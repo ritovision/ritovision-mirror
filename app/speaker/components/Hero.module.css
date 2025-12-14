@@ -1,0 +1,211 @@
+.heroWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+
+  .topRow {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .imageContainer {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+
+
+  .aspectRatioBox {
+    position: relative;
+    padding-bottom: 150%;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .leftImage, .rightImage {
+    flex: 1;
+  }
+  
+  .leftImage {
+    border-top-left-radius: var(--border-radius-standard);
+  }
+
+  .rightImage {
+    border-top-right-radius: var(--border-radius-standard);
+  }
+
+  .bottomImage {
+    width: 100%;
+    height: 0;
+    padding-bottom: 40%;
+    transform: scale(.5);
+    border-bottom-left-radius: var(--border-radius-standard);
+    border-bottom-right-radius: var(--border-radius-standard);
+    position: relative;
+  }
+  
+  .image {
+    object-fit: cover;
+    transition: all 0.8s ease;
+  }
+  
+  .imageText {
+    position: absolute;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .leftText {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 3vw, 4rem);
+  }
+  
+  .rightText {
+    bottom: 20%;
+    left: 50%;
+    transform: translate(100%, 0);
+    font-size: clamp(2rem, 3vw, 4rem);
+    transition: all 0.6s ease;
+  }
+  
+  .bottomText {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: clamp(3rem, 4vw, 4rem);
+    color: var(--primary-red);
+    transition: all 0.8s ease;
+  }
+  
+  /* Animation states */
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .showDelayed {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+  }
+  
+  .showBottom {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 1s;
+  }
+  
+  .transparent {
+    opacity: 0.3;
+    transition: opacity 0.8s ease;
+  }
+  
+  .transparentDelayed {
+    opacity: 0.3;
+    transition: opacity 0.8s ease;
+  }
+  
+  .transparentDelayedMore {
+    opacity: 0.3;
+    transition: opacity 0.8s ease;
+  }
+  
+  .showText {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.8s ease;
+  }
+  
+  .showTextFromRight {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: all 0.6s ease;
+  }
+  
+  .showTextFromTop {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: all 0.8s ease;
+  }
+  
+  @media (max-width: 599px) {
+    .aspectRatioBox {
+      padding-bottom: 150%;
+    }
+
+    .bottomImage {
+      padding-bottom: 45%;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 729px) {
+    .aspectRatioBox {
+      padding-bottom: 130%;
+    }
+
+    .bottomImage {
+      padding-bottom: 43%;
+    }
+  }
+
+  @media (min-width: 730px) {
+    .aspectRatioBox {
+      padding-bottom: 100%;
+    }
+
+    .bottomImage {
+      padding-bottom: 40%;
+    }
+
+    .heroContainer {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .leftText {
+      font-size: clamp(3rem, 4vw, 5rem);
+    }
+
+    .rightText {
+      font-size: clamp(3rem, 4vw, 5rem);
+    }
+
+    .bottomText {
+      font-size: clamp(4.5rem, 5vw, 6rem);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .leftText {
+      font-size: 4rem;
+    }
+
+    .rightText {
+      font-size: 4rem;
+    }
+
+    .bottomText {
+      font-size: 5rem;
+    }
+  }

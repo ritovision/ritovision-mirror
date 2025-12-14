@@ -1,0 +1,188 @@
+/* app\press\sections\hero\hero.module.css */
+.container {
+  position: relative;
+  width: var(--container-width-percent);
+  max-width: 700px;
+  margin: 0 auto;
+  height: 90vh;
+  z-index: 2;
+  background-color: transparent;
+}
+
+@media (max-width: 500px) {
+  .container {
+    height: 80vh;
+  }
+}
+
+.bgLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-blue);
+  z-index: 0;
+}
+
+.imageLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+.videoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.videoWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, var(--primary-blue) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.videoWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to top, var(--primary-blue) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.videoLayer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.videoVisible {
+  opacity: 1;
+}
+
+.textLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.textBlock {
+  position: absolute;
+  opacity: 0;
+  font-size: var(--font-size-heading-primary);
+  font-family: var(--font-agency);
+}
+
+.topLeft {
+  top: 10%;
+  left: 10%;
+  color: #ffffff;
+}
+
+.middleRight {
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  color: #ffffff;
+}
+
+.bottomCenter {
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--primary-red);
+  width: 80%;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .bottomCenter {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  .bottomCenter {
+    font-size: 2.667rem;
+  }
+}
+
+@media (max-width: 499px) {
+  .bottomCenter {
+    font-size: var(--font-size-heading-secondary);
+    width: var(--container-width-percent);
+  }
+  .textBlock {
+    font-size: var(--font-size-heading-tertiary);
+  }
+}
+
+.heroWrapper {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.whiteOrbsBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.svgBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.svgPath {
+  fill: none;
+  stroke: var(--secondary-blue);
+  stroke-width: 2;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.animateSvg {
+  animation: draw 2.4s ease forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

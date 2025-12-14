@@ -1,0 +1,26 @@
+.variant {
+  background-color: var(--secondary-red);
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
+}
+
+.variant:hover {
+  background-color: var(--foreground);
+  color: var(--black);
+  border: 2px solid var(--foreground);
+}
+
+.variant:active {
+  background-color: var(--foreground);
+  color: var(--black);
+  border: 2px solid var(--foreground);
+  transform: scale(0.98);
+}
+
+.variant:disabled {
+  background-color: var(--secondary-red);
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
+  cursor: not-allowed;
+  opacity: 0.6;
+}

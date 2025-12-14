@@ -1,0 +1,65 @@
+  .coreServiceOfferings {
+    margin: 10% 0;
+    padding: 0 16px;
+  }
+  
+  .intro {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .intro h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .intro p {
+    margin: 16px 0 0;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 1149px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 10%;
+    }
+    .grid > * {
+      width: 100%;
+      max-width: 550px;
+      margin-bottom: 90px;
+    }
+    .coreServiceOfferings {
+      margin-bottom: 80%;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+    .grid > * {
+      width: 70%;
+      justify-self: center;
+      margin-bottom: 90px;
+    }
+    .grid > *:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+  }
+  
+
+  @media (min-width: 730px) {
+    .coreServiceOfferings {
+      margin-bottom: 20%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .coreServiceOfferings {
+      margin-bottom: 50%;
+    }
+  }

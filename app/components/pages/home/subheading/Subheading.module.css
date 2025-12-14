@@ -1,0 +1,80 @@
+.imageContainer {
+    position: relative;
+    margin-top: 0; /* no top margin so it's flush with the above component */
+    width: 100%;
+  }
+  
+  /* Mobile: enforce square aspect ratio (100% width) */
+  @media (max-width: 729px) {
+    .imageContainer {
+      aspect-ratio: 1;
+    }
+  }
+  
+  /* Desktop: fixed height with cropped sides */
+  @media (min-width: 730px) {
+    .imageContainer {
+      height: 700px;
+      overflow: hidden;
+      margin-bottom: -10rem;
+    }
+  }
+  
+  .backgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
+  /* Base overlay styling for mobile */
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-blue);
+    border-radius: var(--border-radius-standard);
+    border: var(--default-border);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .lineSmall {
+    font-size: 16px;
+    color: var(--foreground);
+    font-family: "AgencyB", sans-serif;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .lineLarge {
+    font-size: 24px;
+    color: var(--foreground);
+    font-family: "AgencyB", sans-serif;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+  }
+  
+  @media (min-width: 730px) {
+    .overlay {
+      width: 400px;
+      height: 400px;
+    }
+    
+    .lineSmall {
+      font-size: 21px;
+    }
+    
+    .lineLarge {
+      font-size: 32px;
+    }
+  }
+  

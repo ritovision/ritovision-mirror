@@ -1,0 +1,82 @@
+.confirmOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  touch-action: none;
+}
+
+.confirmModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 64px);
+  max-width: 320px;
+  background-color: var(--primary-blue);
+  border: var(--default-border);
+  border-radius: var(--border-radius-medium);
+  padding: 24px;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-large);
+}
+
+.confirmMessage {
+  margin: 0;
+  color: var(--foreground);
+  font-family: 'Michroma', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.confirmButtons {
+  display: flex;
+  gap: var(--gap-standard);
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmButton {
+  flex: 1;
+  height: var(--height-button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: var(--default-border);
+  padding: 0 16px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Michroma', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.confirmButtonPrimary {
+  border-color: var(--utility-green);
+}
+
+.confirmButtonPrimary:hover {
+  background-color: rgba(17, 192, 69, 0.1);
+}
+
+.cancelButton {
+  background-color: transparent;
+  border-color: var(--primary-red);
+  color: var(--primary-red);
+}
+
+.cancelButton:hover {
+  background-color: var(--primary-red);
+  color: var(--foreground);
+}

@@ -1,0 +1,121 @@
+/* overlay fade-in/out */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.overlayVisible {
+  opacity: 1;
+}
+
+/* content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: var(--container-width-narrow);
+  max-height: 80vh;
+}
+
+/* image */
+.lightboxImage {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: var(--border-radius-standard);
+}
+
+/* caption */
+.caption {
+  margin-top: var(--gap-standard);
+  font-family: 'Michroma', sans-serif;
+  color: var(--foreground);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* download button */
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-section-gap);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.downloadButton:hover {
+  transform: scale(1.10);
+}
+.downloadIconLB {
+  width: 30px;
+  height: auto;
+}
+
+/* close button */
+.closeButton {
+  position: absolute;
+  top: var(--spacing-base-px);
+  right: var(--spacing-base-px);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: var(--foreground);
+}
+.closeButton:hover {
+  transform: scale(1.10);
+}
+
+/* navigation arrows */
+.prevButton,
+.nextButton {
+  position: absolute;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: var(--foreground);
+}
+.prevButton {
+  top: 50%;
+  left: var(--spacing-base-px);
+  transform: translateY(-50%);
+}
+.nextButton {
+  top: 50%;
+  right: var(--spacing-base-px);
+  transform: translateY(-50%);
+}
+.prevButton:hover,
+.nextButton:hover {
+  transform: translateY(-50%) scale(1.10);
+}
+
+/* mobile arrows */
+@media (max-width: 729px) {
+  .prevButton,
+  .nextButton {
+    top: 50%;
+    transform: translateY(-50%) scale(0.5);
+  }
+  .prevButton {
+    left: 0;
+  }
+  .nextButton {
+    right: 0;
+  }
+  .prevButton:hover,
+  .nextButton:hover {
+    transform: translateY(-50%) scale(0.55);
+  }
+}

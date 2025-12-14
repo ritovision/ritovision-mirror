@@ -1,0 +1,11 @@
+.accordionSection {
+  width: 100%;
+}
+
+.header {
+  color: var(--primary-red);
+  margin: 0 auto var(--spacing-gap-medium);
+  text-align: center;
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+}

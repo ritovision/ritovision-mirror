@@ -1,0 +1,124 @@
+/* Overall container */
+.container {
+  background-color: black;
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  max-width: 700px;
+  width: var(--container-width-percent);
+  margin: 5% auto 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Fade-in once in view */
+.animateOverall {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Title with animated underline */
+.title {
+  text-align: center;
+  color: white;
+  position: relative;
+  margin-bottom: 5%;
+  font-size: var(--font-size-heading-primary);
+}
+@media (max-width: 730px) {
+  .title {
+    font-size: var(--font-size-heading-secondary);
+  }
+}
+.title::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 1s ease-out;
+}
+.animateOverall .title::after {
+  width: 70%;
+}
+
+/* Each direction item */
+.directionPair {
+  margin-bottom: 30px;
+}
+
+/* Typewriter title */
+.directionTitle {
+  color: var(--primary-red);
+  text-align: center;
+  margin: 0;
+  position: relative;
+  min-height: 1.2em;
+  overflow: hidden;
+}
+.dummy {
+  visibility: hidden;
+}
+.actual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+}
+
+/* Bullet list hidden until title completes */
+.bulletList {
+  list-style: disc;
+  margin: 10px 0 20px 40px;
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+.bulletItem {
+  margin: 0.5em 0;
+  font-family: 'Michroma', sans-serif;
+}
+
+/* Reveal bullets */
+.fadeIn {
+  opacity: 1;
+}
+
+/* Roles section */
+.rolesSection {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.rolesTitle {
+  font-family: var(--font-agency);
+  font-size: 1.8rem;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-margin-bottom);
+}
+.rolesList p {
+  margin: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+/* sequential fade-in of roles when container visible */
+.animateOverall .rolesList p:nth-child(1) { transition-delay:0.6s; opacity:1; transform:translateY(0); }
+.animateOverall .rolesList p:nth-child(2) { transition-delay:0.8s; opacity:1; transform:translateY(0); }
+.animateOverall .rolesList p:nth-child(3) { transition-delay:1s;   opacity:1; transform:translateY(0); }
+.animateOverall .rolesList p:nth-child(4) { transition-delay:1.2s; opacity:1; transform:translateY(0); }
+.animateOverall .rolesList p:nth-child(5) { transition-delay:1.4s; opacity:1; transform:translateY(0); }
+.animateOverall .rolesList p:nth-child(6) { transition-delay:1.6s; opacity:1; transform:translateY(0); }
+.animateOverall .rolesList p:nth-child(7) { transition-delay:1.8s; opacity:1; transform:translateY(0); }
+.animateOverall .rolesList p:nth-child(8) { transition-delay:2s;    opacity:1; transform:translateY(0); }
+
+/* Responsive adjustments */
+@media (max-width: 730px) {
+  .container { margin-top: 20%; padding: 20px; }
+  .bulletList { margin-left: 15%; }
+}
+@media (min-width: 730px) {
+  .container { padding: 40px; }
+}

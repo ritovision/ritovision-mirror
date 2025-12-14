@@ -1,0 +1,218 @@
+.ai-drawer {
+  animation: slideUp 0.3s ease-out;
+  padding: var(--spacing-base-px);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px 24px;
+  max-width: var(--container-max-width-small);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.aiButtons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-standard);
+}
+
+.aiDrawerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-standard);
+  width: 100%;
+  min-height: var(--height-button);
+  padding: var(--gap-standard) var(--spacing-base-px);
+  border-radius: var(--border-radius-button);
+  font-family: 'Michroma', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: var(--default-border);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.aiDrawerButton:active {
+  transform: scale(0.98);
+}
+
+/* Button Icon Wrapper */
+.buttonIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s linear;
+}
+
+.buttonIconWrap.hiddenNow {
+  opacity: 0;
+  transition: none !important;
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.providerLogo {
+  flex-shrink: 0;
+}
+
+.copyButton {
+  background-color: #000000;
+  border-color: var(--secondary-blue);
+}
+
+.copyButton:hover {
+  background-color: #1a1a1a;
+}
+
+.promptButton {
+  background-color: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+}
+
+.promptButton:hover {
+  background-color: #055a9e;
+}
+
+.promptButtonText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chatgptButton {
+  background-color: var(--color-chatgpt);
+  border-color: var(--color-chatgpt);
+}
+
+.chatgptButton:hover {
+  background-color: #5f9385;
+}
+
+.claudeButton {
+  background-color: var(--color-claude);
+  border-color: var(--color-claude);
+}
+
+.claudeButton:hover {
+  background-color: #c56447;
+}
+
+.perplexityButton {
+  background-color: var(--color-perplexity);
+  border-color: var(--color-perplexity);
+}
+
+.perplexityButton:hover {
+  background-color: #1a6670;
+}
+
+/* Status Animation Styles */
+.statusLabelWrap {
+  /* was: position: relative; */
+  display: inline-block;
+  min-width: 1px;
+}
+
+.primaryLabel {
+  opacity: 1;
+  transition: opacity 0.25s linear;
+}
+
+.primaryLabel.hiddenNow {
+  opacity: 0;
+  transition: none !important;
+}
+
+.statusLabel {
+  position: absolute;   /* position against the button (parent) now */
+  inset: 0;             /* cover entire button area */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* <-- centers "Copied!" perfectly */
+  gap: 6px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.statusIn {
+  animation: fadeInFast 0.25s forwards;
+}
+
+.statusOut {
+  animation: fadeOutSlow 0.75s forwards;
+}
+
+@keyframes fadeInFast {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeOutSlow {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+.statusIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.privacyNote {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--foreground);
+  opacity: 0.85;
+  text-align: center;
+}
+
+.ai-drawer::-webkit-scrollbar { width: 6px; }
+.ai-drawer::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+.ai-drawer::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+.ai-drawer::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .ai-drawer { padding: 16px; }
+  .ai-content { padding: 16px 20px; }
+  .aiDrawerButton {
+    min-height: 40px;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  .privacyNote { font-size: 11px; }
+}

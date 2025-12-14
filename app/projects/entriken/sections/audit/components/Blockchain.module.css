@@ -1,0 +1,133 @@
+/* \test\app\projects\entriken\sections\audit\components\Blockchain.module.css */
+.container {
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  padding: var(--spacing-container-padding);
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  color: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-container-padding);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto var(--spacing-margin-bottom);
+  width: 60px;
+  height: auto;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-heading-primary);
+}
+
+.paragraph {
+  margin: var(--spacing-margin-bottom) 0;
+  text-align: left;
+  line-height: var(--line-height-body);
+}
+
+.subheading {
+  margin: var(--spacing-section-gap) 0 var(--spacing-margin-bottom);
+  text-align: center;
+  font-size: var(--font-size-heading-primary);
+}
+
+/* h4 style for Overview, Impact, First Implementation, Challenges, Role and Contribution, Strategic Importance */
+.challengeHeading {
+  margin: var(--spacing-section-gap) 0 var(--spacing-margin-bottom);
+  text-align: center;
+  font-size: var(--font-size-subheading); /* half of 3rem */
+  color: var(--primary-red);
+}
+
+.suSquares {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--spacing-container-padding);
+  margin: var(--spacing-section-gap) 0;
+}
+
+.suSquares img {
+  max-width: 200px;
+  height: auto;
+}
+
+.textBlock h4 {
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+/* bullet list - Keep existing styles */
+.list {
+  list-style-type: disc;
+  padding-left: var(--spacing-container-padding);
+  margin: var(--spacing-margin-bottom) 0;
+}
+
+.listItem {
+  margin-bottom: 0.5rem;
+  line-height: var(--line-height-body);
+  font-size: 1rem;
+}
+
+/* Styles for the container of each technical point/insight point (copied from SEO/Press) */
+.techPoint {
+  margin-bottom: var(--spacing-margin-bottom); /* Spacing between points */
+}
+
+/* Styles for the technical point/insight point title (copied from SEO/Press) */
+.techTitle {
+  display: block; /* Ensure the description appears on a new line */
+  font-size: var(--font-size-subheading)
+}
+
+/* Styles for the technical point/insight point description (copied from SEO/Press) */
+.techDescription {
+  line-height: var(--line-height-body);
+  margin-bottom: 0; /* Remove default paragraph margin-bottom */
+}
+
+/* Desktop styles (indentation for description) (copied from SEO/Press) */
+@media (min-width: 731px) {
+  .techDescription {
+    margin-left: 20px; /* Add indentation on desktop */
+  }
+}
+
+/* Mobile styles (spacing between title and description) (copied from SEO/Press) */
+@media (max-width: 730px) {
+   .techTitle {
+     margin-bottom: 0.5rem; /* Add space below title on mobile */
+   }
+  /* No indentation needed for description - default behavior */
+  /* Keep existing mobile styles */
+  .title,
+  .subheading {
+    font-size: var(--font-size-heading-secondary);
+  }
+
+  .suSquares {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 96px;
+  }
+}
+
+/* Keep existing min-width media query */
+@media (min-width: 731px) {
+  .suSquares img {
+    max-width: 266px; /* 200px × 1.33 ≈ 266px */
+  }
+}

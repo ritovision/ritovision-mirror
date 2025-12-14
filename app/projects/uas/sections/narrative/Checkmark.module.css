@@ -1,0 +1,21 @@
+.checkboxContainer {
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%) translateY(2px);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 5px 5px 0 0;
+    border: var(--default-border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .checkmark {
+    width: 24px;
+    height: 24px;
+  }
+  

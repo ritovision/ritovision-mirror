@@ -1,0 +1,96 @@
+/* app/projects/entriken/sections/audit/components/ImageReveal.module.css */
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: var(--container-max-width-cards);
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid var(--foreground);
+    border-radius: var(--border-radius-standard);
+    overflow: hidden;
+  }
+  
+  .heading {
+    text-align: center;
+    color: var(--foreground);
+    font-size: var(--font-size-heading-primary);
+    margin-bottom: var(--spacing-margin-bottom);
+  }
+
+  @media screen and (max-width: 730px) {
+    .heading {
+        font-size: 2.3rem;
+        margin-bottom: var(--spacing-margin-bottom);
+      }
+
+  }
+  
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    /* removed transition so image appears instantly when visible */
+  }
+  
+  .visible {
+    opacity: 1;
+  }
+  
+  .textContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+  
+  .textLine {
+    color: var(--foreground);
+    font-size: var(--font-size-heading-tertiary);
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    animation-delay: var(--delay);
+    text-align: center;
+    margin: 4px 0;
+    white-space: normal;
+    max-width: 90%;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--foreground);
+    transform: translateY(100%);
+    transition: transform 1.5s ease-in-out;
+  }
+  
+  .fill {
+    transform: translateY(0);
+  }
+  
+  .empty {
+    transform: translateY(100%);
+  }
+  

@@ -1,0 +1,118 @@
+/* app\components\pages\home\intro\Intro.module.css */
+/* Overall Wrapper: now initially invisible for fade-in */
+.introWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  padding: var(--spacing-base-px);
+  opacity: 0;
+  transform: translateY(var(--spacing-base-px));
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.overallVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.introContent {
+  width: 85%;
+  max-width: 700px;
+  background: var(--primary-blue);
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  padding: var(--spacing-base-px);
+  color: var(--foreground);
+  font-family: "AgencyB", sans-serif;
+}
+
+@media (max-width: 729px) {
+  .introContent {
+    width: 100%;
+  }
+}
+
+.introContent h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--primary-red);
+}
+
+.introContent p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.contentImage {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: var(--border-radius-standard);
+}
+
+@media (min-width: 730px) {
+  .introWrapper {
+    margin-top: 5%;
+  }
+  .introContent p {
+    margin-bottom: var(--spacing-section-gap);
+  }
+  .introContent {
+    padding: var(--padding-large);
+  }
+}
+
+.fadeInSection {
+  opacity: 0;
+  transform: translateY(var(--spacing-base-px));
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.buttonSectionWrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: var(--spacing-base-px);
+  background: transparent;
+}
+
+.imageCaption {
+  color: var(--primary-red);
+  text-align: center;
+  margin: var(--spacing-base-px) 0;
+}
+
+/* Accent link for RitoSwap and documentation */
+.accentLink {
+  color: var(--primary-red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.primaryRed {
+  color: var(--primary-red);
+}
+
+.projectLinks {
+  margin-left: 20px;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.10em;
+  line-height: 1.5;
+}
+
+.projectLinks li {
+  margin-bottom: 0.5rem;
+}
+
+.projectTitle {
+  margin-bottom: 1rem !important;
+}

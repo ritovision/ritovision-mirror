@@ -1,0 +1,76 @@
+/* container styling matches other sections */
+.wrapper {
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    padding: var(--spacing-container-padding);
+    width: var(--container-width-percent);
+    max-width: var(--container-max-width-large);
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+}
+
+/* main component title now 3rem */
+.title {
+    font-size: var(--font-size-heading-primary);
+    color: var(--foreground);
+    text-align: center;
+    margin-bottom: var(--spacing-margin-bottom);
+}
+
+/* regular paragraph text */
+.paragraph {
+    color: var(--foreground);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-margin-bottom);
+    text-align: left;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+/* red, centered headings */
+.redHeading {
+    color: var(--primary-red);
+    text-align: center;
+    font-size: var(--font-size-heading-tertiary);
+    margin: var(--spacing-container-padding) 0 var(--spacing-margin-bottom);
+}
+
+/* left-aligned subheadings */
+.leftHeading {
+    color: var(--foreground);
+    font-size: 1.25rem;
+    text-align: left;
+    margin-left: var(--spacing-container-padding);
+    margin-top: var(--spacing-margin-bottom);
+    margin-bottom: 0.5rem;
+}
+
+/* left-aligned paragraph under subheadings */
+.leftText {
+    color: var(--foreground);
+    text-align: left;
+    margin-left: var(--spacing-margin-bottom);
+    margin-right: var(--spacing-margin-bottom);
+    margin-bottom: var(--spacing-margin-bottom);
+    line-height: var(--line-height-body);
+}
+
+/* bullet list container — keep same indent */
+.bulletList {
+    list-style-type: disc;
+    margin-left: 3rem;
+    margin-right: var(--spacing-container-padding);
+    margin-bottom: var(--spacing-margin-bottom);
+    padding-left: 0.5rem;
+}
+
+
+/* bullet items with Michroma font */
+.bulletList li {
+    font-family: 'Michroma', sans-serif;
+    margin-bottom: var(--spacing-margin-bottom);
+    line-height: var(--line-height-body);
+    font-size: 1em;
+    color: var(--foreground);
+}

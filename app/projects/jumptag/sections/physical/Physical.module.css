@@ -1,0 +1,24 @@
+/* \test\app\projects\jumptag\sections\physical\Physical.module.css */
+.wrapper {
+    width: var(--container-width-percent);
+    max-width: var(--container-max-width-large);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-gap);
+  }
+
+  .heading {
+    color: var(--primary-red);
+    text-align: center;
+    font-size: var(--font-size-heading-primary);
+    margin-bottom: var(--spacing-margin-bottom);
+  }
+
+  @media (max-width: 730px) {
+    .heading {
+      font-size: var(--font-size-heading-secondary);
+    }
+  }
+  

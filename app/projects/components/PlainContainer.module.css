@@ -1,0 +1,35 @@
+/* \test\app\components\pages\projects\PlainContainer.module.css */
+.container {
+  width: 90%;
+  max-width: var(--container-max-width-large);
+  padding: 2rem;
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.anchorTarget {
+  display: block;
+  position: relative;
+  top: -120px;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+  color: var(--foreground);
+  /* font-size removed so .headingLarge can control sizing */
+}
+
+/* Media query for screens smaller than 500px */
+@media (max-width: 500px) {
+  .container {
+      padding-left: 12px;
+      padding-right: 12px;
+  }
+}

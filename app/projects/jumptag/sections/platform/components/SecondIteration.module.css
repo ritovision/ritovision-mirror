@@ -1,0 +1,84 @@
+/* \test\app\projects\jumptag\sections\platform\components\SecondIteration.module.css */
+.wrapper {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing-container-padding);
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background: transparent;
+  color: white;
+}
+
+.title {
+  font-size: var(--font-size-heading-primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+@media (max-width: 729px) {
+  .title {
+    font-size: var(--font-size-heading-secondary);
+  }
+}
+
+.subheading {
+  font-size: var(--font-size-subheading);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+  color: var(--primary-red);
+}
+
+.text {
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+/* new UX heading */
+.centeredRedHeading {
+  text-align: center;
+  color: var(--primary-red);
+  font-size: 1.5rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* platform image wrappers */
+.platformImageWrapper {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.imageDescription {
+  margin-bottom: var(--spacing-margin-bottom);
+  line-height: var(--line-height-body);
+}
+
+/* images with border-radius */
+.platformImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--border-radius-standard);
+}
+
+/* caption under each image */
+.caption {
+  margin-top: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}

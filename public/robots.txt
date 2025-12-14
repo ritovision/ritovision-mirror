@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ritovision.com/SEO/sitemap.xml
+Sitemap: https://ritovision.com/SEO/sitemap-images.xml

@@ -1,0 +1,128 @@
+.toc-drawer {
+  animation: slideUp 0.3s ease-out;
+  padding: var(--gap-standard) 0;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toc-link {
+  display: block;
+  width: 100%;
+  padding: var(--gap-small) 24px;
+  box-sizing: border-box;
+
+  color: var(--foreground);
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.toc-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* Primary sections - styled in red */
+.toc-primary {
+  color: var(--primary-red, #ff0000) !important;
+}
+
+/* Spacer element */
+.toc-spacer {
+  height: 16px;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* ToC heading levels - centered without indentation */
+.toc-h1 {
+  font-size: 17px;
+}
+
+.toc-h2 {
+  font-size: 16px;
+}
+
+.toc-h3 {
+  font-size: 15px;
+  opacity: 0.95;
+}
+
+.toc-h4 {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.toc-h5,
+.toc-h6 {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Custom scrollbar for ToC drawer */
+.toc-drawer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.toc-drawer::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.toc-drawer::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.toc-drawer::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .toc-link {
+    font-size: 15px;
+    padding: 6px 16px;
+  }
+
+  .toc-spacer {
+    height: 12px;
+  }
+
+  .toc-h1 {
+    font-size: 16px;
+  }
+
+  .toc-h2 {
+    font-size: 15px;
+  }
+
+  .toc-h3 {
+    font-size: 14px;
+  }
+
+  .toc-h4 {
+    font-size: 13px;
+  }
+
+  .toc-h5,
+  .toc-h6 {
+    font-size: 12px;
+  }
+}

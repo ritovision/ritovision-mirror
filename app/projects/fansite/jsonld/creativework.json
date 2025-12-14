@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Caroline Vreeland Tribute Site",
+  "url": "https://ritovision.com/projects/fansite",
+  "description": "A passion-driven digital tribute to fashion icon and singer Caroline Vreeland, designed, developed, and optimized by Rito as a high-performance, editorial-grade fan archive. Featured in The New York Times and ranked in Google's top results for her name.",
+  "creator": {
+    "@type": "Person",
+    "name": "Rito",
+    "url": "https://ritovision.com/about",
+    "jobTitle": "Creative Technologist & Strategist",
+    "sameAs": [
+      "https://www.instagram.com/ritorhymes",
+      "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+      "https://www.ritovision.com"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com"
+  },
+  "datePublished": "2025-05-10",
+  "keywords": [
+    "Caroline Vreeland",
+    "Celebrity Fan Site",
+    "Tribute Website",
+    "Web Design",
+    "Case Study",
+    "Creative Development",
+    "SEO Optimization",
+    "Next.js",
+    "RitoVision"
+  ],
+  "inLanguage": "en",
+  "image": "https://ritovision.com/images/pages/projects/fansite/caroline-hero.jpg",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Caroline Vreeland",
+    "url": "https://www.carolinevreeland.com",
+    "sameAs": [
+      "https://www.carolinevreeland.com",
+      "https://www.instagram.com/carolinevreeland"
+    ],
+    "description": "Caroline Vreeland is a singer, model, and fashion personality known for her bold aesthetic and creative legacy as the great-granddaughter of Vogue editor Diana Vreeland."
+  }
+}

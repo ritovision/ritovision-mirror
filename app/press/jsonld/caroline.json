@@ -1,0 +1,111 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "@id": "https://www.nytimes.com/2020/01/16/style/caroline-vreeland-a-singer-with-a-famous-fashion-name.html",
+  "url": "https://www.nytimes.com/2020/01/16/style/caroline-vreeland-a-singer-with-a-famous-fashion-name.html",
+  "name": "Caroline Vreeland, a Singer With a Famous Fashion Name",
+  "headline": "Caroline Vreeland, a Singer with a Famous Fashion Name",
+  "keywords": "fashion, Caroline Vreeland, fansite, famous",
+  "datePublished": "2020-01-16T00:00:00-05:00",
+  "image": "https://static01.nyt.com/images/2020/01/15/fashion/15upnext-vreeland1/15upnext-vreeland1-superJumbo.jpg?quality=75&auto=webp",
+  "author": {
+    "@type": "Person",
+    "name": "Mia Adorante",
+    "url": "https://www.miaadorante.com/"
+  },
+  "mentions": {
+    "@type": "CreativeWork",
+    "name": "Caroline Vreeland Fansite",
+    "url": "https://carolinevreeland.com",
+    "about": {
+      "@type": "Person",
+      "@id": "https://en.wikipedia.org/wiki/Caroline_Vreeland",
+      "name": "Caroline Vreeland",
+      "url": "https://en.wikipedia.org/wiki/Caroline_Vreeland",
+      "sameAs": "https://instagram.com/carolinevreeland"
+    },
+    "creator": {
+      "@type": "Person",
+      "@id": "https://ritovision.com/about",
+      "url": "https://ritovision.com/about",
+      "name": "Rito",
+      "alternateName": "Rito Rhymes",
+      "sameAs": [
+        "https://www.instagram.com/ritorhymes",
+        "https://www.threads.net/ritorhymes",
+        "https://www.x.com/rito_rhymes",
+        "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+        "https://www.github.com/ritorhymes",
+        "https://www.reddit.com/user/ritorhymes",
+        "https://www.ritovision.com/about",
+        "https://www.ritography.com/about",
+        "https://www.ritorhymes.com/about",
+        "https://facebook.com/ritorhymes",
+"https://www.youtube.com/@ritorhymes",
+"https://open.spotify.com/artist/03iaQJsc1704Mbj25dHp4Q",
+"https://music.apple.com/us/artist/rito-rhymes/1633458672",
+        "https://www.williamentriken.net/about",
+        "https://www.carolinevreeland.com/about",
+        "https://stockhead.com.au/cryptocurrency/bitcoin-is-the-gangsta-rap-of-the-tech-world-putting-the-verse-in-metaverse-with-crypto-rapper-rito-rhymes",
+        "https://screenrant.com/cod-warzone-riot-shield-disappear-glitch-rap-video",
+        "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/"
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Role",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Lead Designer",
+            "occupationalCategory": "15-1255.00",
+            "description": "Responsible for overseeing design processes and managing creative outputs.",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "USA"
+            },
+            "estimatedSalary": {
+              "@type": "MonetaryAmountDistribution",
+              "name": "estimated compensation",
+              "currency": "USD",
+              "duration": "P1Y",
+              "percentile10": 70000,
+              "percentile25": 85000,
+              "median": 100000,
+              "percentile75": 115000,
+              "percentile90": 130000
+            },
+            "mainEntityOfPage": "https://en.wikipedia.org/wiki/User_experience_design"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Web Developer",
+          "description": "Responsible for developing and maintaining web applications.",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "USA"
+          },
+          "estimatedSalary": {
+            "@type": "MonetaryAmountDistribution",
+            "name": "estimated compensation",
+            "currency": "USD",
+            "duration": "P1Y",
+            "percentile10": 70000,
+            "percentile25": 85000,
+            "median": 100000,
+            "percentile75": 115000,
+            "percentile90": 130000
+          },
+          "mainEntityOfPage": "https://en.wikipedia.org/wiki/Web_developer"
+        }
+      ],
+      "subjectOf": [
+        {
+          "@type": "WebPage",
+          "url": "https://carolinevreeland.com/about",
+          "name": "About Caroline Vreeland Fansite"
+        }
+      ]
+    }
+  }
+}

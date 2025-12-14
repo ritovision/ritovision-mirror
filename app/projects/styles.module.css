@@ -1,0 +1,14 @@
+.testimonialWrapper {
+    width: var(--container-width-percent);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* app/projects/styles.module.css */
+.pageContent {
+  position: relative;
+  z-index: 2;         /* above the orb canvas */
+  
+}
+
+

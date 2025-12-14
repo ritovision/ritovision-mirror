@@ -1,0 +1,100 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "url": "https://u.today/dogecoin-used-to-purchase-nfts-worth-600000-in-historic-transaction",
+  "name": "Dogecoin Used to Purchase NFTs Worth $600,000 in Historic Transaction",
+  "headline": "Dogecoin inspired music: rapper releases acapella of Dogecoin Foundation's Trailmap",
+  "description": "The Dogecoin Foundation posts on Twitter about Rito Rhymes rapping about their roadmap for Dogecoin.",
+  "author": {
+    "@type": "Person",
+    "name": "Tomiwabold Olajide",
+    "url": "https://u.today/tomiwabold-olajide"
+  },
+  "datePublished": "2022-05-04",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://ritovision.com/about",
+    "url": "https://ritovision.com/about",
+    "name": "Rito",
+    "alternateName": "Rito Rhymes",
+    "sameAs": [
+      "https://www.instagram.com/ritorhymes",
+      "https://www.threads.net/ritorhymes",
+      "https://www.x.com/rito_rhymes",
+      "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+      "https://www.github.com/ritorhymes",
+      "https://www.reddit.com/user/ritorhymes",
+      "https://www.ritovision.com/about",
+      "https://www.ritography.com/about",
+      "https://www.ritorhymes.com/about",     
+      "https://www.williamentriken.net/about",
+      "https://www.carolinevreeland.com/about",   
+      "https://stockhead.com.au/cryptocurrency/bitcoin-is-the-gangsta-rap-of-the-tech-world-putting-the-verse-in-metaverse-with-crypto-rapper-rito-rhymes",
+      "https://screenrant.com/cod-warzone-riot-shield-disappear-glitch-rap-video",
+      "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/"
+    ],
+    "performerIn": {
+      "@type": "Event",
+      "@id": "https://dogepalooza.com/",
+      "url": "https://dogepalooza.com/",
+      "name": "Dogepalooza",
+      "description": "The first ever Dogecoin-themed charity music festival",
+      "eventStatus": "https://schema.org/EventCompleted",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "startDate": "2021-10-09",
+      "endDate": "2021-10-09",
+      "location": {
+        "@type": "Place",
+        "name": "Constellation Field",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1 Stadium Dr",
+          "addressLocality": "Sugar Land",
+          "addressRegion": "TX",
+          "postalCode": "77498",
+          "addressCountry": "US"
+        }
+      },
+      "sameAs": "https://hackernoon.com/who-showed-up-to-dogepalooza-and-who-cares-much-surprise",
+      "image": "https://ritorhymes.com/images/260-DSC08354.jpg",
+      "performer": [
+        {
+          "@type": "Person",
+          "@id": "https://ritovision.com/about",
+          "url": "https://ritovision.com/about",
+          "name": "Rito",
+          "sameAs": [
+            "https://www.instagram.com/ritorhymes",
+            "https://www.threads.net/ritorhymes",
+            "https://www.x.com/rito_rhymes",
+            "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+            "https://www.github.com/ritorhymes",
+            "https://www.reddit.com/user/ritorhymes",
+            "https://www.ritovision.com/about",
+            "https://www.ritography.com/about",
+            "https://www.ritorhymes.com/about",           
+            "https://www.williamentriken.net/about",
+            "https://facebook.com/ritorhymes",
+            "https://www.youtube.com/@ritorhymes",
+            "https://open.spotify.com/artist/03iaQJsc1704Mbj25dHp4Q",
+            "https://music.apple.com/us/artist/rito-rhymes/1633458672",
+            "https://www.carolinevreeland.com/about",
+            "https://stockhead.com.au/cryptocurrency/bitcoin-is-the-gangsta-rap-of-the-tech-world-putting-the-verse-in-metaverse-with-crypto-rapper-rito-rhymes",
+            "https://screenrant.com/cod-warzone-riot-shield-disappear-glitch-rap-video",
+            "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://en.wikipedia.org/wiki/Damon_Elliott",
+          "url": "https://en.wikipedia.org/wiki/Damon_Elliott",
+          "name": "Damon Elliot",
+          "sameAs": [
+            "https://instagram.com/iamdamonelliott/"
+          ]
+        }
+      ]
+    }
+  }
+}

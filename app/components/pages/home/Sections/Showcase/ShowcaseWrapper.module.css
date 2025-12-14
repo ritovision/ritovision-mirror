@@ -1,0 +1,87 @@
+/* Container with a black background wrapper */
+.container {
+  width: 100%;
+  max-width: 1200px;      /* constrain overall width on small screens */
+  margin: 0 auto;         /* center on page */
+  padding: var(--spacing-section-gap) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;   /* let children fill width */
+  box-sizing: border-box; /* include padding in width calc */
+}
+
+/* When viewport is 730px or wider, remove the max-width so container spans 100% */
+@media (min-width: 730px) {
+  .container {
+    max-width: none;
+  }
+}
+
+/* Inner wrapper for all subsections */
+.content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header title styles */
+.headerTitle {
+  text-align: center;
+  color: var(--primary-red);
+  margin: 0;
+  font-size: 4rem; /* adjust size as needed */
+}
+
+/* Header subtitle styles */
+.headerSubtitle {
+  text-align: center;
+  color: var(--foreground);
+  margin: 0;
+  font-size: 2.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Divider line used right after the headers (special top margin) */
+.topDivider {
+  width: 80%;
+  max-width: var(--container-max-width-cards);
+  height: 2px;
+  background-color: var(--foreground);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Divider line between subsections */
+.divider {
+  width: 80%;
+  max-width: var(--container-max-width-cards);
+  height: 2px;
+  background-color: var(--foreground);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive margin rules */
+@media (max-width: 730px) {
+  .topDivider {
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
+  .divider {
+    margin-top: 30%;
+    margin-bottom: 30%;
+  }
+  .headerTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 730px) {
+  .topDivider {
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+  .divider {
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+}

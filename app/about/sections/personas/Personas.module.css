@@ -1,0 +1,74 @@
+.personasContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-gap-xl) 0;
+  background-color: transparent;
+}
+
+.personasTitle {
+  font-size: clamp(40px, 5vw, 36px);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.personasFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-gap-xl);
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-base-px);
+}
+
+@media (max-width: 768px) {
+  .personasContainer {
+    padding: 40px 0;
+  }
+
+  .personasTitle {
+    margin-bottom: var(--spacing-section-margin-px);
+  }
+
+  .personasGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-gap-xl);
+  }
+}
+
+.personaBlock {
+  margin-bottom: 10vh;
+}
+
+.personasHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-section-margin-px);
+  margin-top: 8%;
+  max-width: var(--container-max-width-medium);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.personasHeader h2 {
+  margin-bottom: var(--spacing-section-margin-px);
+}
+.personasHeader p {
+  width: var(--container-width-narrow);
+  margin: auto;
+}
+
+@media (max-width: 730px) {
+  .personasHeader {
+    margin-bottom: 20%;
+    margin-top: 20%;
+  }
+}
+
+@media (min-width: 730px) {
+  .personaBlock > :first-child {
+    margin-bottom: var(--spacing-section-margin-px);
+  }
+}
+

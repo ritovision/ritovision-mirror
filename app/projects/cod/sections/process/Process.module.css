@@ -1,0 +1,62 @@
+.container {
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    padding: 1rem;
+    max-width: var(--container-max-width-medium);
+    width: var(--container-width-percent);
+    margin: 0 auto;
+  }
+  
+  .sectionHeading {
+    text-align: center;
+  }
+  
+  .sectionText {
+    /* No changes here */
+  }
+  
+  .red {
+    color: var(--primary-red);
+    font-size: 3.2rem;
+  }
+  
+  /* New intro paragraph class */
+  @media (min-width: 769px) {
+    .introParagraph {
+      margin-top: 30px;
+    }
+  }
+  .introParagraph {
+    margin-top: 20px;
+  }
+  
+  /* QA graph wrapper (previous) */
+  @media (min-width: 769px) {
+    .qaWrapper {
+      margin: 30px 0;
+    }
+  }
+  .qaWrapper {
+    margin: 20px 0;
+  }
+  
+  /* Outreach graph wrapper */
+  @media (min-width: 769px) {
+    .outreachWrapper {
+      margin-top: 30px;
+    }
+  }
+  .outreachWrapper {
+    margin-top: 20px;
+  }
+  
+  /* ContentGraph wrapper */
+  @media (min-width: 769px) {
+    .contentGraphWrapper {
+      margin: 30px 0;
+    }
+  }
+  .contentGraphWrapper {
+    margin: 20px 0;
+  }
+  

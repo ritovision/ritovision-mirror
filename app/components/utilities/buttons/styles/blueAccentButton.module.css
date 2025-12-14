@@ -1,0 +1,19 @@
+.variant {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 2px solid var(--secondary-blue);
+}
+
+.variant:hover {
+  background-color: var(--secondary-blue);
+}
+
+.variant:active {
+  transform: scale(0.98);
+}
+
+.variant:disabled {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 2px solid var(--secondary-blue);
+}

@@ -1,0 +1,76 @@
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: var(--container-width-narrow);
+  max-width: var(--container-max-width-cards);
+  margin: 0 auto;
+}
+
+.logomarkImage {
+  display: block;
+  width: 100%;
+  border-radius: var(--border-radius-standard);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.revealingImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-standard);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+  clip-path: inset(100% 0 0 0);
+}
+
+.visionTextContainer {
+  width: 90vw;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 730px) {
+  .visionTextContainer {
+    margin-top: 4%;
+    margin-bottom: 20%;
+  }
+}
+
+@media (min-width: 731px) {
+  .visionTextContainer {
+    margin-top: 4%;
+    margin-bottom: 8%;
+  }
+}
+
+.visionTextS1 {
+  font-size: 2rem;
+  color: var(--primary-red);
+  white-space: normal;
+}
+
+.visionTextS2 {
+  font-size: 1rem;
+  font-family: michroma;
+  color: white;
+  white-space: normal;
+  opacity: 0;
+  transform: translateY(10px);
+  margin-top: var(--spacing-base-px);
+  min-height: 1.2rem;
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.animateS2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.75s;
+}

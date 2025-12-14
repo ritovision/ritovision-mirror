@@ -1,0 +1,54 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "RadioEpisode",
+  "@id": "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/",
+  "name": "Rito Rhymes, Rapper and Crypto Nerd",
+  "keywords": "Rito Rhymes, blockchain, rapping, interview, live radio",
+  "datePublished": "2022-06-08",
+  "url": "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/",
+  "description": "Rito was interviewed live on WABC radio with Frank Morano, he rapped his answers to certain questions in real time and performed a final rap verse at the end.",
+  "actor": [
+    {
+      "@type": "Person",
+      "@id": "https://ritovision.com/about",
+      "url": "https://ritovision.com/about",
+      "name": "Rito",
+      "alternateName": "Rito Rhymes",
+      "sameAs": [
+        "https://www.instagram.com/ritorhymes",
+        "https://www.threads.net/ritorhymes",
+        "https://www.x.com/rito_rhymes",
+        "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+        "https://www.github.com/ritorhymes",
+        "https://www.reddit.com/user/ritorhymes",
+        "https://www.ritovision.com/about",
+        "https://www.ritography.com/about",
+        "https://www.ritorhymes.com/about",     
+        "https://www.williamentriken.net/about",
+        "https://www.carolinevreeland.com/about",
+        "https://stockhead.com.au/cryptocurrency/bitcoin-is-the-gangsta-rap-of-the-tech-world-putting-the-verse-in-metaverse-with-crypto-rapper-rito-rhymes",
+        "https://screenrant.com/cod-warzone-riot-shield-disappear-glitch-rap-video"
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Frank Morano"
+    }
+  ],
+  "partOfSeries": {
+    "@type": "RadioSeries",
+    "@id": "https://wabcradio.com/radio-series/the-other-side-of-midnight",
+    "name": "The Other Side of Midnight with Frank Morano",
+    "url": "https://wabcradio.com/"
+  },
+  "mainEntityOfPage": "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/",
+  "audio": {
+    "@type": "AudioObject",
+    "url": "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/",
+    "contentUrl": "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/",
+    "encodingFormat": "audio/mpeg",
+    "name": "Listen to the Episode",
+    "description": "Audio recording of Rito Rhymes, Rapper and Crypto Nerd episode."
+  }
+}

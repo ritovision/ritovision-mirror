@@ -1,0 +1,31 @@
+.footer {
+  --footer-bg: var(--primary-blue);
+  background-color: var(--footer-bg);
+  padding: clamp(32px, 6vw, 56px) clamp(20px, 8vw, 40px) clamp(48px, 10vw, 64px);
+  text-align: center;
+  position: relative;
+  z-index: 1500;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(16px, 4vw, 32px);
+}
+
+.logoContainer {
+  display: block;
+  width: 100%;
+}
+
+.logo {
+  width: min(80%, 420px);
+  height: auto;
+  display: inline-block;
+  border-radius: var(--border-radius-standard);
+}
+
+.mobileFooterButtonSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

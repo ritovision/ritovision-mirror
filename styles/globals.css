@@ -1,0 +1,257 @@
+@import 'modern-normalize';
+
+/* ✅ CSS Reset - Strip Browser Defaults */
+* {
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+textarea,
+select {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+
+:root {
+  --primary-blue: #012035;
+  --secondary-blue: #04426C;
+  --secondary-blue-rgb: 4, 66, 108;
+  --primary-red: #FC1819;
+  --background-white: #e9f9f9;
+  --secondary-red: #CE161B;
+  --utility-green: #11C045;
+  --background: var(--primary-blue);
+  --foreground: #ffffff;
+  --black: #000;
+
+  /* AI Provider Colors */
+  --color-chatgpt: #74AA9C;
+  --color-claude: #DA7756;
+  --color-perplexity: #21808D;
+
+  --default-border: 2px solid var(--secondary-blue);
+
+  /* Border & Radius */
+  --border-radius-standard: 10px;
+  --border-radius-small: 5px;
+  --border-radius-button: 8px;
+  --border-radius-medium: 12px;
+  --border-radius-large: 17px;
+  --border-radius-pill: 30px;
+
+  /* Container Widths */
+  --container-width-percent: 92%;
+  --container-width-narrow: 90%;
+  --container-max-width-large: 1000px;
+  --container-max-width-medium: 800px;
+  --container-max-width-small: 600px;
+  --container-max-width-cards: 500px;
+
+  /* Spacing */
+  --spacing-container-padding: 1.5rem;
+  --spacing-section-gap: 2rem;
+  --spacing-gap-xl: 60px;
+  --spacing-gap-medium: 1.5rem;
+  --spacing-element-gap: 1rem;
+  --spacing-margin-bottom: 1rem;
+  --spacing-base-px: 20px;
+  --spacing-section-margin-px: 30px;
+
+  /* Padding */
+  --padding-button: 12px;
+  --padding-medium: 15px;
+  --padding-large: 40px;
+
+  /* Gaps */
+  --gap-small: 8px;
+  --gap-standard: 12px;
+  --gap-large: 20px;
+
+  /* Heights */
+  --height-button: 44px;
+  --height-nav-bar: 60px;
+
+  /* Z-Index Layers */
+  --z-index-nav: 1000;
+  --z-index-modal: 2000;
+
+  /* Font Sizes */
+  --font-size-heading-primary: 3rem;
+  --font-size-heading-secondary: 2.5rem;
+  --font-size-heading-tertiary: 2rem;
+  --font-size-subheading: 1.5rem;
+
+  /* Line Heights */
+  --line-height-body: 1.5;
+  --line-height-legal: 1.7;
+
+  /* Shadows */
+  --shadow-dark: 0 8px 30px rgba(0, 0, 0, 0.7);
+  --shadow-overlay-dark: rgba(0, 0, 0, 0.5);
+  --shadow-overlay-light: rgba(0, 0, 0, 0.25);
+
+  /* Transitions */
+  --transition-fade: opacity 0.6s ease-out;
+  --transition-transform: transform 0.6s ease-out;
+  --transition-combined: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  /* Font CSS variables are now provided by next/font/local in app/layout.tsx */
+}
+
+/* ✅ Apply Global Styles */
+body {
+  background-color: var(--primary-blue);
+  color: var(--foreground);
+  font-family: var(--font-agency), Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ Headings (H1-H5) Use AgencyB */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-agency), sans-serif;
+}
+
+h1 {
+  
+  font-size: 2.5rem;
+}
+
+h2 {
+  
+  font-size: 2rem;
+}
+
+h3 {
+  
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+
+h4 {
+  
+  font-size: 1.5rem;
+}
+
+h5 {
+  
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-family: var(--font-young), sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* ✅ Paragraphs (P) Use Michroma */
+p {
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.10em;
+}
+
+/* ✅ WebKit Scrollbar (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(90, 86, 86);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #01182a;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* For Firefox (if needed) */
+:-moz-autofill {
+  background-color: transparent !important;
+  color: var(--foreground) !important;
+}
+
+.defaulttopspace {
+  margin-top: 8%;
+}
+
+@media (max-width: 730px) {
+  .defaulttopspace {
+    margin-top: 20%;
+  }
+}
+
+.defaultbottomspace {
+  margin-bottom: 8%;
+}
+
+@media (max-width: 730px) {
+  .defaultbottomspace {
+    margin-bottom: 20%;
+  }
+
+  .margincenter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.darkglow {
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.blueglow {
+  box-shadow: 6px 6px 25px rgba(3, 62, 101, 0.25);
+}
+
+.redglow {
+  box-shadow: 0 10px 20px rgba(252, 24, 25, 0.3);
+}
+
+.headingLarge {
+  font-size: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 730px) {
+  .headingLarge {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+.redText {
+  color: var(--primary-red);
+}

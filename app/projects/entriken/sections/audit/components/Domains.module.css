@@ -1,0 +1,105 @@
+/* \test\app\projects\entriken\sections\audit\components\Domains.module.css */
+
+.wrapper {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Base style for each sub-container */
+.domainContainer {
+  border-left: 2px solid var(--secondary-blue);
+  border-right: 2px solid var(--secondary-blue);
+  border-top: 2px solid var(--secondary-blue);
+  border-bottom: none;
+  padding: var(--spacing-container-padding);
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+/* First container: keep its top border and round top corners */
+.domainContainer:first-child {
+  border-radius: var(--border-radius-standard) var(--border-radius-standard) 0 0;
+}
+
+/* Last container: bottom border, bottom corners rounded */
+.domainContainer.last,
+.domainContainer:last-child {
+  border-bottom: 2px solid var(--secondary-blue);
+  border-radius: 0 0 var(--border-radius-standard) var(--border-radius-standard);
+}
+
+/* Scroll-triggered dark background */
+.dark {
+  background: #000;
+}
+
+/* ENTER ENTRIKEN heading */
+.firstTitle {
+  font-size: var(--font-size-heading-primary);
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+  transition: color 0.3s ease; /* animate color change */
+}
+
+/* when dark background is active, make that heading red */
+.domainContainer.dark .firstTitle {
+  color: var(--primary-red);
+}
+
+/* other headings & text */
+.title {
+  font-size: var(--font-size-heading-tertiary);
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.subheading {
+  font-size: var(--font-size-subheading);
+  color: var(--primary-red);
+  text-align: center;
+  margin-top: var(--spacing-container-padding);
+  margin-bottom: 0.5rem;
+}
+
+.paragraph {
+  color: var(--foreground);
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+/* Styles for the container of each point with a title and description */
+.techPoint {
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+/* Styles for the point title */
+.techTitle {
+  display: block; /* Ensure the description appears on a new line */
+  font-size: var(--font-size-subheading); 
+}
+
+/* Styles for the point description */
+.techDescription {
+  line-height: var(--line-height-body);
+  margin-bottom: 0; 
+  color: var(--foreground); 
+}
+
+/* Desktop styles (indentation for description) */
+@media (min-width: 731px) {
+  .techDescription {
+    margin-left: 20px; 
+  }
+}
+
+/* Mobile styles (spacing between title and description) */
+@media (max-width: 730px) {
+   .techTitle {
+     margin-bottom: 0.5rem; 
+   }
+  /* No indentation needed for description - default behavior */
+}

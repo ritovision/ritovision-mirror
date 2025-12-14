@@ -1,0 +1,77 @@
+/* c:/Users/Mattj/ritovision website/test/app/projects/uas/sections/intro/components/Cycles.module.css */
+.container {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: var(--font-size-heading-primary);
+  color: var(--primary-red);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.cycleBox {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  padding: 1rem;
+  font-family: var(--font-agency);
+  font-size: 1.25rem;
+  color: var(--foreground);
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.label {
+  color: var(--primary-red);
+  margin-right: 0.5rem;
+}
+
+.text {
+  flex: 1;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.hidden {
+  /* stays hidden until .visible is added */
+}
+
+/* Static button section—no animation */
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.introText {
+  font-family: var(--font-agency);
+  font-size: 1.25rem;
+  color: var(--foreground);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.button {
+  /* override or extra spacing if desired */
+}
+
+/* Responsive adjustments */
+@media (min-width: 731px) {
+  .title {
+    font-size: var(--font-size-heading-primary);
+  }
+  .cycleBox {
+    font-size: var(--font-size-heading-tertiary);
+  }
+}

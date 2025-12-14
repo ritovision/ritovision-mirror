@@ -1,0 +1,200 @@
+.heroSection {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* The main container is square, clips its contents with a 10px border radius,
+     and transitions the border color with a fade-in effect triggered at 2.5s */
+  .heroContainer {
+    position: relative;
+    width: 100%;
+    max-width: var(--container-max-width-cards);
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-standard);
+    overflow: hidden;
+    animation: borderDraw 1s ease forwards;
+    animation-delay: 2.5s;
+    animation-play-state: paused;
+  }
+  
+  /* Main logomark image with a 10px border radius */
+  .logomarkImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: var(--border-radius-standard);
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 1s;
+    animation-play-state: paused;
+  }
+  
+  /* Vertical line expanding from the center */
+  .verticalLine {
+    position: absolute;
+    background-color: var(--secondary-blue);
+    width: 2px;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: verticalLineExpand 1s ease forwards;
+    animation-delay: 1.5s;
+    animation-play-state: paused;
+  }
+  
+  /* Horizontal line expanding from the center */
+  .horizontalLine {
+    position: absolute;
+    background-color: var(--secondary-blue);
+    height: 2px;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    animation: horizontalLineExpand 1s ease forwards;
+    animation-delay: 1.5s;
+    animation-play-state: paused;
+  }
+  
+  /* Quadrant containers for the icons with staggered animations */
+  .quadrant {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .topLeft {
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    animation: fadeAndRise 0.8s ease forwards;
+    animation-delay: 2.8s;
+    animation-play-state: paused;
+  }
+  
+  .topRight {
+    top: 25%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    animation: fadeAndRise 0.8s ease forwards;
+    animation-delay: 3.1s;
+    animation-play-state: paused;
+  }
+  
+  .bottomLeft {
+    top: 75%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    animation: fadeAndRise 0.8s ease forwards;
+    animation-delay: 3.4s;
+    animation-play-state: paused;
+  }
+  
+  .bottomRight {
+    top: 75%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    animation: fadeAndRise 0.8s ease forwards;
+    animation-delay: 3.7s;
+    animation-play-state: paused;
+  }
+  
+  /* Icon styling: default fixed height of 75px, auto width to retain aspect ratio */
+  .icon {
+    height: 75px;
+    width: auto;
+  }
+  
+  /* Styling for the ipsum text below the image container */
+  .heroText {
+    width: var(--container-width-percent);
+    max-width: var(--container-max-width-cards);
+    margin: 2rem auto 0;
+    text-align: left;
+    font-size: 1rem;
+    line-height: var(--line-height-body);
+  }
+  
+  /* KEYFRAMES */
+  
+  /* Fade the logomark image to 0.3 opacity */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  
+  /* Vertical line animation expanding from the center */
+  @keyframes verticalLineExpand {
+    0% {
+      height: 0;
+      top: 50%;
+    }
+    100% {
+      height: 100%;
+      top: 0;
+    }
+  }
+  
+  /* Horizontal line animation expanding from the center */
+  @keyframes horizontalLineExpand {
+    0% {
+      width: 0;
+      left: 50%;
+    }
+    100% {
+      width: 100%;
+      left: 0;
+    }
+  }
+  
+  /* Fade in border drawing from transparent to the secondary blue color */
+  @keyframes borderDraw {
+    0% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: var(--secondary-blue);
+    }
+  }
+  
+  /* Fade in and slight rise animation for quadrant icons */
+  @keyframes fadeAndRise {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments for smaller viewports */
+  @media screen and (max-width: 370px) {
+    .icon {
+      height: 50px;
+      width: auto;
+    }
+  }
+  
+  /* When the container receives the .animate class, set all animations to running */
+  .animate .heroContainer,
+  .animate .logomarkImage,
+  .animate .verticalLine,
+  .animate .horizontalLine,
+  .animate .topLeft,
+  .animate .topRight,
+  .animate .bottomLeft,
+  .animate .bottomRight {
+    animation-play-state: running;
+  }
+  

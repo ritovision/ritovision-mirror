@@ -1,0 +1,44 @@
+/* File: app/projects/cod/sections/hero/HeroText.module.css */
+.heroTextContainer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    margin-top: -2rem; /* overlap previous content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .heroTextContainer.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .title {
+    color: var(--primary-red);
+    text-align: center;
+    margin: 0;
+    width: 90%;
+  }
+  
+  .description {
+    max-width: var(--container-max-width-large);
+    width: 90%;
+    text-align: center;
+    margin-top: var(--spacing-element-gap);
+  }
+  
+
+
+  @media (max-width: 400px) {
+    .heroTextContainer {
+      margin-top: -5rem; /* or whatever smaller negative value you want */
+    }
+  }
+  @media (min-width: 500px) and (max-width: 730px) {
+  .heroTextContainer {
+    margin-top: -1.5rem; /* adjust this value as needed */
+  }
+}

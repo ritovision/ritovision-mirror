@@ -1,0 +1,66 @@
+/* \test\app\projects\entriken\sections\audit\components\Press.module.css */
+.wrapper {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing-container-padding);
+  /* Assuming Press component keeps its original blue border */
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background: transparent;
+  color: white;
+}
+
+.title {
+  font-size: var(--font-size-heading-primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Styles for the section subheadings like "Overview", "Strengths and Impact" */
+.subheading {
+  font-size: var(--font-size-subheading);
+  text-align: center;
+  margin: var(--spacing-container-padding) 0 var(--spacing-margin-bottom);
+  color: var(--primary-red); /* Keeping red for section subheadings */
+}
+
+/* Styles for regular paragraphs */
+.text {
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+/* Styles for the container of each technical point/insight point */
+.techPoint {
+  margin-bottom: var(--spacing-margin-bottom); /* Spacing between points */
+}
+
+/* Styles for the technical point/insight point title */
+.techTitle {
+
+  display: block; /* Ensure the description appears on a new line */
+font-size: var(--font-size-subheading);
+}
+
+/* Styles for the technical point/insight point description */
+.techDescription {
+  line-height: var(--line-height-body);
+  margin-bottom: 0; /* Remove default paragraph margin-bottom */
+}
+
+/* Desktop styles (indentation for description) */
+@media (min-width: 731px) {
+  .techDescription {
+    margin-left: 20px; /* Add indentation on desktop */
+  }
+}
+
+/* Mobile styles (spacing between title and description) */
+@media (max-width: 730px) {
+   .techTitle {
+     margin-bottom: 0.5rem; /* Add space below title on mobile */
+   }
+  /* No indentation needed for description - default behavior */
+}

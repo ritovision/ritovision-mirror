@@ -1,0 +1,78 @@
+/* test/app/projects/uas/sections/intro/components/Activities.module.css */
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  /* preserve defaulttopspace */
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  background: transparent;
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  padding: var(--spacing-container-padding);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.title {
+  font-size: var(--font-size-heading-primary);
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.list {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.list li {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  margin-bottom: var(--spacing-margin-bottom);
+  font-family: var(--font-body);
+}
+
+/* animate each of the seven items in sequence */
+.wrapper.visible .list li:nth-child(1) {
+  transition-delay: 0.6s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.wrapper.visible .list li:nth-child(2) {
+  transition-delay: 0.8s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.wrapper.visible .list li:nth-child(3) {
+  transition-delay: 1s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.wrapper.visible .list li:nth-child(4) {
+  transition-delay: 1.2s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.wrapper.visible .list li:nth-child(5) {
+  transition-delay: 1.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.wrapper.visible .list li:nth-child(6) {
+  transition-delay: 1.6s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.wrapper.visible .list li:nth-child(7) {
+  transition-delay: 1.8s;
+  opacity: 1;
+  transform: translateY(0);
+}

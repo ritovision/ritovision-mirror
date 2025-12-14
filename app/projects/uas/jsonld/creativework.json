@@ -1,0 +1,60 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "The UAS Chronicles: An ERC Journey with a Legend",
+  "url": "https://ritovision.com/work/uas-chronicles",
+  "description": "A strategic case study and narrative documenting the six-month journey of Rito co-authoring Universal Asset Signing (ERC), a proposed Ethereum standard, alongside William Entriken, lead author of ERC-721. The story details branding, governance strategy, stakeholder alignment, and ecosystem planning.",
+  "creator": {
+    "@type": "Person",
+    "name": "Rito",
+    "url": "https://ritovision.com/about",
+    "jobTitle": ["Founder", "Product Strategist", "Web3 Governance Advisor"],
+    "sameAs": [
+      "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+      "https://www.instagram.com/ritorhymes",
+      "https://ritovision.com"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com"
+  },
+  "datePublished": "2024-06-01",
+  "inLanguage": "en",
+  "keywords": [
+    "Universal Asset Signing",
+    "Ethereum",
+    "ERC Standard",
+    "Web3 Governance",
+    "Smart Contracts",
+    "NFT Infrastructure",
+    "William Entriken",
+    "Blockchain Strategy"
+  ],
+  "image": "https://ritovision.com/assets/images/case-studies/uas-cover.jpg",
+  "mentions": {
+    "@type": "Person",
+    "name": "William Entriken",
+    "sameAs": "https://en.wikipedia.org/wiki/ERC-721"
+  },
+  "hasPart": {
+    "@type": "TechArticle",
+    "name": "ERC: Universal Asset Signing",
+    "url": "https://eips.ethereum.org/proposals/erc-universal-asset-signing",
+    "description": "A proposed Ethereum application-layer standard co-authored by Rito and William Entriken to enable cross-market NFT liquidity using off-chain signature-based permissions.",
+    "inLanguage": "en",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Rito",
+        "url": "https://ritovision.com/about"
+      },
+      {
+        "@type": "Person",
+        "name": "William Entriken",
+        "sameAs": "https://en.wikipedia.org/wiki/William_Entriken"
+      }
+    ]
+  }
+}

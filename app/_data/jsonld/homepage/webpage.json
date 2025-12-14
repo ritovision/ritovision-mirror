@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "RitoVision – Strategic Synthesis for Scalable Product Leadership",
+  "url": "https://ritovision.com/",
+  "description": "RitoVision transforms visionary thinking into scalable digital products. Led by Strategic Synthesis Specialist Rito, the site showcases UX strategy, product development, full-stack engineering, brand systems, and high-impact creative direction.",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://ritovision.com/images/brand/ritovision-wordmark-tm.png"
+  }
+}

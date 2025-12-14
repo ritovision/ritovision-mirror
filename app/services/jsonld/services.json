@@ -1,0 +1,167 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Services",
+  "url": "https://ritovision.com/services",
+  "description": "Explore RitoVision’s strategic services—from full-stack product development and UX design to brand strategy and creative direction—led by Rito, a Strategic Synthesis Specialist with expertise across web, mobile, blockchain, and systems integration.",
+  "about": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "info@ritovision.com",
+      "url": "https://ritovision.com/contact",
+      "availableLanguage": ["English"]
+    },
+    "knowsAbout": [
+      "UX Design",
+      "Creative Strategy",
+      "Web Development",
+      "Mobile Applications",
+      "Full-Stack Engineering",
+      "AI Tools",
+      "Blockchain",
+      "Brand Identity",
+      "Product Management"
+    ]
+  },
+  "mainEntity": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Product Strategy & Management",
+        "description": "Shape product vision, define roadmaps, align stakeholders, and drive execution from first sketch to market traction—including domain-specific strategy for emerging technologies such as blockchain when relevant.",
+        "provider": {
+          "@type": "Organization",
+          "name": "RitoVision",
+          "url": "https://ritovision.com"
+        },
+        "audience": [
+          { "@type": "Audience", "audienceType": "Founders" },
+          { "@type": "Audience", "audienceType": "Startup Teams" },
+          { "@type": "Audience", "audienceType": "Enterprise Stakeholders" },
+          { "@type": "Audience", "audienceType": "Digital Agencies" }
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "UX Strategy, Architecture & Design",
+        "description": "Premium user experience rooted in brand truth, behavioral insight, and elegant systems—spanning strategy, prototyping, and validation.",
+        "provider": {
+          "@type": "Organization",
+          "name": "RitoVision",
+          "url": "https://ritovision.com"
+        },
+        "audience": [
+          { "@type": "Audience", "audienceType": "Startups" },
+          { "@type": "Audience", "audienceType": "Enterprises" },
+          { "@type": "Audience", "audienceType": "Agencies" },
+          { "@type": "Audience", "audienceType": "Digital Agencies" }
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Full Stack Engineering",
+        "description": "From scalable infrastructure to pixel-perfect UI, RitoVision engineers robust digital foundations across the stack.",
+        "provider": {
+          "@type": "Organization",
+          "name": "RitoVision",
+          "url": "https://ritovision.com"
+        },
+        "audience": [
+          { "@type": "Audience", "audienceType": "Technical Founders" },
+          { "@type": "Audience", "audienceType": "Product Teams" },
+          { "@type": "Audience", "audienceType": "Digital Agencies" }
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Mobile App Development",
+        "description": "Hybrid and native mobile development using modern frameworks like React Native and Kotlin—built to perform across platforms.",
+        "provider": {
+          "@type": "Organization",
+          "name": "RitoVision",
+          "url": "https://ritovision.com"
+        },
+        "audience": [
+          { "@type": "Audience", "audienceType": "Startups" },
+          { "@type": "Audience", "audienceType": "Product Leads" },
+          { "@type": "Audience", "audienceType": "Mobile-first Brands" },
+          { "@type": "Audience", "audienceType": "Digital Agencies" }
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Brand Strategy",
+        "description": "Clarify positioning, messaging, and brand purpose to drive resonance and consistency across all experiences.",
+        "provider": {
+          "@type": "Organization",
+          "name": "RitoVision",
+          "url": "https://ritovision.com"
+        },
+        "audience": [
+          { "@type": "Audience", "audienceType": "Founders" },
+          { "@type": "Audience", "audienceType": "Creative Directors" },
+          { "@type": "Audience", "audienceType": "Marketing Teams" },
+          { "@type": "Audience", "audienceType": "Digital Agencies" }
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Creative Direction",
+        "description": "Develop and oversee campaign themes, visual storytelling, and content execution across media with cohesive impact.",
+        "provider": {
+          "@type": "Organization",
+          "name": "RitoVision",
+          "url": "https://ritovision.com"
+        },
+        "audience": [
+          { "@type": "Audience", "audienceType": "Agencies" },
+          { "@type": "Audience", "audienceType": "Brands" },
+          { "@type": "Audience", "audienceType": "Production Studios" },
+          { "@type": "Audience", "audienceType": "Digital Agencies" }
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Visionary Integration Accelerator",
+      "description": "An embedded velocity-building partnership where RitoVision unifies product, UX, branding, and delivery into one executable strategy.",
+      "url": "https://ritovision.com/services#visionary-integration-accelerator",
+      "provider": {
+        "@type": "Organization",
+        "name": "RitoVision",
+        "url": "https://ritovision.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "url": "https://ritovision.com/services#visionary-integration-accelerator"
+      },
+      "audience": [
+        { "@type": "Audience", "audienceType": "Enterprise Teams" },
+        { "@type": "Audience", "audienceType": "Founders" },
+        { "@type": "Audience", "audienceType": "High-Growth Startups" },
+        { "@type": "Audience", "audienceType": "Digital Agencies" }
+      ]
+    }
+  ]
+}

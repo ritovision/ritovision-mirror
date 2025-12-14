@@ -1,0 +1,263 @@
+/* ContentDisplaySlider.module.css */
+
+/* Wrapper to help center the container if needed */
+.containerWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 5%; /* Add some horizontal padding if container is < 100% */
+}
+
+/* Main Component Container */
+.container {
+  display: flex;
+  flex-direction: column; /* Mobile first: Stack columns */
+  align-items: center; /* Center items horizontally on mobile */
+  width: 100%; /* Full width within the wrapper padding */
+  max-width: var(--container-max-width-cards); /* Mobile max-width */
+  padding: 5% 5% 7% 5%; /* Padding like original ContentDisplay */
+  border: var(--default-border); /* Default border */
+  border-radius: var(--border-radius-standard); /* Default border radius */
+  background-color: transparent; /* Default background */
+  margin: 0 auto; /* Center the container itself */
+  gap: var(--spacing-gap-medium); /* Space between slider/caption and body/button on mobile */
+}
+
+/* Wrapper for Slider and Caption */
+.sliderCaptionWrapper {
+  width: 100%; /* Take full width of parent */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center slider and caption */
+}
+
+/* Wrapper specifically for the Swiper component */
+.sliderWrapper {
+  width: 100%;
+  max-width: 350px; /* Max width for video on mobile */
+  margin: 0 auto var(--spacing-element-gap) auto; /* Center horizontally, add bottom margin before caption */
+  position: relative; /* Needed for absolute positioning of iframe/pagination */
+}
+
+.swiperContainer {
+  width: 100%;
+  /* Swiper's autoHeight should handle height */
+}
+
+.swiperSlide {
+  width: 100%;
+  /* background-color: #eee; */ /* Optional: background for loading state */
+}
+
+/* Aspect Ratio Container for Video */
+.videoContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius-small); /* Slight rounding if desired */
+}
+
+.videoIframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Ensure no iframe border */
+}
+
+/* Custom Pagination Dots Area */
+.customPagination {
+  position: relative; /* Keep it in flow */
+  bottom: auto; /* Override potential Swiper defaults */
+  left: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Space between slider and dots */
+  gap: 10px; /* Space between dots */
+  height: 16px; /* Explicit height for alignment */
+}
+
+/* Styling individual pagination bullets (dots) */
+/* We target the default Swiper class generated within our custom element */
+.customPagination :global(.swiper-pagination-bullet) {
+  width: 12px !important; /* Use !important cautiously, but Swiper styles can be stubborn */
+  height: 12px !important;
+  border-radius: 50%;
+  background-color: transparent;
+  border: var(--default-border);
+  opacity: 1;
+  cursor: pointer;
+  margin: 0 !important; /* Remove default Swiper margins */
+  transition: background-color 0.3s ease;
+}
+
+/* Styling the active pagination bullet */
+.customPagination :global(.swiper-pagination-bullet-active) {
+  background-color: var(--secondary-blue);
+}
+
+/* Caption Styling */
+.caption {
+  text-align: center;
+  margin-top: 0.5rem; /* Reduced top margin as space is below sliderWrapper */
+  margin-bottom: 0.5rem; /* Space below caption */
+  font-size: 0.9rem; /* Slightly smaller than body */
+  color: #ccc; /* Lighter color for caption */
+  width: 100%;
+  font-family: var(--font-body);
+}
+
+/* Wrapper for Body Text and Button */
+.bodyWrapper {
+  width: 100%; /* Full width on mobile */
+  display: flex; /* Enable flex for centering content later */
+  flex-direction: column; /* Stack text and button */
+}
+
+.bodyInnerWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Allow vertical distribution */
+  width: 100%;
+}
+
+.textWrapper {
+  /* On mobile, text wrapper takes available space */
+}
+
+.bodyText {
+  text-align: left; /* Align text left */
+  width: 100%;
+  font-size: 1rem; /* Adjust as needed */
+  line-height: var(--line-height-body);
+  font-family: var(--font-body);
+  color: var(--foreground); /* Use global foreground color */
+  margin-bottom: var(--spacing-gap-medium); /* Space between text and button on mobile */
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center; /* Center button on mobile */
+  width: 100%;
+  margin-top: auto; /* Push button to bottom in desktop flex layout */
+  margin-bottom: 0;
+}
+
+/* --- Desktop Styles (Matching Screenshot Layout) --- */
+/* Using 731px to avoid overlap with mobile max-width 730px */
+@media (min-width: 731px) {
+  .container {
+    flex-direction: row; /* Switch to side-by-side columns */
+    align-items: stretch; /* Make columns equal height */
+    max-width: var(--container-max-width-large); /* Desktop max-width */
+    width: 100%; /* Or 100% depending on desired screen fill */
+    padding: 40px 60px; /* Desktop padding */
+    gap: 40px; /* Space between columns */
+  }
+
+  .sliderCaptionWrapper {
+    flex: 0 0 55%; /* Adjust ratio if needed, slightly more space for video */
+    max-width: 55%;
+    padding-right: 0; /* Remove padding, gap handles spacing */
+    align-items: flex-start; /* Align content to start */
+    /* Center the sliderWrapper within this column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically if needed */
+    align-items: center; /* Center horizontally */
+  }
+
+  .sliderWrapper {
+    max-width: 100%; /* Allow slider to fill its column width */
+    margin-bottom: var(--spacing-element-gap); /* Keep space before caption */
+  }
+
+  .caption {
+     margin-top: 0.5rem; /* Reset margin if needed */
+  }
+
+  .bodyWrapper {
+    flex: 0 0 45%; /* Remaining space */
+    max-width: 45%;
+    padding-left: 0; /* Remove padding, gap handles spacing */
+    /* Center content vertically */
+    display: flex; /* Use flex on the wrapper itself */
+    align-items: center; /* Center inner wrapper vertically */
+    justify-content: center; /* Center inner wrapper horizontally (optional) */
+  }
+  
+  .bodyInnerWrapper {
+     /* Reset or adjust alignment if needed */
+  }
+
+  .textWrapper {
+    /* Adjust text wrapper alignment if needed */
+  }
+
+  .bodyText {
+    text-align: left; /* Ensure text is left-aligned */
+    margin-bottom: var(--spacing-section-gap); /* More space before button on desktop */
+  }
+
+  .buttonWrapper {
+    margin-top: auto; /* Push to bottom */
+  }
+}
+
+
+/* Add touch-action to Swiper container */
+.swiperContainer {
+  width: 100%;
+  touch-action: pan-y; /* Enable vertical touch scrolling (horizontal for swiper) */
+}
+
+/* New wrapper for iframe to handle pointer events */
+.videoWrapper {
+  pointer-events: none; /* Allow events to pass through to Swiper */
+  width: 100%;
+  height: 100%;
+}
+
+/* Re-enable pointer events for the iframe itself */
+.videoWrapper iframe {
+  pointer-events: auto; /* Allow interactions with the iframe */
+}
+
+/* Thumbnail styling for ContentDisplaySlider */
+.thumbnailContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: var(--border-radius-small); /* Match the .videoContainer rounding */
+}
+
+.videoThumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-small);
+}
+
+.playOverlay {
+  position: absolute;
+  inset: 0;
+  background: var(--shadow-overlay-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playIcon {
+  width: 50px;
+  height: 50px;
+  fill: white;
+}

@@ -1,0 +1,28 @@
+/* Ensure the hero container is relative */
+.heroContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+  
+/* Container for the hero animation area */
+.desktopContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align near the top */
+    padding-top: 50px; /* Adjust this value as needed */
+}
+  
+/* New gradient overlay at the bottom so that the particles fade out */
+/* The colors are chosen to match your background (0x012035 → rgb(1,32,53)) */
+.bottomGradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust height to control the fade-out length */
+    pointer-events: none;
+    z-index: 2;
+}

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Strategic Brand Repositioning for William Entriken",
+  "url": "https://ritovision.com/projects/entriken",
+  "description": "A multidisciplinary branding initiative led and executed by Rito to reposition blockchain pioneer William Entriken as a Civic Hacker Businessman — building WilliamEntriken.net, a platform structured to support mainstream press, AI discoverability, and long-term thought leadership.",
+  "creator": {
+    "@type": "Person",
+    "name": "Rito",
+    "url": "https://ritovision.com/about",
+    "jobTitle": "Product Strategist & Creative Technologist",
+    "sameAs": [
+      "https://www.instagram.com/ritorhymes",
+      "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+      "https://www.ritovision.com"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com"
+  },
+  "datePublished": "2024-01-10",
+  "keywords": [
+    "William Entriken",
+    "Brand Strategy",
+    "Personal Brand Platform",
+    "Civic Hacker",
+    "Blockchain",
+    "NFT Pioneer",
+    "ERC-721",
+    "Strategic Positioning",
+    "UX Architecture",
+    "RitoVision"
+  ],
+  "inLanguage": "en",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "William Entriken",
+    "url": "https://www.williamentriken.net",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/William_Entriken",
+      "https://www.phor.net",
+      "https://github.com/fulldecent",
+      "https://twitter.com/fulldecent"
+    ],
+    "description": "William Entriken is a software pioneer and lead author of ERC-721, the standard that defined NFTs on Ethereum. His public-facing brand platform was restructured to frame him as a Civic Hacker Businessman, reflecting multidisciplinary contributions across finance, blockchain, and cybersecurity."
+  }
+}

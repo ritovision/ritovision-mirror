@@ -1,0 +1,140 @@
+.heroContainer {
+    position: relative;
+    /* Centering styles */
+    margin: var(--hero-margin, 0 auto);
+    display: block;
+  
+    /* Default styles for larger screens */
+    width: var(--container-max-width-small);
+    max-width: 100%;
+  
+    overflow: hidden;
+  }
+  
+  .svgContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none; /* Allow clicks to pass through the SVG */
+  }
+  
+  /* Initial state for the border path */
+  .borderPath {
+      opacity: 0;
+  }
+  
+  .mapImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.8);
+    z-index: 1;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  /* Container for the Adoption Text and X SVG */
+  .xAndAdoptionContainer {
+      position: absolute;
+      /* Position using percentages and transform for responsiveness */
+      left: 75%; /* Center the container horizontally around the 75% mark */
+      transform: translateX(-50%); /* Pull the container left by half its width for centering */
+      top: 10%; /* Position the container's top edge 10% from the hero container's top */
+               /* This value needs tuning to position the *group* correctly vertically */
+  
+      z-index: 3; /* Ensure it's above the image and main SVG border */
+      display: flex; /* Use flexbox to arrange X and text */
+      flex-direction: column; /* Stack text and X vertically */
+      align-items: center; /* Center items horizontally within this container */
+      opacity: 0; /* Start invisible for fade-in animation */
+  }
+  
+  .xSvg {
+       /* Dimensions are set to 100% inline in TSX */
+       /* The actual size will be determined by the xAndAdoptionContainer's size */
+  }
+  
+  
+  /* Initial state for the X lines */
+  .xLine {
+    opacity: 0;
+  }
+  
+  .adoptionText {
+    /* Positioned relative to xAndAdoptionContainer using flexbox */
+    color: white;
+    font-family: 'agencyb', sans-serif;
+    font-size: 2em;
+    margin-bottom: -20%; /* Reduced space between text (above) and X (below) */
+    opacity: 0; /* Initial state for text fade-in */
+    white-space: nowrap;
+  }
+  
+  /* SVG Border Animation */
+  @keyframes drawBorder {
+    to {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+  
+  /* Image Fade In and Scale Up Animation */
+  @keyframes fadeInScaleUp {
+    to {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+  }
+  
+  /* SVG Line Drawing Animation (for X) */
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
+      opacity: 1; /* Become visible while drawing */
+    }
+  }
+  
+  /* Text Fade In Animation */
+  @keyframes fadeInText {
+    to {
+      opacity: 1; /* Become fully visible */
+    }
+  }
+  
+  /* New Animation for the X/Adoption Container */
+  @keyframes fadeInXContainer {
+      to {
+          opacity: 1;
+      }
+  }
+  
+  
+  /* --- Mobile Responsiveness --- */
+  @media (max-width: 768px) {
+    .heroContainer {
+      width: 90vw;
+      max-width: var(--container-max-width-small);
+      /* Height will adjust based on aspect-ratio */
+    }
+  
+     .xAndAdoptionContainer {
+         /* Position using percentages and transform for responsiveness */
+         left: 75%; /* Maintain horizontal centering around 75% */
+         transform: translateX(-50%); /* Maintain horizontal centering */
+         top: 8%; /* Adjust top position for smaller screens - TUNE THIS VALUE */
+                  /* A smaller percentage or pixel value might be needed */
+     }
+  
+     .adoptionText {
+       /* Font size adjustment already here */
+        font-size: 1.5em;
+         /* Adjust spacing between text and X on mobile if needed */
+         margin-bottom: -5%; /* Reduced space for mobile */
+     }
+  }

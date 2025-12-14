@@ -1,0 +1,36 @@
+.card {
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    overflow: hidden;
+    margin: 10% auto;
+    max-width: 400px;
+    background: transparent;
+  }
+
+  .header {
+    border-bottom: var(--default-border);
+    padding: 10px;
+    text-align: center;
+  }
+
+  .imageSection {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-bottom: var(--default-border);
+  }
+
+  .bottom {
+    padding: var(--spacing-base-px);
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: left;
+  }
+
+  @media (max-width: 730px) {
+    .card {
+      width: var(--container-width-narrow);
+    }
+  }
+  

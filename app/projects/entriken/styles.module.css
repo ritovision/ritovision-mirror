@@ -1,0 +1,19 @@
+.container {
+   
+}
+
+.callToAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  max-width: var(--container-max-width-medium);
+  margin: 2rem auto 4rem auto; 
+  text-align: center;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: var(--spacing-element-gap);
+}

@@ -1,0 +1,24 @@
+/* app\components\utilities\buttons\ButtonGroup.module.css */
+.buttonGroup {
+    display: flex;
+    gap: var(--gap-large);
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .buttonWrapper {
+    flex: 1;
+    max-width: none;
+  }
+  
+  .buttonWrapperSingle {
+    flex: 0 1 auto;
+    max-width: 300px;
+  }
+  
+  @media (max-width: 730px) {
+    .buttonGroup {
+      max-width: var(--mobile-max-width);
+    }
+  }
+  

@@ -1,0 +1,40 @@
+.ai-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--gap-small);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.ai-btn:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.ai-btn:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.ai-btn[aria-expanded="true"] {
+  opacity: 1;
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .ai-btn {
+    padding: 6px;
+  }
+
+  .ai-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}

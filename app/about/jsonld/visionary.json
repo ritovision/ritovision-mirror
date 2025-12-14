@@ -1,0 +1,50 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Rito’s Visionary Principles",
+  "url": "https://ritovision.com/about",
+  "description": "A unified framework of six interlocking principles that define the mindset and methodology behind Rito’s approach to strategic, creative, and technical problem-solving.",
+  "creator": {
+    "@type": "Person",
+    "name": "Rito",
+    "url": "https://ritovision.com/about"
+  },
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "The Big Picture’s a Map",
+      "description": "Solutions aren't one-size-fits-all. The best outcomes emerge from understanding the unique needs and behaviors of the people you're serving.",
+      "image": "https://ritovision.com/images/pages/about/bigpicture.png"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Context is Key",
+      "description": "A part's purpose transforms through its interactions. Understanding these relationships leads to flexible, adaptable solutions.",
+      "image": "https://ritovision.com/images/pages/about/Context-is-Key.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Feedback is a Compass",
+      "description": "Feedback guides projects and ensures alignment between vision and practical outcomes.",
+      "image": "https://ritovision.com/images/pages/about/feedback.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Perspective is Magic",
+      "description": "Strategic use of diverse perspectives transforms abstract ideas into tangible, high-impact solutions.",
+      "image": "https://ritovision.com/images/pages/about/Perspective-is-magic.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Precedents are Not Laws",
+      "description": "Challenging norms enables innovation. Doing something different isn’t contrarian — it’s strategic.",
+      "image": "https://ritovision.com/images/pages/about/Precedents-are-not-laws.webp"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Usability is Relative",
+      "description": "True usability is contextual. It adapts to users, needs, and environments.",
+      "image": "https://ritovision.com/images/pages/about/relative.png"
+    }
+  ]
+}

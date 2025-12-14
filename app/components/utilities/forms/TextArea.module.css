@@ -1,0 +1,168 @@
+/* app\components\utilities\forms\TextArea.module.css */
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-base-px);
+}
+
+.fieldLabel {
+  font-family: agencyb, sans-serif;
+  margin-bottom: 5px;
+  color: var(--foreground);
+  text-align: center;
+}
+
+/* Wrapper splits the component into top, middle, and bottom parts */
+.textareaWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Top Rounded Section */
+.textareaTop {
+  height: 10px;
+  border-top: 2px solid var(--secondary-blue);
+  border-left: 2px solid var(--secondary-blue);
+  border-right: 2px solid var(--secondary-blue);
+  border-top-left-radius: var(--border-radius-pill);
+  border-top-right-radius: var(--border-radius-pill);
+  background: transparent;
+}
+
+/* Middle Section (contains the scrollable textarea) */
+.textareaMiddle {
+  border-left: 2px solid var(--secondary-blue);
+  border-right: 2px solid var(--secondary-blue);
+  overflow: hidden;
+}
+
+/* Textarea with no top and bottom borders */
+.textArea {
+  width: 100%;
+  min-height: 160px;
+  padding: var(--spacing-base-px) 10px;
+  font-family: Michroma, sans-serif;
+  font-size: clamp(10px, 2vw, 14px);
+  color: var(--foreground);
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: vertical;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* Bottom Rounded Section */
+.textareaBottom {
+  height: 10px;
+  border-bottom: 2px solid var(--secondary-blue);
+  border-left: 2px solid var(--secondary-blue);
+  border-right: 2px solid var(--secondary-blue);
+  border-bottom-left-radius: var(--border-radius-pill);
+  border-bottom-right-radius: var(--border-radius-pill);
+  background: transparent;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 730px) {
+  .textArea {
+    min-height: 133px;
+    font-size: clamp(12px, 2vw, 16px);
+  }
+}
+
+/* State Classes for colors (applied on the wrapper) */
+.pre .textareaTop,
+.pre .textareaMiddle,
+.pre .textareaBottom {
+  border-color: var(--secondary-blue);
+}
+
+.valid .textareaTop,
+.valid .textareaMiddle,
+.valid .textareaBottom {
+  border-color: var(--utility-green);
+}
+
+.invalid .textareaTop {
+  border-color: var(--primary-red);
+  box-shadow:
+    inset 0 2px 0 0 var(--primary-red),
+    inset 2px 0 0 0 var(--primary-red),
+    inset -2px 0 0 0 var(--primary-red);
+}
+
+.invalid .textareaMiddle {
+  border-color: var(--primary-red);
+  box-shadow:
+    inset 2px 0 0 0 var(--primary-red),
+    inset -2px 0 0 0 var(--primary-red);
+}
+
+.invalid .textareaBottom {
+  border-color: var(--primary-red);
+  box-shadow:
+    inset 0 -2px 0 0 var(--primary-red),
+    inset 2px 0 0 0 var(--primary-red),
+    inset -2px 0 0 0 var(--primary-red);
+}
+
+.disabled .textareaTop,
+.disabled .textareaMiddle,
+.disabled .textareaBottom {
+  border-color: var(--secondary-blue);
+  background-color: var(--secondary-blue);
+}
+
+/* Focus styling when not valid/invalid */
+.textareaWrapper:not(.invalid):not(.valid):focus-within .textareaTop,
+.textareaWrapper:not(.invalid):not(.valid):focus-within .textareaMiddle,
+.textareaWrapper:not(.invalid):not(.valid):focus-within .textareaBottom {
+  border-color: var(--foreground);
+}
+
+/* Remove native focus outline */
+.textArea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Custom Scrollbar */
+.textArea::-webkit-scrollbar {
+  width: 10px;
+}
+.textArea::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: var(--border-radius-pill);
+  margin: 2px;
+}
+.textArea::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-blue);
+  border-radius: var(--border-radius-pill);
+  margin: 2px;
+}
+.textArea::-webkit-resizer {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--border-radius-pill);
+  background-color: var(--secondary-blue);
+}
+
+/* Hide text when disabled */
+.disabled .textArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: transparent;
+}
+
+.fieldContainer .errorText {
+  color: var(--primary-red);
+  font-size: clamp(10px, 2vw, 12px);
+  margin-top: 4px;
+  font-family: Michroma, sans-serif;
+  text-align: center;
+}

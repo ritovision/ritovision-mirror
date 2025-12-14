@@ -1,0 +1,100 @@
+.box {
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.box.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1s ease;
+  transition-delay: 0.5s;
+}
+
+.backgroundImage.active {
+  opacity: 0.15;
+}
+
+.fadeInText {
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transition: opacity 1s ease;
+  transition-delay: 0.8s;
+}
+
+.fadeInText.active {
+  opacity: 1;
+}
+
+.ctaRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  transition-delay: 1.5s;
+}
+
+.ctaRow.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ctaText {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.heroHeading {
+  text-align: center;
+  color: #ffffff;
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.red {
+  color: var(--primary-red);
+}
+
+.italic {
+  font-style: italic;
+}
+
+@media (min-width: 730px) {
+  .ctaRow {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ctaText {
+    margin-right: 1rem;
+  }
+
+  .ctaRow :global(button) {
+    width: auto;
+  }
+
+  .heroHeading {
+    margin-top: 0;
+  }
+}

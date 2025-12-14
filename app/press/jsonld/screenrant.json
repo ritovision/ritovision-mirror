@@ -1,0 +1,57 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://www.ritovision.com/press",
+  "name": "Press",
+  "description": "A page dedicated to showcasing Rito's acknowledgment by various media outlets and highlights of his achievements.",
+  "about": {
+    "@type": "Article",
+    "headline": "Call of Duty: Warzone Bug Causes Riot Shields To Disappear",
+    "keywords": "Call of Duty, Warzone, Rito Rhymes, bugs, Quality Assurance, video, rap",
+    "description": "Rito was featured by Screen Rant for his innovative approach to addressing a longstanding Call of Duty: Warzone bug involving disappearing Riot Shields. By combining spoken-word rap with gameplay footage, Rito Rhymes drew attention to this issue, assisting players in navigating the glitch until a fix is implemented.",
+    "url": "https://screenrant.com/cod-warzone-riot-shield-disappear-glitch-rap-video/",
+    "image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2021/11/Call-of-Duty-Warzone-Riot-Shield.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5",
+    "author": {
+      "@type": "Person",
+      "name": "Carol Zhang",
+      "url": "https://screenrant.com/author/carol-zhang/"
+    },
+    "datePublished": "2021-11-29T00:00:00-05:00",
+    "isBasedOn": {
+      "@type": "VideoObject",
+      "name": "Warzone Vanishing Rito Shield Bug (Rap)",
+      "description": "Rito Rhymes raps about a bug plaguing a certain weapon class in Call of Duty Warzone and demonstrates it with footage as quality assurance infotainment.",
+      "uploadDate": "2021-11-18T00:00:00Z",
+      "thumbnailUrl": "https://i.ytimg.com/vi/c7pHn3WCi4k/hqdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/c7pHn3WCi4k",
+      "contentUrl": "https://youtu.be/c7pHn3WCi4k",
+      "creator": {
+        "@type": "Person",
+        "name": "Rito",
+        "sameAs": [
+          "https://www.instagram.com/ritorhymes",
+          "https://www.threads.net/ritorhymes",
+          "https://www.x.com/rito_rhymes",
+          "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+          "https://www.github.com/ritorhymes",
+          "https://www.reddit.com/user/ritorhymes",
+          "https://www.ritography.com/about",
+          "https://www.ritorhymes.com/about",
+          "https://www.williamentriken.net/about",
+          "https://facebook.com/ritorhymes",
+"https://www.youtube.com/@ritorhymes",
+"https://open.spotify.com/artist/03iaQJsc1704Mbj25dHp4Q",
+"https://music.apple.com/us/artist/rito-rhymes/1633458672",
+          "https://www.carolinevreeland.com/about",         
+          "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22",
+          "https://stockhead.com.au/cryptocurrency/bitcoin-is-the-gangsta-rap-of-the-tech-world-putting-the-verse-in-metaverse-with-crypto-rapper-rito-rhymes"
+        ]
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Screen Rant"
+    }
+  }
+}

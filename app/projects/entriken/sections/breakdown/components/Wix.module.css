@@ -1,0 +1,43 @@
+/* \test\app\projects\entriken\sections\breakdown\components\Wix.module.css */
+.wrapper {
+    width: var(--container-width-percent);
+    max-width: var(--container-max-width-large);
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--spacing-container-padding);
+    /* Assuming Wix component uses a different border color than Phor */
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    background: transparent;
+    color: white;
+  }
+  
+  .title {
+    font-size: var(--font-size-heading-primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Styles for the section subheadings like "Overview", "Platform Choice" */
+  .subheading {
+    font-size: var(--font-size-subheading);
+    text-align: center;
+    margin: 1.5rem 0 var(--spacing-margin-bottom);
+    color: var(--primary-red); /* Keeping red for section subheadings */
+  }
+  
+  /* Removed unused classes subheadingWhite and tightSubheading */
+  
+  /* Styles for regular paragraphs */
+  .text {
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-margin-bottom);
+  }
+
+  /* Styles for bullet points */
+  .bullet {
+    margin-bottom: 0.75rem;
+    line-height: var(--line-height-body);
+    text-indent: -1em;
+    padding-left: 1em;
+  }

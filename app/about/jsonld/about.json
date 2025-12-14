@@ -1,0 +1,57 @@
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "url": "https://ritovision.com/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com",
+    "logo": "https://ritovision.com/images/brand/ritovision-wordmark-tm.png",
+    "description": "RitoVision is a hybrid creative studio and strategy consultancy founded by Rito, bridging brand, UX, and technology into visionary systems and scalable digital products.",
+    "keywords": "RitoVision, creative studio, UX strategy, product innovation, brand systems, software development, AI design, full-stack, consulting, creative technologist",
+    "knowsAbout": [
+      "UX Design",
+      "Business Strategy",
+      "Web Development",
+      "AI Tools",
+      "Full-Stack Engineering",
+      "Blockchain",
+      "Branding",
+      "Product Management"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "info@ritovision.com",
+      "url": "https://ritovision.com/contact",
+      "availableLanguage": ["English"]
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Rito",
+      "url": "https://ritovision.com/about",
+      "image": "https://ritovision.com/images/home/hero/rito-picture1.png",
+      "sameAs": [
+        "https://www.instagram.com/ritorhymes",
+        "https://www.threads.net/ritorhymes",
+        "https://www.x.com/rito_rhymes",
+        "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+        "https://www.github.com/ritorhymes",
+        "https://www.reddit.com/user/ritorhymes",
+        "https://www.ritovision.com/about",
+        "https://www.ritography.com/about",
+        "https://www.ritorhymes.com/about",
+        "https://www.williamentriken.net/about",
+        "https://www.carolinevreeland.com/about",
+        "https://facebook.com/ritorhymes",
+        "https://www.youtube.com/@ritorhymes",
+        "https://open.spotify.com/artist/03iaQJsc1704Mbj25dHp4Q",
+        "https://music.apple.com/us/artist/rito-rhymes/1633458672",
+        "https://stockhead.com.au/cryptocurrency/bitcoin-is-the-gangsta-rap-of-the-tech-world-putting-the-verse-in-metaverse-with-crypto-rapper-rito-rhymes",
+        "https://screenrant.com/cod-warzone-riot-shield-disappear-glitch-rap-video",
+        "https://hackernoon.com/about/ritorhymes",
+        "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22"
+      ]
+    }
+  }
+}

@@ -1,0 +1,247 @@
+.uasContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topTextContainer {
+    position: absolute;
+    top: 0;
+    width: var(--container-width-narrow);
+    max-width: var(--container-max-width-cards);
+    background-color: var(--primary-blue);
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    padding: var(--spacing-element-gap);
+    z-index: 5;
+}
+  
+.topTextContainer h3 {
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.middleContainer {
+    width: 100%;
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    background: transparent;
+    margin: 3rem 0;
+    padding: var(--spacing-base-px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-gap-xl);
+    margin-top: var(--spacing-gap-xl);
+    margin-bottom: var(--spacing-section-margin-px);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imageContainer {
+    position: relative;
+    width: var(--container-width-percent);
+    max-width: 450px;
+    padding: 10px;
+    background-color: var(--primary-blue);
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius-standard);
+}
+
+.overlayText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.audioContainer {
+    width: 95%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomContainer {
+    width: var(--container-width-percent);
+    max-width: 900px;
+    background: black;
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    padding: var(--spacing-base-px);
+    margin-top: var(--spacing-section-margin-px);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.bottomTitle {
+    color: var(--primary-red);
+    text-align: center;
+    margin: 0 0 var(--spacing-base-px);
+}
+
+.bottomContent {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-base-px);
+    width: 100%;
+
+}
+
+@media (min-width: 730px) {
+  .bottomContent {
+    align-items: center;
+  }
+}
+
+.videoContainer {
+    flex: 1;
+}
+  
+.videoWrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+  
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.textBlock {
+    flex: 1;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 730px) {
+    .contentContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .bottomContent {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .videoContainer {
+        order: 2;
+        margin-bottom: 10%;
+    }
+
+    .textBlock {
+        order: 1;
+    }
+    .imageContainer {
+        margin-top: 40px;
+    }
+
+    .textBlock {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+    .bottomContainer {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+@keyframes imageAnimation {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes overlayTextAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bottomAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateImage {
+  animation: imageAnimation 2s forwards ease-in-out;
+}
+
+.animateOverlay {
+  animation: overlayTextAnimation 2s forwards ease-in-out;
+}
+
+.animateBottom {
+  animation: bottomAnimation 1.5s forwards ease-out;
+}
+
+.imageInitial {
+  transform: scale(0.6);
+  opacity: 0;
+}

@@ -1,0 +1,22 @@
+.pastEngagementsSection {
+    padding: 4rem 2rem;
+    width: 100%;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-red);
+  }
+  
+  .engagementsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  @media (max-width: 730px) {
+    .pastEngagementsSection {
+      padding: 3rem 1rem;
+    }
+  }

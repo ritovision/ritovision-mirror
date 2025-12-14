@@ -1,0 +1,54 @@
+/* FILE PATH: app\components\utilities\modal\Modal.module.css */
+
+.modalContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 300px;
+    min-height: 150px;
+    padding: var(--spacing-base-px);
+    box-sizing: border-box;
+    z-index: 9999;
+  
+    /* Default look if no variant is specified */
+    border: var(--default-border);
+    background-color: var(--primary-blue);
+    color: var(--foreground);
+    border-radius: var(--border-radius-standard);
+  
+    /* Center text by default; you can override in children if needed */
+    text-align: center;
+  }
+  
+  /* Example Variants */
+  
+  /* Primary Blue with secondary blue border (like your form style) */
+  .primaryBlue {
+    border-color: var(--secondary-blue);
+    background-color: var(--primary-blue);
+    color: var(--foreground);
+  }
+  
+  /* Black background with red border */
+  .blackRed {
+    border-color: var(--primary-red);
+    background-color: var(--black);
+    color: var(--foreground);
+  }
+  
+  /* Add as many variants as you like */
+  .someOtherVariant {
+    border-color: var(--secondary-blue);
+    background-color: #222;
+    color: var(--foreground);
+  }
+
+  .inline {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    width: fit-content;
+  }

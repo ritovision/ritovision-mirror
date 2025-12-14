@@ -1,0 +1,20 @@
+.variant {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 2px solid var(--black);
+}
+
+.variant:hover {
+  background-color: var(--black);
+}
+
+.variant:active {
+  background-color: var(--black);
+  transform: scale(0.98);
+}
+
+.variant:disabled {
+  background-color: transparent;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

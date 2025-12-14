@@ -1,0 +1,55 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "SiteNavigationElement",
+      "position": 1,
+      "name": "Home",
+      "description": "RitoVision home page - Infotainment creator and speaker",
+      "url": "https://ritovision.com"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 2,
+      "name": "About",
+      "description": "About RitoVision - Background and expertise",
+      "url": "https://ritovision.com/about"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 3,
+      "name": "Services",
+      "description": "Services offered by RitoVision",
+      "url": "https://ritovision.com/services"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 4,
+      "name": "Press",
+      "description": "Press coverage and media mentions",
+      "url": "https://ritovision.com/press"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 5,
+      "name": "Speaker",
+      "description": "Speaking engagements and presentations",
+      "url": "https://ritovision.com/speaker"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 6,
+      "name": "Projects",
+      "description": "Portfolio of case studies and projects",
+      "url": "https://ritovision.com/projects"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 7,
+      "name": "Contact",
+      "description": "Get in touch with RitoVision",
+      "url": "https://ritovision.com/contact"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+.container {
+    max-width: var(--container-max-width-small);
+    margin: 0 auto;
+  }
+  
+  .heading {
+    text-align: center;
+    color: var(--primary-red);
+    /* Default spacing below h2 might be 16px—now decreased by half for the first top line */
+    margin-bottom: 8px;
+  }
+  
+  /* The divider line for project items */
+  .borderLine {
+    width: 80%;
+    max-width: var(--container-max-width-cards);
+    height: 2px;
+    background-color: var(--secondary-blue);
+    /* Standard spacing above and below the divider */
+    margin: 8px auto;
+  }
+  
+  /* For the very first top line, we reduce the top spacing (the bottom spacing remains as is) */
+  .topLine {
+    margin-top: 4px; /* half of 8px to tighten the gap between the h2 and the top divider */
+  }
+  
+  .projectItem {
+    cursor: pointer;
+  }
+  
+  .projectContent {
+    /* Let the project content scale naturally without forced sizing */
+  }
+  

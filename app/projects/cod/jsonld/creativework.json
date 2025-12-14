@@ -1,0 +1,55 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "From Glitch to Global: How Content and PR Helped Fix Warzone",
+  "url": "https://ritovision.com/projects/cod",
+  "description": "A multimedia case study by Rito showcasing how infotaining video content, strategic journalism outreach, and quality assurance methodology influenced developer response within the Call of Duty: Warzone ecosystem — without any internal access or official partnership.",
+  "creator": {
+    "@type": "Person",
+    "name": "Rito",
+    "url": "https://ritovision.com/about",
+    "jobTitle": "Content Strategist & QA Storyteller",
+    "sameAs": [
+      "https://www.instagram.com/ritorhymes",
+      "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+      "https://www.ritovision.com"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com"
+  },
+  "datePublished": "2023-10-15",
+  "keywords": [
+    "Call of Duty",
+    "Warzone",
+    "Bug Reports",
+    "Quality Assurance",
+    "Gaming PR",
+    "Infotainment",
+    "Content Strategy",
+    "ScreenRant",
+    "Dexerto",
+    "GameRant",
+    "Infinity Ward",
+    "Raven Software",
+    "AAA Games"
+  ],
+  "inLanguage": "en",
+  "image": "https://ritovision.com/images/pages/projects/cod/hero/warzone.webp",
+  "mainEntity": {
+    "@type": "VideoGame",
+    "name": "Call of Duty: Warzone",
+    "url": "https://www.callofduty.com/warzone",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Activision"
+    },
+    "gamePlatform": [
+      "PC",
+      "PlayStation",
+      "Xbox"
+    ]
+  }
+}

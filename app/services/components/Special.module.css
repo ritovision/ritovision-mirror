@@ -1,0 +1,274 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.titleBannerContainer {
+  width: 75%;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.titleBannerContainer.visible {
+  opacity: 1;
+}
+
+.titleBanner {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.borderSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  z-index: 1;
+}
+
+.titleContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.word {
+  font-family: var(--font-agency);
+  color: white;
+  font-size: 2.5rem;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.visibleWord {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.visibleIntegration {
+  opacity: 1;
+  transform: translateY(0);
+  animation: clipReveal 0.7s ease forwards;
+}
+
+.visibleAccelerator {
+  opacity: 1;
+  transform: translateY(0);
+  animation: clipFromLeft 0.7s ease forwards;
+}
+
+@keyframes clipReveal {
+  0% {
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes clipFromLeft {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 700px;
+  max-width: 95%;
+  border: 2px solid var(--primary-red);
+  border-radius: var(--border-radius-standard);
+  overflow: hidden;
+  transition: box-shadow 1s ease;
+  box-shadow: 0 0 0 rgba(252, 24, 25, 0);
+}
+
+.imageVisible {
+  box-shadow: 0 10px 20px rgba(252, 24, 25, 0.3);
+}
+
+.imageContent {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.heroImage {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease, transform 1s ease;
+  z-index: 0;
+}
+
+.imageVisible .heroImage {
+  opacity: 0.2;
+  transform: scale(1);
+}
+
+.headerWrapper {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  height: 2.5rem;
+  align-items: center;
+}
+
+.imageHeader {
+  font-family: var(--font-agency);
+  color: var(--primary-red);
+  font-size: 1.8rem;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  margin: 0;
+  height: 1.8rem;
+  line-height: 1.8rem;
+}
+
+.typeWriter {
+  overflow: hidden;
+  border-right: 0.15em solid var(--primary-red);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: normal;
+  animation: typing 1s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-red) }
+}
+
+.imageText {
+  font-family: var(--font-body);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  z-index: 1;
+  max-width: 90%;
+  margin: 1.5rem auto;
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.buttonContainer {
+  opacity: 0;
+  transform: translateY(20px);
+  margin-top: 1rem;
+  z-index: 1;
+}
+
+.buttonVisible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+@media (max-width: 730px) {
+  .titleBannerContainer {
+    width: var(--container-width-narrow);
+  }
+
+  .imageContainer {
+    width: 100%;
+    max-width: 95vw;
+  }
+
+  .imageContent {
+    height: auto;
+    min-height: 400px;
+    padding: 1.5rem 0.75rem;
+  }
+
+  .headerWrapper {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0 5px;
+    height: 2rem;
+  }
+
+  .imageHeader {
+    font-size: 1.4rem;
+    max-width: 100%;
+    height: 1.4rem;
+    line-height: 1.4rem;
+  }
+
+  .typeWriter {
+    transform: translateX(-50%) translateZ(0);
+    will-change: width;
+    animation: typing-mobile 1s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes typing-mobile {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  .imageText {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+    width: 100%;
+  }
+}

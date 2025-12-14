@@ -1,0 +1,17 @@
+/* components/pages/press/Quotes.module.css */
+.quotes {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    max-width: var(--container-max-width-small);
+  }
+  
+  .quotes h3 {
+    margin-top: var(--spacing-section-gap);
+  }
+  
+  .quotes p {
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+  

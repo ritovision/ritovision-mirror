@@ -1,0 +1,100 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  
+  .graphContainer {
+    max-width: var(--container-max-width-medium);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .marketplaceText {
+    font-family: 'Agency FB', sans-serif;
+    font-size: 32px;
+    fill: white;
+    opacity: 0;
+    font-weight: normal;
+  }
+  
+  .gasText {
+    font-family: 'Agency FB', sans-serif;
+    font-size: 26px;
+    fill: white;
+    opacity: 0;
+  }
+  
+  .fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .blueColor {
+    animation: changeColorAndElevate 1s forwards;
+    /* Important - this will make it appear above other elements */
+    z-index: 10;
+  }
+  
+  .donut {
+    stroke-width: 1;
+    animation: expandDonut 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes changeColorAndElevate {
+    0% {
+      fill: white;
+    }
+    50% {
+      fill: var(--primary-blue);
+      opacity: 0.7;
+    }
+    100% {
+      fill: var(--primary-blue);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes expandDonut {
+    from {
+      stroke-width: 1;
+    }
+    to {
+      stroke-width: 40;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 730px) {
+    .graphContainer {
+      max-width: 400px;
+    }
+    
+    .marketplaceText {
+      font-size: 28px;
+    }
+    
+    .gasText {
+      font-size: 22px;
+    }
+  }

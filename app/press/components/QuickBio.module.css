@@ -1,0 +1,13 @@
+/* components/pages/press/QuickBio.module.css */
+.quickBio {
+  color: white;
+  text-align: left;
+  margin: 0 auto;
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-medium);
+}
+
+.quickBio h3 {
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+}

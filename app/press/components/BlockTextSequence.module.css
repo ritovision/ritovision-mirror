@@ -1,0 +1,108 @@
+/* \test\app\components\pages\press\BlockTextSequence.module.css */
+
+/* Container for the sequence of blocks */
+.sequenceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-gap-medium); /* Increased gap slightly */
+  align-items: center; /* Center blocks horizontally by default */
+}
+
+/* Wrapper for each block (canvas + text) */
+.blockWrapper {
+  position: relative; /* Crucial for stacking */
+  max-width: var(--container-max-width-small); /* Or your preferred max width */
+  width: fit-content; /* Fit to text content width */
+  opacity: 0;         /* Start hidden */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in for the whole block */
+}
+
+/* Container holding the Pixi.js canvas */
+.canvasContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Canvas sits behind text */
+  pointer-events: none; /* Prevent canvas from blocking text interaction */
+}
+/* Ensure the canvas itself fills the container */
+.canvasContainer canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Container holding the actual HTML text */
+.textContainer {
+  position: relative; /* Needed for z-index stacking context */
+  z-index: 2;         /* Text sits on top of the canvas */
+  padding: var(--spacing-element-gap) var(--spacing-container-padding); /* Keep padding for spacing inside the border */
+  text-align: center;
+  font-size: var(--font-size-heading-tertiary);
+}
+
+/* New alignment classes */
+.leftAlign {
+  align-self: flex-start;
+}
+
+.rightAlign {
+  align-self: flex-end;
+}
+
+/* Alignment tweaks for wider screens */
+@media (min-width: 401px) {
+  .leftAlign {
+    align-self: flex-start;
+    margin-left: -2rem; /* Push more to the left */
+  }
+
+  .rightAlign {
+    align-self: flex-end;
+    margin-right: -3rem; /* Push more to the right */
+  }
+}
+
+/* Existing rules... */
+
+.sequenceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-gap-medium);
+  align-items: center;
+}
+
+.blockWrapper {
+  position: relative;
+  max-width: var(--container-max-width-small);
+  width: fit-content;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.textContainer {
+  position: relative;
+  z-index: 2;
+  padding: var(--spacing-element-gap) var(--spacing-container-padding);
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Alignment classes */
+.leftAlign {
+  align-self: flex-start;
+  margin-left: 50px; 
+}
+
+.rightAlign {
+  align-self: flex-end;
+  margin-right: 50px; 
+}
+
+/* Bigger font size for the multidisciplinary visionary text and expanding space */
+.largeText {
+  font-size: 1.7rem; /* variable breaks it here on desktop, use hardcoded value */
+  text-align: center;
+}

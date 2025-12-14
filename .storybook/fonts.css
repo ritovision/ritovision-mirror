@@ -1,0 +1,7 @@
+/* .storybook/fonts.css */
+
+:root {
+  --font-agency: 'AgencyB';
+  --font-young: 'YoungAgency';
+  --font-body: 'Michroma';
+}

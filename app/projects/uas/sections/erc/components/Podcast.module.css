@@ -1,0 +1,78 @@
+/* test/app/projects/uas/sections/erc/components/Podcast.module.css */
+.wrapper {
+    width: var(--container-width-percent);
+    max-width: var(--container-max-width-large);
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--spacing-container-padding);
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    background: transparent;
+  }
+  
+  .title {
+    font-size: var(--font-size-heading-primary);
+    color: var(--foreground);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect */
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+  }
+  
+  .thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 68px;
+    height: 48px;
+    background: url('/images/utilities/icons/media/play.png') no-repeat center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .text {
+    color: var(--foreground);
+    line-height: var(--line-height-body);
+    margin-top: var(--spacing-element-gap);
+  }
+  
+  @media (max-width: 730px) {
+    .title {
+      font-size: var(--font-size-heading-secondary);
+    }
+  }
+
+  @media (min-width: 731px) {
+    .videoWrapper {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+  }
+  

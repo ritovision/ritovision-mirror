@@ -1,0 +1,187 @@
+.dogepaloozaContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.middleContainer {
+    width: 100%;
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    background: transparent;
+    margin: 3rem 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.imageGallery {
+    position: relative;
+    width: 100%;
+    min-height: 900px;
+}
+
+.imageWrapper {
+    position: absolute;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.galleryImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+    width: 60%;
+}
+
+.image1 {
+    top: 5%;
+    left: 0%;
+    z-index: 1;
+}
+
+.image2 {
+    top: 25%;
+    right: 0%;
+    z-index: 2;
+    width: 55%;
+}
+
+.image3 {
+    bottom: 15%;
+    left: 0%;
+    z-index: 3;
+    width: 55%;
+}
+
+.image4 {
+    bottom: 0%;
+    top: 50%;
+    right: 5%;
+    z-index: 4;
+    width: 50%;
+}
+
+.topTextContainer {
+    position: absolute;
+    top: 0;
+    width: var(--container-width-narrow);
+    max-width: var(--container-max-width-cards);
+    background-color: var(--primary-blue);
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    padding: 1rem;
+    z-index: 5;
+}
+
+.topTextContainer h3 {
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.bottomContent {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    box-sizing: border-box;
+    margin-top: var(--spacing-section-gap);
+}
+
+.bottomTextContainer {
+    background-color: var(--primary-blue);
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    padding: 1rem;
+    flex: 1 1 60%;
+    color: white;
+}
+
+.audioWrapper {
+    flex: 0 0 35%;
+}
+
+@media (min-width: 731px) and (max-width: 1099px) {
+    .middleContainer {
+        flex-direction: column;
+    }
+}
+@media (min-width: 1100px) {
+    .middleContainer {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1099px) {
+  .image3 {
+    bottom: 10%;
+  }
+  .image4 {
+    top: 75%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .image3 {
+    bottom: 5%;
+  }
+  .image4 {
+    top: 80%;
+  }
+}
+
+.image4 {
+  min-height: 400px;
+}
+
+@media (min-width: 800px) and (max-width: 1099px) {
+  .image4 {
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .image4 {
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 800px) {
+  .image4 {
+    display: none !important;
+  }
+
+  .bottomTextContainer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bottomTextContainer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('/images/pages/speaker/hero/ritorhymes.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .bottomTextContainer > * {
+    position: relative;
+    z-index: 1;
+  }
+}

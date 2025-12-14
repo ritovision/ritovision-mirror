@@ -1,0 +1,41 @@
+.tocWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tocContent {
+  text-align: left;
+  font-size: 1.333em;
+  display: inline-block;
+  padding-left: var(--spacing-section-gap);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.linkList li {
+  margin: .25rem 0;
+}
+
+.spacer {
+  margin: var(--spacing-element-gap) 0;
+}
+
+.primaryTitle {
+  color: var(--primary-red);
+  margin: var(--spacing-element-gap) 0 0 0;
+
+}
+
+
+@media (max-width: 730px) {
+  .tocContent {
+    margin-left: 0rem;
+    padding-left: 0;
+    display: block;
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Jumptag Club: Wearable Tech & Fashion Pilot",
+  "url": "https://ritovision.com/projects/jumptag",
+  "description": "A fashion-integrated wearable tech project led by Rito, combining physical jewelry, dynamic QR code routing, and hybrid mobile app development. Jumptag Club was featured at New York Fashion Week and merged real-time UX, creative branding, and full-stack platform design into a forward-thinking digital identity experience.",
+  "creator": {
+    "@type": "Person",
+    "name": "Rito",
+    "url": "https://ritovision.com/about",
+    "jobTitle": ["Founder", "Product Strategist", "Creative Technologist"],
+    "sameAs": [
+      "https://www.instagram.com/ritorhymes",
+      "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+      "https://www.ritovision.com"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com"
+  },
+  "datePublished": "2023-09-15",
+  "keywords": [
+    "Wearable Tech",
+    "Fashion Technology",
+    "QR Code Jewelry",
+    "Jumptag Club",
+    "New York Fashion Week",
+    "Product Design",
+    "UX Strategy",
+    "Phygital",
+    "Digital Identity",
+    "Creative Technology"
+  ],
+  "inLanguage": "en",
+  "image": "https://ritovision.com/images/pages/projects/jumptag/demode/romeohunte.jpg",
+  "mainEntity": {
+    "@type": "Product",
+    "name": "Jumptag Club",
+    "description": "A limited-run wearable tech concept blending physical jewelry with dynamic QR code destinations, built by Rito and showcased at New York Fashion Week. The project included a hybrid mobile app, Shopify storefront, and was worn by models from Vogue and Harper’s Bazaar-featured designers.",
+    "brand": "Jumptag Club",
+    "url": "https://ritovision.com/projects/jumptag"
+  },
+  "mentions": [
+    {
+      "@type": "Event",
+      "name": "DeMode Fashion Show – NYFW",
+      "startDate": "2023-09-08",
+      "endDate": "2023-09-08",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventCompleted",
+      "location": {
+        "@type": "Place",
+        "name": "Mercedes-Benz Manhattan",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "770 11th Ave",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "postalCode": "10019",
+          "addressCountry": "US"
+        }
+      }
+    }
+  ],
+  "hasPart": {
+    "@type": "MusicRecording",
+    "name": "Let's Get Phygital",
+    "url": "https://ritovision.com/audio/Phygital.mp3",
+    "description": "An EDM parody track created by Rito as a brand expression for Jumptag Club — a remix of 'Physical' celebrating phygital identity culture.",
+    "byArtist": {
+      "@type": "Person",
+      "name": "Rito",
+      "url": "https://ritovision.com/about"
+    },
+    "inLanguage": "en",
+    "duration": "PT4M11S",
+    "genre": "Electronic",
+    "encodingFormat": "audio/mpeg"
+  }
+}

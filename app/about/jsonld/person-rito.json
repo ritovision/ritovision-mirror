@@ -1,0 +1,135 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://ritovision.com/about",
+  "description": "Rito is a fractional Chief Integration Officer of Product, Brand, UX & Technology and a creative-strategic powerhouse who turns vision and complexity into scalable market leadership.",
+  "keywords": "Rito, Rito Rhymes, software development, UX architecture, product strategy, brand design, creative technologist, AI tools, full-stack developer, multi-disciplinary, visionary, strategist",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Rito",
+      "url": "https://ritovision.com/about"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "info@ritovision.com",
+      "url": "https://ritovision.com/contact"
+    }
+  },
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Rito",
+    "image": "https://ritovision.com/images/home/hero/rito-picture1.png",
+    "url": "https://ritovision.com/about",
+  "description": "Rito is a fractional Chief Integration Officer of Product, Brand, UX & Technology and a creative-strategic powerhouse who turns vision and complexity into scalable market leadership.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "RitoVision",
+      "url": "https://ritovision.com"
+    },
+    "jobTitle": [
+      "Brand Systems Designer",
+      "Chief Integration Officer",
+      "Chief Experience Officer",
+      "Chief Product Officer",
+      "Full Stack Developer"
+    ],
+    "hasOccupation": [
+      {
+        "@type": "Occupation",
+        "name": "Brand Systems Designer",
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+          "codeValue": "27-1024.00",
+          "name": "Graphic Designers",
+          "inCodeSet": "https://www.onetonline.org/"
+        }
+      },
+      {
+        "@type": "Occupation",
+        "name": "Chief Integration Officer",
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+          "codeValue": "11-3021.00",
+          "name": "Computer and Information Systems Managers",
+          "inCodeSet": "https://www.onetonline.org/"
+        }
+      },
+      {
+        "@type": "Occupation",
+        "name": "Chief Experience Officer",
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+          "codeValue": "11-1021.00",
+          "name": "General and Operations Managers",
+          "inCodeSet": "https://www.onetonline.org/"
+        }
+      },
+      {
+        "@type": "Occupation",
+        "name": "Chief Product Officer",
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+          "codeValue": "11-2021.00",
+          "name": "Marketing Managers",
+          "inCodeSet": "https://www.onetonline.org/"
+        }
+      },
+      {
+        "@type": "Occupation",
+        "name": "Full Stack Developer",
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+          "codeValue": "15-1252.00",
+          "name": "Software Developers, Applications",
+          "inCodeSet": "https://www.onetonline.org/"
+        }
+      }
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "DePaul University"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Rutgers University"
+      }
+    ],
+    "knowsAbout": [
+      "UX Design",
+      "Creative Strategy",
+      "Web Development",
+      "AI Tools",
+      "Full-Stack Engineering",
+      "Blockchain",
+      "Branding",
+      "Product Management"
+    ],
+    "sameAs": [
+      "https://www.instagram.com/ritorhymes",
+      "https://www.threads.net/ritorhymes",
+      "https://www.x.com/rito_rhymes",
+      "https://www.linkedin.com/in/rito-matt-j-pellerito-36779084",
+      "https://www.github.com/ritorhymes",
+      "https://www.reddit.com/user/ritorhymes",
+      "https://www.ritovision.com/about",
+      "https://www.ritography.com/about",
+      "https://www.ritorhymes.com/about",
+      "https://www.williamentriken.net/about",
+      "https://www.carolinevreeland.com/about",
+      "https://facebook.com/ritorhymes",
+      "https://www.youtube.com/@ritorhymes",
+      "https://open.spotify.com/artist/03iaQJsc1704Mbj25dHp4Q",
+      "https://music.apple.com/us/artist/rito-rhymes/1633458672",
+      "https://stockhead.com.au/cryptocurrency/bitcoin-is-the-gangsta-rap-of-the-tech-world-putting-the-verse-in-metaverse-with-crypto-rapper-rito-rhymes",
+      "https://screenrant.com/cod-warzone-riot-shield-disappear-glitch-rap-video",
+      "https://hackernoon.com/about/ritorhymes",
+      "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22"
+    ]
+  }
+}
