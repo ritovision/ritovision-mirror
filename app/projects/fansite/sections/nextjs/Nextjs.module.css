@@ -1,0 +1,19 @@
+.heading {
+    color: var(--primary-red);
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: -50px;
+    font-size: var(--font-size-heading-primary);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 500px) {
+    .heading {
+        margin-top: 100px;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+
+    }
+  }
+  

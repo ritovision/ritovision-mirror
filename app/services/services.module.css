@@ -1,0 +1,59 @@
+.page {
+    background-color: var(--primary-blue);
+    color: var(--foreground);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: var(--font-size-heading-secondary);
+  }
+
+  @media (min-width: 730px) {
+    .heading {
+      font-size: var(--font-size-heading-primary);
+    }
+  }
+
+.callToAction {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  text-align: center;
+  max-width: var(--container-max-width-medium);
+  margin: 0 auto;
+}
+
+.callToAction p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 730px) {
+  .buttonGroup {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.underline {
+  text-decoration: underline;
+}
+
+.formSection {
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+}

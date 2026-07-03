@@ -1,0 +1,58 @@
+.defaulttopspace {
+  margin-top: 4rem;
+}
+
+/* the inner bordered container */
+.wrapper {
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  padding: var(--spacing-container-padding);
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin: 0 auto;
+  background: transparent;
+}
+
+/* red H2 above the container */
+.heading {
+  font-size: var(--font-size-heading-primary);
+  color: var(--primary-red);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* white H2 inside the container for "Overview" */
+.innerHeading {
+  font-size: var(--font-size-heading-primary);
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.subheading {
+  font-size: var(--font-size-heading-tertiary);
+  color: var(--primary-red);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.audienceHeading {
+  font-size: 1.333rem;
+  color: var(--foreground);
+  text-align: left;
+  margin-left: var(--spacing-container-padding);
+  margin-top: var(--spacing-margin-bottom);
+  margin-bottom: 0.5rem;
+}
+
+.audienceText {
+  color: var(--foreground);
+  line-height: var(--line-height-body);
+  margin: 0 0 var(--spacing-margin-bottom) 3rem;
+}
+
+.text {
+  color: var(--foreground);
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+}

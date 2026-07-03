@@ -1,0 +1,109 @@
+.sliderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-base-px);
+    padding: var(--spacing-base-px) var(--spacing-base-px) 80px var(--spacing-base-px);
+    border: 2px solid var(--secondary-blue);
+    border-radius: var(--border-radius-pill);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: var(--container-max-width-small);
+  }
+  
+  .sliderTitle {
+    font-family: agencyb, sans-serif;
+    color: var(--foreground);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  /* Add horizontal padding to narrow the slider line */
+  .sliderWrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 var(--spacing-base-px);
+  }
+  
+  /* The range input track (horizontal line) */
+  .sliderTrack {
+    width: 100%;
+    -webkit-appearance: none; /* Remove default styling in Chrome/Safari */
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* Track styling (the line) in WebKit browsers */
+  .sliderTrack::-webkit-slider-runnable-track {
+    height: 2px;
+    background: var(--foreground);
+    border-radius: 2px;
+  }
+  
+  /* Thumb styling (the draggable knob) in WebKit browsers */
+  .sliderTrack::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    /* Always use secondary blue */
+    background: var(--secondary-blue);
+    border-radius: 50%;
+    margin-top: -8px; /* Center the knob on the track */
+    cursor: pointer;
+    transition: none;
+  }
+  
+  /* For Firefox: styling for the track & thumb */
+  .sliderTrack::-moz-range-track {
+    height: 2px;
+    background: var(--foreground);
+    border-radius: 2px;
+  }
+  .sliderTrack::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: var(--secondary-blue);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: none;
+  }
+  
+  /* Labels container, positioned below the track */
+  .sliderLabels {
+    position: absolute;
+    top: 40px; /* Moved down to provide more space */
+    left: 0;
+    right: 0;
+    height: 20px;
+    pointer-events: none; /* Allows clicks to pass through to the track */
+  }
+  
+  /* Each label mark is absolutely positioned by left percentage */
+  .sliderMark {
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: var(--foreground);
+    font-family: Michroma, sans-serif;
+    font-size: 14px;
+  }
+  
+  /* State overrides for slider container */
+.valid {
+  border-color: var(--utility-green) !important;
+}
+
+.invalid {
+  border-color: var(--primary-red) !important;
+}
+
+.errorText {
+  color: red;
+  font-family: AgencyB, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+}

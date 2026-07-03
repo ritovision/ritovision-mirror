@@ -1,0 +1,58 @@
+name: Mainsite Pipeline
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run lint
+        uses: ./.github/actions/lint
+
+  test:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run vitest
+        uses: ./.github/actions/vitest
+
+  link-check:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run link check
+        uses: ./.github/actions/link-check
+
+  smoke-tests:
+    runs-on: ubuntu-latest
+    needs: link-check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run smoke tests
+        uses: ./.github/actions/smoke-tests
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: smoke-tests
+    environment: production
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Deploy to Vercel
+        uses: ./.github/actions/deploy-vercel
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}

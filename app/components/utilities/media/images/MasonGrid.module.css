@@ -1,0 +1,95 @@
+/* app\components\utilities\media\images\MasonGrid.module.css */
+.masonGridWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonWrapper {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  justify-items: center;
+  padding: 16px;
+}
+
+@media (min-width: 1200px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 96px;
+  }
+}
+
+.gridItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== DEFAULT: MOBILE ========== */
+.imageWrapper {
+  position: relative;
+  box-sizing: border-box;
+  padding: 24px;
+  border: 2px solid var(--secondary-blue);
+  border-radius: var(--border-radius-standard);
+  width: calc(90% + 48px);
+  max-width: calc(500px + 48px);
+  /* overflow removed so icon can sit on top */
+}
+
+.imageItem {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-standard);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.imageItem:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* ========== BREAKPOINT: TABLET AND UP (730px+) ========== */
+@media (min-width: 730px) {
+  .imageWrapper {
+    padding: 36px;
+    width: calc(90% + 72px);
+    max-width: calc(500px + 72px);
+  }
+
+  @media (min-width: 1200px) {
+    .imageWrapper {
+      width: calc(500px + 72px);
+    }
+  }
+}
+
+/* Icon overlap: stays centered on bottom border */
+.downloadLink {
+  position: absolute;
+  bottom: -15px;              /* half of 30px icon height */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.downloadIcon {
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+
+.downloadIcon:hover {
+  transform: scale(0.73);
+}

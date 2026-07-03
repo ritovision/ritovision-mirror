@@ -1,0 +1,146 @@
+/* \test\app\projects\jumptag\sections\activations\components\Sponsorship.module.css */
+.wrapper {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing-container-padding);
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background: transparent;
+  color: white;
+}
+
+.title {
+  font-size: var(--font-size-heading-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+  color: white;
+}
+
+@media (max-width: 729px) {
+  .title {
+    font-size: var(--font-size-heading-secondary);
+  }
+}
+
+.subheading {
+  font-size: var(--font-size-subheading);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+  color: var(--primary-red);
+}
+
+.text {
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+/* two-up flex for first sponsorship images */
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-element-gap);
+  margin: 2rem 0;
+}
+
+.image {
+  display: block;
+  object-fit: contain;
+  border-radius: var(--border-radius-standard);
+}
+
+@media (max-width: 729px) {
+  .image {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 730px) {
+  .image {
+    width: 100%;
+  }
+  .imageMingle {
+    max-width: 250px;
+  }
+  .imageAsia {
+    max-width: 200px;
+  }
+}
+
+/* single-image wrapper (speaking.jpg) */
+.singleImageWrapper {
+  margin: 4rem 0;    /* increased to match other gaps on mobile */
+  text-align: center;
+}
+
+.singleImage {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  border-radius: var(--border-radius-standard);
+}
+
+/* two-column layout for runway, group, and Ajay jumptag */
+.twoColumnContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem auto;
+  gap: 4rem;           /* double space on mobile */
+  align-items: stretch; /* ensure columns stretch to same height on desktop */
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;           /* mobile gap between runway & group */
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.twoImageItem {
+  text-align: center;
+}
+
+.twoImage {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  border-radius: var(--border-radius-standard);
+}
+
+/* captions under images */
+.caption {
+  margin-top: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* desktop adjustments */
+@media (min-width: 730px) {
+  .twoColumnContainer {
+    flex-direction: row;
+    gap: var(--spacing-element-gap);           /* normal gap between columns */
+  }
+  .leftColumn {
+    flex: 1;
+    gap: 0;              /* reset gap so justify-content governs spacing */
+    justify-content: space-between; /* runway at top, group at bottom */
+  }
+  .rightColumn {
+    flex: 1;
+    margin-left: var(--spacing-element-gap);
+    justify-content: center; /* center Ajay image vertically */
+  }
+  .singleImageWrapper {
+    margin: 2rem 0;      /* desktop: standard 2rem gap */
+  }
+}

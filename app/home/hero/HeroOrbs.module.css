@@ -1,0 +1,126 @@
+/* app\components\pages\home\hero\HeroOrbs.module.css */
+.heroContainer {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.videoVisible {
+  opacity: 1;
+}
+
+/* HeroOrbs.module.css */
+@media (min-width: 730px) {
+  .backgroundVideo {
+    display: none;
+  }
+}
+
+
+.sequenceContainer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-gap-medium);
+  align-items: center;
+  padding: var(--spacing-section-gap);
+  margin: 0 auto;
+  max-width: 550px
+}
+
+.blockWrapper {
+  position: relative;
+  max-width: 600px;
+  width: fit-content;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.svgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.svgBorder {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.textContainer {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 2em;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.leftAlign {
+  align-self: flex-start;
+}
+
+.rightAlign {
+  align-self: flex-end;
+}
+
+.multidisciplinaryText {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.imageContainer {
+  margin-top: auto;    /* pushes this div to the bottom */
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.imageVisible {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.videoGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, var(--primary-blue), transparent);
+  pointer-events: none;
+  z-index: 0;
+}

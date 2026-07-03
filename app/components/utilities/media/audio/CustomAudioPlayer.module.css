@@ -1,0 +1,210 @@
+/* Overall container styling with primary blue background,
+   secondary blue border, rounded corners, and a max width */
+.audioPlayer {
+    background-color: var(--primary-blue);
+    border: 2px solid var(--secondary-blue);
+    border-radius: var(--border-radius-standard);
+    padding: var(--spacing-base-px);
+    min-height: 150px;
+    max-width: var(--container-max-width-small);
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Increased gap between elements */
+  }
+  
+  /* Title styling allowing text to wrap if needed */
+  .title {
+    font-size: var(--font-size-subheading);
+    color: var(--foreground);
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Center the play/pause control with extra vertical margins */
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .playPauseButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0; /* Extra space above and below */
+  }
+  
+  /* Container to stack icons on top of each other */
+  .iconContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Common styling for both play and pause icons */
+  .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* When active, icon scales up and fades in */
+  .active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Group for timeline and time counter to maintain perfect spacing */
+  .timelineGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Keeps timeline and counter spacing as is */
+  }
+  
+  /* Timeline container now stretches to full width with increased hit area */
+  .timelineContainer {
+    align-self: stretch;
+    padding: 0 10px;
+    position: relative;
+    height: 24px; /* Increase hit area height */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* White timeline line */
+  .timeline {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 4px;
+    border-radius: 2px;
+    width: 100%;
+    cursor: pointer;
+    /* Make entire container area clickable */
+    margin: 10px 0;  /* Add vertical padding inside container */
+  }
+  
+  /* Timeline progress bar */
+  .timelineProgress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--foreground);
+    border-radius: 2px;
+    z-index: 1;
+  }
+  
+  /* Timeline cursor styled as a secondary blue rectangle that sticks out */
+  .timelineCursor {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 30px;
+    background-color: var(--secondary-blue);
+    border-radius: var(--border-radius-small);
+    transition: transform 0.1s ease;
+    z-index: 2; /* Ensure cursor appears above the progress bar */
+  }
+  
+  /* When dragging the cursor, make it slightly larger for better visual feedback */
+  .timelineCursor.dragging {
+    transform: translate(-50%, -50%) scale(1.1);
+   
+  }
+  
+  /* Increase the pseudo hit area for the timeline without changing visual size */
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+  
+  /* Time counter text */
+.timeCounter {
+    color: var(--foreground);
+    font-size: 0.9rem;
+  }
+  
+  /* Volume container aligning the button and slider */
+  .volumeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Volume button with fixed dimensions */
+  .volumeButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Volume icon fits its container */
+  .volumeIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* Custom styling for the volume slider with extra top margin */
+  .volumeSlider {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 4px;
+    background: var(--foreground);
+    border-radius: 2px;
+    outline: none;
+    transition: opacity 0.2s ease;
+    margin-top: var(--spacing-base-px); 
+    margin-bottom: var(--spacing-base-px);
+    cursor: pointer;
+  }
+  
+  /* Slider thumb styling for Webkit browsers */
+.volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 30px;
+    background: var(--secondary-blue);
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    border: none;
+  }
+  
+  /* Slider thumb styling for Firefox */
+.volumeSlider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: var(--secondary-blue);
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    border: none;
+  }

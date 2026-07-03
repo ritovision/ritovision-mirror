@@ -1,0 +1,242 @@
+/* \test\app\projects\jumptag\sections\activations\components\Demode.module.css */
+
+.wrapper {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing-container-padding);
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background: transparent;
+  color: white;
+}
+
+.title {
+  font-size: var(--font-size-heading-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+  color: white;
+}
+
+@media (max-width: 729px) {
+  .title {
+    font-size: var(--font-size-heading-secondary);
+  }
+}
+
+.subheading {
+  font-size: var(--font-size-subheading);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+  color: var(--primary-red);
+}
+
+.text {
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.bullet {
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: var(--line-height-body);
+}
+
+/* Floor image (unchanged) */
+.fashionFloorContainer {
+  text-align: center;
+}
+
+.fashionFloorImage {
+  width: 100%;
+  margin: 2rem auto 0 auto;
+  display: block;
+  border-radius: var(--border-radius-standard);
+}
+
+.fashionFloorCaption {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-style: italic;
+}
+
+@media (min-width: 730px) {
+  .fashionFloorImage {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Romeo + Model */
+.romeoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-element-gap);
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.romeoItem,
+.modelItem {
+  flex: 1;
+  text-align: center;
+}
+
+.romeoImage,
+.modelImage {
+  width: 100%;
+  display: block;
+  border-radius: var(--border-radius-standard);
+  height: auto;
+}
+
+.romeoCaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@media (min-width: 730px) {
+  .romeoWrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-element-gap);
+  }
+  .romeoItem {
+    flex: 1.2;
+  }
+  .modelItem {
+    flex: 0.8;
+  }
+}
+
+/* Scan image */
+.scanContainer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.scanImage {
+  width: 100%;
+  display: block;
+  margin: 5rem auto 0 auto;
+  border-radius: var(--border-radius-standard);
+  height: auto;
+}
+
+.scanCaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+}
+
+@media (max-width: 730px) {
+  .scanCaption {
+    width: 100%;
+  }
+}
+
+@media (min-width: 730px) {
+  .scanImage {
+    width: 90%;
+  }
+}
+
+/* Group images */
+.groupWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-element-gap);
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.groupItem {
+  flex: 1;
+  text-align: center;
+}
+
+.groupImage {
+  width: 100%;
+  display: block;
+  border-radius: var(--border-radius-standard);
+  height: auto;
+}
+
+.groupCaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@media (min-width: 730px) {
+  .groupWrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-element-gap);
+  }
+}
+
+/* Photographer section */
+.photographerText {
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.photoWrapper {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.photoImage {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-standard);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photoCaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+}
+
+/* --- Terry Singh wide image like floor image --- */
+.terryContainer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.terryImage {
+  width: 100%;
+  display: block;
+  margin: 2rem auto 0 auto;
+  border-radius: var(--border-radius-standard);
+  height: auto;
+}
+
+.terryCaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+}
+
+@media (min-width: 730px) {
+  .terryImage {
+    width: 90%;
+  }
+}

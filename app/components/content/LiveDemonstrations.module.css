@@ -1,0 +1,47 @@
+.section {
+  color: var(--foreground);
+  font-family: "AgencyB", sans-serif;
+}
+
+.title {
+  color: var(--primary-red);
+  text-align: center;
+  margin: var(--spacing-base-px) 0;
+  font-size: 3rem;
+}
+
+.intro,
+.projectTitle {
+  line-height: 1.5;
+  text-align: left;
+}
+
+.intro {
+  margin-bottom: var(--spacing-section-gap);
+}
+
+.demonstration + .demonstration {
+  margin-top: var(--spacing-section-gap);
+}
+
+.projectTitle {
+  margin: 0 0 1rem;
+}
+
+.projectLinks {
+  margin: 0 0 0 20px;
+  padding: 0;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+.projectLinks li {
+  margin-bottom: 0.5rem;
+}
+
+.primaryRed {
+  color: var(--primary-red);
+}

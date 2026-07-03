@@ -1,0 +1,7 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Security Policy",
+  "url": "https://ritovision.com/security",
+  "description": "How to report vulnerabilities and coordinate disclosures with RitoVision."
+}

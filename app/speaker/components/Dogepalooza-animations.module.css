@@ -1,0 +1,11 @@
+.imageInnerAnimate {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+
+  .active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  

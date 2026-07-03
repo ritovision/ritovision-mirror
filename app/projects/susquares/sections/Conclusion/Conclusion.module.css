@@ -1,0 +1,31 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionText,
+.caption {
+  margin: 0;
+  max-width: 80ch;
+  font-family: michroma, sans-serif;
+  line-height: 1.8;
+  color: rgba(245, 247, 251, 0.9);
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.imageFrame {
+  aspect-ratio: 1079 / 873;
+  overflow: hidden;
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background: rgba(6, 24, 44, 0.55);
+}

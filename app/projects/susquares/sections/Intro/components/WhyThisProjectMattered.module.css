@@ -1,0 +1,11 @@
+.sectionText {
+  margin: 0;
+  max-width: 78ch;
+  font-family: michroma, sans-serif;
+  line-height: 1.8;
+  color: rgba(245, 247, 251, 0.86);
+}
+
+.sectionText + .sectionText {
+  margin-top: 1rem;
+}

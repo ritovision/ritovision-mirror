@@ -1,0 +1,26 @@
+.pressContactContainer {
+    /* Let the form stretch up to 700px and center it */
+    width: var(--container-width-percent);
+    max-width: 700px;
+    margin: 100px auto;
+    text-align: left; /* or center if you prefer */
+    padding: var(--spacing-element-gap);
+  }
+  
+  .formTitle {
+    text-align: center;
+    margin-bottom: var(--spacing-margin-bottom);
+  }
+  
+  .formFieldWrapper {
+    margin-bottom: var(--spacing-margin-bottom);
+    width: 100%;
+  }
+  
+  /* Force inputs, textareas, etc. to span the entire width of the wrapper */
+  .formFieldWrapper input,
+  .formFieldWrapper textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  

@@ -1,0 +1,6 @@
+.desktopGridWrapper {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-gap-xl) var(--spacing-base-px);
+  }
+  

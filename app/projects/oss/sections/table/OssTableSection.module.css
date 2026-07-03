@@ -1,0 +1,83 @@
+.heading {
+  text-align: center;
+  margin: 0 auto 12px;
+  max-width: var(--container-width-percent);
+}
+
+.intro {
+  text-align: center;
+  margin: 0 auto 32px;
+  max-width: var(--container-width-percent);
+}
+
+.tableContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.tableWrapper {
+  margin-top: 24px;
+  width: 100%;
+  max-width: 90%;
+  border: 1px solid var(--secondary-blue);
+}
+
+.projectCell {
+  text-align: center;
+}
+
+.projectLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  color: inherit;
+}
+
+.projectLogo {
+  width: 140px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.projectName {
+  font-family: var(--font-agency), sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+
+.tableLink {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.tableLink:hover {
+  opacity: 0.8;
+}
+
+.improvementCell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.improvementText {
+  text-align: left;
+  white-space: pre-line;
+}
+
+.improvementText p {
+  margin: 0 0 0.6em 0;
+}
+
+.improvementText p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 730px) {
+  .projectLogo {
+    width: 120px;
+    height: 70px;
+  }
+}

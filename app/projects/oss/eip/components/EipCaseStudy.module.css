@@ -1,0 +1,100 @@
+.section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.backgroundBlock {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.backgroundTitle {
+  margin: 0 0 8px;
+}
+
+.quickHighlightsTitle {
+  margin-bottom: 12px;
+  color: var(--primary-red);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: 1.05;
+}
+
+.quickHighlightsList {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.quickHighlightsItem {
+  margin: 0 0 12px;
+  font-size: 1.333rem;
+  opacity: 0.9;
+}
+
+.quickHighlightsItem:last-child {
+  margin-bottom: 0;
+}
+
+.backgroundBody {
+  margin: 0 0 14px;
+  opacity: 0.9;
+}
+
+.problemGrid {
+  display: block;
+}
+
+.problemMedia {
+  margin-bottom: 18px;
+}
+
+.problemDetails {
+  display: block;
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.orbImage {
+  width: 90%;
+  max-width: 400px;
+  margin: 18px auto 8px;
+}
+
+.imageCaption {
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto 18px;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.sliderBlock {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 900px) {
+  .problemGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  .problemMedia {
+    margin-bottom: 0;
+  }
+
+  .problemDetails .backgroundBody:last-child {
+    margin-bottom: 0;
+  }
+}

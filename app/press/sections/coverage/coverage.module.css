@@ -1,0 +1,38 @@
+.pressShowcase {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  
+  .buttonContainer {
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .buttonIntro {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  
+  .innerButtonContainer {
+    width: var(--container-width-percent);
+    margin: 0 auto;
+  }
+  
+  .pressHeading {
+    color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 3.5rem;
+  }
+  
+  @media (max-width: 730px) {
+    .pressHeading {
+      margin-bottom: 20%;
+    }
+  }
+  

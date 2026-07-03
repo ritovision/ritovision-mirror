@@ -1,0 +1,25 @@
+import { Meta, Title, Primary, Controls, Story } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+The `Button` component is a versatile UI element used for triggering actions or navigating.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+### Blue Accent
+<Story of={ButtonStories.BlueAccent} />
+
+### Red Button
+<Story of={ButtonStories.RedButton} />
+
+### Disabled
+<Story of={ButtonStories.Disabled} />

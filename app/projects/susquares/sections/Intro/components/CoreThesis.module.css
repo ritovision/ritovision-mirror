@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subheading {
+  margin: 0;
+  text-align: center;
+  color: var(--foreground);
+  font-size: var(--font-size-heading-tertiary);
+}
+
+.sectionText {
+  margin: 0;
+  max-width: 78ch;
+  font-family: michroma, sans-serif;
+  line-height: 1.8;
+  color: rgba(245, 247, 251, 0.86);
+}

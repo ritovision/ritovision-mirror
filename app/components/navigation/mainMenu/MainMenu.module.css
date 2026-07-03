@@ -1,0 +1,202 @@
+/* ./app/components/navigation/mainMenu/MainMenu.module.css */
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-index-modal);
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.socialsContainer {
+    display: flex;
+    gap: var(--gap-large);
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.socialIcon {
+    height: 30px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.socialIcon:hover {
+    transform: scale(1.1);
+}
+
+.menuContainer {
+    border: 2px solid var(--secondary-blue);
+    border-radius: var(--border-radius-standard);
+    padding: var(--padding-medium) var(--spacing-base-px);
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    aspect-ratio: 1 / 1;
+}
+
+.wordmarkLogo {
+    width: 200px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--gap-standard);
+    flex: 1;
+    z-index: 10;
+}
+
+.rightColumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    z-index: 10;
+}
+
+.menuItem {
+    font-family: "AgencyB", sans-serif;
+    font-size: 1.2rem;
+    color: var(--foreground);
+    text-decoration: none;
+    padding: 3px var(--spacing-base-px);
+    background-color: transparent;
+    border-radius: var(--border-radius-pill);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.menuItem:hover {
+    background-color: var(--foreground);
+    color: var(--primary-blue);
+}
+
+.menuButton {
+    margin: 0;
+    color: var(--foreground);
+    font-family: "AgencyB", sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    padding: var(--gap-small) var(--padding-medium);
+    border-radius: var(--border-radius-standard);
+    transition: background-color 0.75s ease-in-out, color 0s, opacity 0.5s ease;
+    background: transparent;
+}
+
+.menuButton:hover {
+    background-color: var(--foreground);
+    color: var(--primary-blue);
+}
+
+/* New: wrapper for OrbImage so Framer can animate it */
+.randomImageLayer {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Legacy class kept (unused by OrbImage) */
+.randomImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5;
+}
+
+@media (min-width: 730px) {
+    .socialsContainer {
+      gap: 30px;
+    }
+
+    .socialIcon {
+      height: 40px;
+    }
+
+    .menuContainer {
+      width: var(--container-max-width-cards);
+      max-width: var(--container-max-width-cards);
+      height: 500px;
+      padding: 25px 33px;
+      border-width: 3px;
+      border-radius: var(--border-radius-large);
+    }
+
+    .wordmarkLogo {
+      width: 350px;
+    }
+
+    .leftColumn {
+      gap: var(--gap-large);
+    }
+
+    .menuItem {
+      font-size: 1.6rem;
+      padding: 4px 27px;
+      min-height: 32px;
+      border-radius: 40px;
+    }
+
+    .menuButton {
+      font-size: 2.5rem;
+      padding: 13px 25px;
+      border-radius: var(--border-radius-large);
+    }
+}
+
+@media (max-width: 729px) {
+    .menuContainer {
+      height: auto;
+      aspect-ratio: unset;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 729px) {
+  .menuContainer {
+    width: clamp(300px, 66.6vw, 500px) !important;
+    max-width: unset !important;
+    height: clamp(300px, 66.6vw, 500px);
+    max-height: unset;
+    min-height: 350px;
+  }
+
+  .menuItem {
+    font-size: 1.3rem;
+  }
+
+  .menuButton {
+    font-size: 2rem;
+  }
+}

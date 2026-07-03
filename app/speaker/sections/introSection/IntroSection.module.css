@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.buttonWrapper {
+  width: auto;
+}
+
+@media (max-width: 729px) {
+  .wrapper {
+    margin-top: 30%;
+  }
+  .buttonWrapper {
+    width: var(--container-width-percent);
+  }
+}

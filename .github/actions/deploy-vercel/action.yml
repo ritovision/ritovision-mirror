@@ -1,0 +1,27 @@
+name: Deploy Vercel
+description: Deploy the main site to Vercel
+inputs:
+  vercel-token:
+    description: Vercel API token
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Install Vercel CLI
+      run: npm i -g vercel@latest
+      shell: bash
+
+    - name: Pull Vercel env (production)
+      run: vercel pull --yes --environment=production --token=${{ inputs.vercel-token }}
+      shell: bash
+
+    - name: Build with Vercel (prebuild artifacts)
+      run: vercel build --prod --token=${{ inputs.vercel-token }}
+      shell: bash
+
+    - name: Deploy prebuilt artifacts to Vercel (production)
+      run: vercel deploy --prebuilt --prod --token=${{ inputs.vercel-token }}
+      shell: bash

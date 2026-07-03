@@ -1,0 +1,52 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 auto 0 1rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  font-family: michroma, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(245, 247, 251, 0.86);
+}
+
+.title {
+  margin: 0;
+  font-family: agencyb, sans-serif;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 0.94;
+  text-align: center;
+}
+
+.logoFrame {
+  position: relative;
+  aspect-ratio: 1;
+  width: min(100%, 360px);
+  border-radius: var(--border-radius-standard);
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.lede {
+  margin: 0;
+  width: 100%;
+  font-family: michroma, sans-serif;
+  font-size: clamp(0.98rem, 1.9vw, 1.12rem);
+  line-height: 1.8;
+  color: rgba(245, 247, 251, 0.9);
+  text-align: left;
+}
+
+@media (max-width: 860px) {
+  .logoFrame {
+    max-width: 360px;
+  }
+}

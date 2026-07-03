@@ -1,0 +1,186 @@
+/* app\components\utilities\accordion\AccordionTOC.module.css */
+
+.outer {
+  /* defaults provided via inline style from props */
+}
+
+.wrapper {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin: 0 auto;
+}
+
+.accordionRoot {
+  border: 2px solid var(--secondary-blue);
+  border-radius: var(--border-radius-standard);
+  overflow: hidden;
+  width: 100%;
+}
+
+.accordionItem:not(:first-child) {
+  border-top: 2px solid var(--secondary-blue);
+}
+
+.accordionHeader {
+  margin: 0;
+}
+
+.accordionTrigger {
+  all: unset;
+  width: 100%;
+  padding: var(--spacing-element-gap);
+  display: flex;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.headerWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-right: 70px;
+}
+
+.title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-heading-primary);
+  color: var(--foreground);
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  max-width: var(--container-max-width-medium);
+  word-wrap: break-word;
+}
+
+@media (max-width: 730px) {
+  .title {
+    font-size: var(--font-size-heading-secondary);
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLine {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--foreground);
+  transition: all 0.3s ease;
+}
+
+.iconLine:first-child {
+  transform: rotate(90deg);
+}
+
+.contentWrapper {
+  overflow: hidden;
+  padding: 0 var(--spacing-section-gap);
+}
+
+.contentWrapper > div {
+  padding: var(--spacing-element-gap) 0;
+  text-align: left;
+}
+
+/* ⬇️ Mobile-specific override for left alignment */
+@media (max-width: 730px) {
+  .contentWrapper {
+    padding-left: var(--spacing-element-gap);
+    padding-right: var(--spacing-element-gap);
+    display: block;
+  }
+
+  .contentWrapper > div {
+    text-align: left;
+  }
+}
+
+/* ToC content styles (consolidated from individual modules) */
+.tocContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.333em;
+  width: 100%;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 30%;
+  width: 50%;
+  max-width: 80%;
+  margin-bottom: var(--spacing-element-gap);
+  text-align: left;
+}
+
+.linkList li {
+  margin: 0.25rem 0;
+}
+
+.spacer {
+  height: var(--spacing-element-gap);
+  width: 100%;
+}
+
+.primaryTitle {
+  width: 240px;
+  max-width: 80%;
+  margin: var(--spacing-element-gap) 0 0.5rem;
+  text-align: left;
+  color: var(--primary-red);
+
+}
+
+/* Mobile-specific adjustments for ToC */
+@media (max-width: 730px) {
+  .tocContent {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .linkList,
+  .primaryTitle {
+    width: 100%;
+    max-width: none;
+  }
+
+  .linkList {
+    margin-left: 0;
+  }
+}
+
+/* ── SMOOTH TEXT-SCALE HOVER (no layout shift) ── */
+.linkList a,
+.primaryTitle a {
+  display: inline-block;           
+  vertical-align: top;             
+  transform-origin: top center;    
+  will-change: transform;          
+  transition: transform .5s ease-in-out;
+}
+
+.linkList a:hover,
+.primaryTitle a:hover {
+  transform: scale(1.15);
+}
+
+.linkItem {
+  /* Same styles as linkList */
+  padding: 0.5rem 0;
+  list-style: none;
+}

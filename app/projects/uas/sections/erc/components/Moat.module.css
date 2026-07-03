@@ -1,0 +1,91 @@
+/* c:/Users/Mattj/ritovision website/test/app/projects/uas/sections/erc/components/Moat.module.css */
+.outer {
+    text-align: center;
+  }
+  
+  .heading {
+    color: var(--foreground);
+    font-size: var(--font-size-heading-primary);
+    margin-bottom: var(--spacing-margin-bottom);
+    width: 95%;
+    margin: 0 auto var(--spacing-margin-bottom);
+  }
+  
+  .container {
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    padding: var(--spacing-container-padding);
+    width: var(--container-width-percent);
+    max-width: var(--container-max-width-large);
+    margin: 0 auto;
+    background: transparent;
+  }
+  
+  .subheading {
+    font-size: 2.2rem;
+    color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .paragraph {
+    text-align: left;
+    margin-bottom: var(--spacing-margin-bottom);
+    color: var(--foreground);
+    line-height: var(--line-height-body);
+  }
+  
+  .and {
+    text-align: center;
+    color: var(--foreground);
+    margin: var(--spacing-element-gap) 0;
+  }
+  
+  .graphWrapper {
+    margin: 2rem 0;
+  }
+  
+  .graphTitle {
+    font-size: var(--font-size-heading-secondary);
+    color: var(--foreground);
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .consequencesHeading {
+    font-size: 2.2rem;
+    color: var(--primary-red);
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Center the list block, but keep bullet alignment inside */
+  .consequencesList {
+    display: block;
+    margin: var(--spacing-element-gap) auto 0;
+    padding-left: 1.5em;    /* indent for bullets */
+    text-align: left;       /* keep text left-aligned under bullets */
+    max-width: var(--container-max-width-small);       /* optional: constrain width */
+    color: var(--foreground);
+  }
+  
+  .bullet {
+    list-style-type: disc;
+    list-style-position: outside;
+    opacity: 0;
+    margin-bottom: 0.75rem;
+  }
+  
+  .fadeIn {
+    animation: fadeIn 0.8s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

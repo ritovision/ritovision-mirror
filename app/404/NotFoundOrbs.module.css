@@ -1,0 +1,100 @@
+/* app/components/pages/404/NotFoundOrbs.module.css */
+
+.heroContainer {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.videoVisible {
+  opacity: 1;
+}
+
+/* 
+  Pushes the orb-boxes toward the top (instead of centering),
+  and adds a bit of room from whatever sits above this container.
+*/
+.sequenceContainer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;    /* was center */
+  height: 100%;
+  padding: 2rem;
+  margin-top: 4rem;               /* adjust as needed for you menu */
+}
+
+.blockWrapper {
+  position: relative;
+  max-width: 600px;
+  width: fit-content;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.svgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.svgBorder {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.textContainer {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 2em;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.leftAlign {
+  align-self: flex-start;
+}
+
+.rightAlign {
+  align-self: flex-end;
+}
+
+.centerAlign {
+  align-self: center;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.videoGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, #012035, transparent);
+  pointer-events: none;
+  z-index: 0;
+}

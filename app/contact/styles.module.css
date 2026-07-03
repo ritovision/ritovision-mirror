@@ -1,0 +1,9 @@
+.spacerAbove {
+  margin-top: var(--font-size-heading-primary);
+  margin-bottom: 4rem;
+}
+
+.formWrapper {
+  max-width: var(--container-width-percent);
+  margin: 0 auto;
+}

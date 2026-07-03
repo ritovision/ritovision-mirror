@@ -1,0 +1,108 @@
+/* app/press/styles.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pressShowcase {
+  width: 100%;              /* ✅ Full viewport width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Keeps header and accordion centered */
+  padding: 2rem 0;
+}
+
+.header {
+  color: var(--foreground);
+  font-size: var(--font-size-heading-tertiary);
+  margin-bottom: var(--spacing-gap-medium);
+  text-align: center;
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-margin-bottom);
+  color: var(--foreground);
+}
+
+.heroSubtitle {
+  font-size: var(--font-size-subheading);
+  color: var(--foreground);
+  opacity: 0.8;
+}
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--spacing-section-gap);
+}
+
+.heroImage {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-small);
+  border-radius: var(--border-radius-standard);
+}
+
+.heroDescription {
+  color: var(--foreground);
+  text-align: center;
+  margin-top: var(--spacing-element-gap);
+  font-size: 1rem;
+}
+
+/* --- NEW: Block Text Fade-in Sequence --- */
+.sequenceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-element-gap);
+  margin-top: var(--spacing-section-gap);
+}
+
+.blockText {
+  background-color: var(--primary-blue);
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  padding: 0.75rem 1.25rem;
+  color: white;
+  font-size: 1.25rem;
+  text-align: center;
+  opacity: 0;
+  transition: var(--transition-fade);
+  max-width: var(--container-max-width-small);
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 730px) {
+  .heroTitle {
+    font-size: var(--font-size-heading-secondary);
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+}

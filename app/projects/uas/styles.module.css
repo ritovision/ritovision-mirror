@@ -1,0 +1,35 @@
+.ercJourney {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeScaleIn 4s forwards;
+  }
+  
+  @keyframes fadeScaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .callToAction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: var(--container-max-width-medium);
+    margin: 2rem auto 4rem auto; /* top:2rem, bottom:4rem */
+    text-align: center;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: var(--spacing-element-gap);
+  }

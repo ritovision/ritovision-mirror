@@ -1,0 +1,55 @@
+/* FILE PATH: app\components\utilities\modal\ExternalSite.module.css */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: var(--spacing-base-px) 10px 10px;
+}
+
+.message {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--foreground);
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.leaveButton,
+.cancelButton {
+  flex: 1;
+  min-width: 100px;
+}
+
+/* Mobile styles */
+
+@media (max-width: 480px) {
+  .content {
+    gap: var(--gap-large);
+    padding: 16px 8px 8px;
+  }
+  
+  .message {
+    font-size: 16px;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+    gap: var(--gap-standard);
+    max-width: 200px;
+  }
+  
+  .leaveButton,
+  .cancelButton {
+    width: 100%;
+  }
+}

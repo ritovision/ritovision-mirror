@@ -1,0 +1,21 @@
+/* \test\app\projects\jumptag\sections\conclusion\ConclusionWrapper.module.css */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--container-max-width-large);
+    margin-left: auto;
+    margin-right: auto;
+        gap: var(--spacing-section-gap);
+      min-height: 100vh;
+  }
+  
+  .buttonGroupWrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    margin-left: var(--spacing-element-gap);
+    margin-right: var(--spacing-element-gap);
+    margin-bottom: 4rem;
+  }
+  

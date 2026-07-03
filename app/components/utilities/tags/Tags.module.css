@@ -1,0 +1,33 @@
+.container {
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    width: var(--container-width-percent);
+    max-width: var(--container-max-width-cards);
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  .header {
+    font-family: agencyb, sans-serif;
+    font-size: var(--font-size-subheading); /* Larger text */
+    border-bottom: 1px solid var(--secondary-blue);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  
+  .tagList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .tag {
+    font-family: agencyb, sans-serif;
+    color: #ffffff;
+    border: var(--default-border);
+    border-radius: 200px;
+    padding: 4px 12px;
+  }
+  

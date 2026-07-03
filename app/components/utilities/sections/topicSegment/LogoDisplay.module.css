@@ -1,0 +1,28 @@
+.container {
+    border: 2px solid var(--secondary-blue);
+    border-radius: var(--border-radius-standard);
+    padding: 32px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    max-width: 80%;
+  }
+  
+  .image {
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* 🔽 Mobile: override margin for smaller screens */
+  @media (max-width: 600px) {
+    .container {
+      margin-bottom: 25%;
+      max-width: 80%;
+    }
+  }
+  

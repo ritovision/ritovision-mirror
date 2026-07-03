@@ -1,0 +1,27 @@
+.container {
+    margin: 0 auto;
+    text-align: center;
+    width: var(--container-width-narrow);
+  }
+  
+  @media (min-width: 730px) {
+    .container {
+      max-width: var(--container-max-width-medium);
+    }
+  }
+  
+.textTitle {
+    margin-bottom: var(--spacing-element-gap);
+    font-size: var(--font-size-subheading);
+    color: var(--primary-red);
+  }
+  
+  .textBody {
+    font-size: 1rem;
+    color: var(--foreground);
+  }
+  
+.textBody + .textBody {
+    margin-top: var(--spacing-element-gap);
+  }
+  

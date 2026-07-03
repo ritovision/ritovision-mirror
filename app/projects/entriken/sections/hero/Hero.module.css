@@ -1,0 +1,96 @@
+.heroContainer {
+    position: relative;
+    width: 100%;
+    max-width: 751px;        /* original full width */
+    aspect-ratio: 751 / 625; /* preserves 751×625 ratio */
+    margin: 0 auto;
+  
+    /* initial fade/scale animation */
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeScale 1s ease forwards;
+  }
+  
+  @keyframes fadeScale {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .imageWrapper {
+    position: absolute;
+    overflow: hidden;
+    transform-origin: center center;
+    transition: transform 0.4s ease;
+  }
+  
+  /* click-shrink / grow */
+  .shrink { transform: scale(0.8); }
+  .grow   { transform: scale(1);   }
+  
+  /* quadrant geometry in percentages */
+  .upperLeft {
+    top:    0%;
+    left:   0%;
+    width:  60.186%;  /* 452/751*100 */
+    height: 54.240%;  /* 339/625*100 */
+    border-top-left-radius: var(--border-radius-standard);
+  }
+  
+  .upperRight {
+    top:    0%;
+    left:   60.186%;
+    width:  39.814%;  /* 298/751*100 */
+    height: 54.240%;
+    border-top-right-radius: var(--border-radius-standard);
+  }
+  
+  .bottomLeft {
+    top:    54.240%;
+    left:   0%;
+    width:  60.186%;
+    height: 45.760%;  /* 286/625*100 */
+    border-bottom-left-radius: var(--border-radius-standard);
+  }
+  
+  .bottomRight {
+    top:    54.240%;
+    left:   60.186%;
+    width:  39.814%;
+    height: 45.760%;
+    border-bottom-right-radius: var(--border-radius-standard);
+  }
+  
+  /* force each <img> to fill its wrapper */
+  .imageWrapper img {
+    display: block;
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+/* "Extending a Legacy" title */
+.extTitle {
+    opacity: 0;
+    transform: scale(0.8);
+    text-align: center;
+    color: red;
+    margin-top: var(--spacing-element-gap);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+  }
+  
+  .showTitle {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  @media (min-width: 730px) {
+    .extTitle {
+        font-size: var(--font-size-heading-primary);
+      }
+    }

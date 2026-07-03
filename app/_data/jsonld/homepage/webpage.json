@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "RitoVision, de-risking high-ambiguity work",
+  "url": "https://ritovision.com/",
+  "description": "RitoVision showcases how Rito de-risks high-ambiguity work by leading and integrating Product, Brand, UX & Engineering into flagship experiences. Explore end-to-end product strategy, UX leadership, and full-stack engineering.",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://ritovision.com/images/brand/ritovision-wordmark-tm.png"
+  }
+}

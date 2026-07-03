@@ -1,0 +1,51 @@
+/* Container for logos that need a specific squared dimension */
+.squareLogoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px; /* Desktop width */
+    height: 400px; /* Square container */
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 730px) {
+    .squareLogoContainer {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  /* Generic container to center logos without imposing a size */
+  .centerLogoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+
+
+
+  .buttonWrapper {
+    margin-top: 4rem;
+    text-align: center;
+    width: var(--container-width-narrow);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  .montageWrapper {
+    width: 100%;
+    margin: var(--spacing-section-gap) 0;
+  }
+  .swiperContainer {
+    width: 100%;
+    height: auto;
+  }
+  .swiperImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-standard);
+  }
+  

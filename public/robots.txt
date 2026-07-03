@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /connect
+Disallow: /connect/
+Disallow: /qr
+Disallow: /qr/
+
+Sitemap: https://ritovision.com/SEO/sitemap.xml
+Sitemap: https://ritovision.com/SEO/sitemap-images.xml

@@ -1,0 +1,140 @@
+.container {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    max-width: var(--container-max-width-medium);
+    width: var(--container-width-percent);
+    text-align: center;
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 2s ease, transform 2s ease;
+  }
+
+  .animateContainer {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .title {
+    color: var(--primary-red);
+    font-family: var(--font-agency);
+    margin-bottom: var(--spacing-margin-bottom);
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-margin-bottom);
+  }
+  
+  .paragraphAgency {
+    font-family: var(--font-agency);
+    color: var(--primary-red);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 5rem 0;
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-margin-bottom) auto;
+    display: inline-block;
+    text-align: left;
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+
+  .listItem {
+    position: relative;
+    padding-left: 1.2em;
+  }
+
+  .listItem::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.5s ease, opacity 0.5s ease;
+  }
+
+  .listText {
+    display: inline-block;
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.5s ease, opacity 0.5s ease;
+  }
+
+  .animateList li:nth-child(1) .listText,
+  .animateList li:nth-child(1)::before {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transition-delay: 0.2s;
+  }
+  .animateList li:nth-child(2) .listText,
+  .animateList li:nth-child(2)::before {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transition-delay: 0.4s;
+  }
+  .animateList li:nth-child(3) .listText,
+  .animateList li:nth-child(3)::before {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transition-delay: 0.6s;
+  }
+  .animateList li:nth-child(4) .listText,
+  .animateList li:nth-child(4)::before {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transition-delay: 0.8s;
+  }
+  .animateList li:nth-child(5) .listText,
+  .animateList li:nth-child(5)::before {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transition-delay: 1s;
+  }
+  
+  @media (max-width: 729px) {
+    .animateList li:nth-child(1) .listText,
+    .animateList li:nth-child(1)::before {
+      clip-path: none;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      transition-delay: 0.2s;
+    }
+    .animateList li:nth-child(2) .listText,
+    .animateList li:nth-child(2)::before {
+      clip-path: none;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      transition-delay: 0.4s;
+    }
+    .animateList li:nth-child(3) .listText,
+    .animateList li:nth-child(3)::before {
+      clip-path: none;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      transition-delay: 0.6s;
+    }
+    .animateList li:nth-child(4) .listText,
+    .animateList li:nth-child(4)::before {
+      clip-path: none;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      transition-delay: 0.8s;
+    }
+    .animateList li:nth-child(5) .listText,
+    .animateList li:nth-child(5)::before {
+      clip-path: none;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      transition-delay: 1s;
+    }
+  }  

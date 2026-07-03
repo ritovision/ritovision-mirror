@@ -1,0 +1,31 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subheading {
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--foreground);
+  font-size: var(--font-size-heading-tertiary);
+}
+
+.sectionText {
+  margin: 0;
+  max-width: 80ch;
+  font-family: michroma, sans-serif;
+  line-height: 1.8;
+  color: rgba(245, 247, 251, 0.9);
+}
+
+.link {
+  color: var(--primary-red);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.link:hover {
+  color: var(--foreground);
+}

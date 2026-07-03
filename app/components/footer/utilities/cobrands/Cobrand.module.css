@@ -1,0 +1,91 @@
+/* ./app/components/footer/utilities/cobrands/Cobrand.module.css */
+.cobrandContainer {
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    background-color: transparent;
+    padding: var(--padding-medium) var(--spacing-base-px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--container-width-narrow);
+    max-width: var(--container-max-width-cards);
+    margin-top: 7%;
+}
+
+.cobrandTitle {
+    font-family: var(--font-agency), sans-serif;
+    font-size: 1.5rem;
+    color: var(--foreground);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cobrandWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 7vw;
+}
+
+.cobrandLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cobrandImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.cobrandImage {
+    height: auto;
+    max-width: 100%;
+    flex-shrink: 0;
+    transition: transform 1s ease-in-out;
+}
+
+.cobrandImage:hover {
+    transform: scale(1.1);
+}
+
+.ritography {
+    width: 80%;
+}
+
+.ritorhymes {
+    width: 60%;
+    height: 133%;
+}
+
+@media (min-width: 730px) {
+    .cobrandContainer {
+        max-width: 700px;
+    }
+
+    .cobrandWrapper {
+        flex-direction: row;
+        justify-content: center;
+        gap: 7%;
+    }
+
+    .cobrandLink {
+        width: auto;
+    }
+
+    .ritography {
+        width: 83%;
+    }
+
+    .ritorhymes {
+        width: 80%;
+        height: auto;
+    }
+}

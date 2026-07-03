@@ -1,0 +1,49 @@
+/* \test\app\projects\entriken\sections\intro\components\Toc.module.css */
+
+.tocContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.333em;
+  width: 100%;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 240px;
+  max-width: 80%;
+  margin-bottom: var(--spacing-margin-bottom);
+  text-align: left;
+}
+
+.linkList li {
+  margin: 0.25rem 0;
+}
+
+.spacer {
+  height: var(--spacing-margin-bottom);
+  width: 100%;
+}
+
+.primaryTitle {
+  width: 240px;
+  max-width: 80%;
+  margin: var(--spacing-margin-bottom) 0 0.5rem;
+  text-align: left;
+  color: var(--primary-red); 
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 730px) {
+  .tocContent {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .linkList,
+  .primaryTitle {
+    width: 100%;
+    max-width: none;
+  }
+}

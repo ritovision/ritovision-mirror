@@ -1,0 +1,86 @@
+/* Evolution.module.css */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-section-gap);
+}
+
+.paragraph {
+  max-width: var(--container-max-width-medium);
+  margin: 0 auto;
+}
+
+/* center all h3s inside a paragraph */
+.paragraph h3 {
+  text-align: center;
+  margin: 0; /* reset if needed */
+}
+
+/* left‑align all p tags */
+.paragraph p {
+  text-align: left;
+  margin-top: 0.5rem; /* optional spacing */
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-section-gap);
+  margin-top: 0;
+}
+
+@media (min-width: 730px) {
+  .blocks {
+      margin-top: 2rem;
+  }
+}
+
+/* each block is an SVG */
+.block {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* half‑border lines */
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  transition: stroke-dashoffset 1s ease-out;
+}
+.drawBorder {
+  stroke-dashoffset: 0;
+}
+
+/* text fade-in */
+.text {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.showText {
+  opacity: 1;
+}
+
+/* arrow draw */
+.arrow {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 1s ease-out;
+}
+.drawArrow {
+  stroke-dashoffset: 0;
+}
+
+.blockWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

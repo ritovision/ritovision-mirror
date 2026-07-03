@@ -1,0 +1,48 @@
+.pageContainer {
+    background-color: var(--primary-blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .heading {
+    font-family: agencyb, sans-serif;
+    color: var(--foreground);
+    margin-bottom: 20px;
+  }
+  
+  .subheading {
+    font-family: agencyb, sans-serif;
+    color: var(--foreground);
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .fieldsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Existing styles... */
+
+.fieldsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* New wrapper for modal demo (or any other wide sections) */
+.modalDemoWrapper {
+  width: 100%;
+  max-width: 800px; /* Increased width so buttons have more room */
+  margin: 0 auto;
+}

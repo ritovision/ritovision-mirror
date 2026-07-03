@@ -1,0 +1,86 @@
+.wrapper {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* each box */
+.publicContainer {
+  border-left: 2px solid var(--secondary-blue);
+  border-right: 2px solid var(--secondary-blue);
+  border-top: 2px solid var(--secondary-blue);
+  border-bottom: none;
+  padding: var(--spacing-container-padding);
+  background: transparent;
+}
+
+/* top box: white heading, round top corners */
+.publicContainer:first-child {
+  border-radius: var(--border-radius-standard) var(--border-radius-standard) 0 0;
+}
+
+.publicContainer:last-child {
+  border-bottom: 2px solid var(--secondary-blue);
+  border-radius: 0 0 var(--border-radius-standard) var(--border-radius-standard);
+}
+
+/* first heading */
+.firstTitle {
+  font-size: var(--font-size-heading-primary);
+  color: var(--foreground);
+  text-align: center;
+  margin: 0 0 var(--spacing-margin-bottom);
+}
+
+/* intro paragraph */
+.paragraph {
+  color: var(--foreground);
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+  text-align: center;
+}
+
+/* subsequent headings with icon */
+.title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-heading-tertiary);
+  color: var(--foreground);
+  margin: var(--spacing-margin-bottom) 0;
+}
+
+/* icon sizing */
+.title img {
+  height: var(--font-size-heading-tertiary);
+  width: auto;
+}
+
+/* new: red, centered section headings (e.g. Audience Perception, Strategic Insight) */
+.redHeading {
+  color: var(--primary-red);
+  text-align: center;
+  font-size: var(--font-size-heading-tertiary);
+  margin: var(--spacing-container-padding) 0 var(--spacing-margin-bottom);
+}
+
+/* new: left-aligned subheadings */
+.leftHeading {
+  color: var(--foreground);
+  text-align: left;
+  margin-left: var(--spacing-container-padding);
+  font-size: 1.25rem;
+  margin-top: var(--spacing-margin-bottom);
+}
+
+/* new: left-aligned paragraph text */
+.leftText {
+  color: var(--foreground);
+  text-align: left;
+  margin-left: var(--spacing-container-padding);
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+}

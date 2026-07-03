@@ -1,0 +1,124 @@
+/* ./app/components/footer/footerDesktop/FooterDesktop.module.css */
+.footer {
+  --footer-bg: var(--primary-blue);
+  background-color: var(--footer-bg);
+  padding: clamp(32px, 4vw, 64px) clamp(24px, 5vw, 80px);
+  width: 100%;
+  position: relative;
+  z-index: 1500;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  row-gap: clamp(24px, 3vw, 48px);
+}
+
+.topRow {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.logoMarkWrapper {
+  display: inline-flex;
+  border-radius: var(--border-radius-medium);
+}
+
+.logoMark {
+  width: clamp(72px, 6vw, 110px);
+  height: auto;
+  border-radius: var(--border-radius-medium);
+}
+
+.wordmarkLink {
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+  position: absolute;
+}
+
+.wordmarkContainer {
+  display: inline-flex;
+  width: auto;
+}
+
+.wordmark {
+  width: clamp(220px, 28vw, 360px);
+  height: auto;
+}
+
+.footerSocialsInline {
+  display: flex;
+  justify-content: flex-end;
+  justify-self: end;
+}
+
+@media (max-width: 960px) {
+  .topRow {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .wordmarkLink,
+  .footerSocialsInline {
+    justify-content: center;
+  }
+}
+
+.footerButtonSection {
+  grid-column: 2 / span 10;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  .footerButtonSection {
+    grid-column: 1 / -1;
+  }
+}
+
+.footerMenuRow {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  column-gap: clamp(24px, 4vw, 64px);
+}
+
+@media (max-width: 1100px) {
+  .footerMenuRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footerMenuColumn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: left;
+}
+
+.footerMenuColumn:first-of-type {
+  justify-content: flex-end;
+}
+
+.footerMenuColumn:last-of-type {
+  justify-content: flex-start;
+}
+
+@media (max-width: 1100px) {
+  .footerMenuColumn {
+    justify-content: center;
+  }
+}
+
+.coBrands {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.footerLegal {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}

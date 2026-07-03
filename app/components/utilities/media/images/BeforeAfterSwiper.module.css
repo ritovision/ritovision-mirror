@@ -1,0 +1,143 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--container-width-percent);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.sliderFrame {
+  width: 90%;
+  max-width: 500px;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 20px 16px;
+  background: var(--primary-blue);
+  border: 2px solid var(--secondary-blue);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.headingButton {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.headingSeparator {
+  margin: 0 10px;
+  font-size: 2em;
+}
+
+.headingActive {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.headingInactive {
+  opacity: 1;
+}
+
+.headingButton:hover,
+.headingButton:focus-visible {
+  opacity: 0.85;
+}
+
+.label {
+  font-family: var(--font-agency), sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: var(--primary-red);
+}
+
+.video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-blue);
+}
+
+.navButton {
+  border: 2px solid var(--secondary-blue);
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  background: var(--primary-blue);
+  transition: opacity 0.2s ease;
+}
+
+.navButton:hover {
+  opacity: 0.8;
+}
+
+.navIcon {
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .shell {
+    flex-wrap: wrap;
+    row-gap: 12px;
+    column-gap: 8px;
+  }
+
+  .sliderFrame {
+    order: 1;
+    flex-basis: 100%;
+  }
+
+  .navButton {
+    order: 2;
+    width: 40px;
+    height: 40px;
+  }
+}

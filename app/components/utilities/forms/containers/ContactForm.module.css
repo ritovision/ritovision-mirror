@@ -1,0 +1,67 @@
+.formContainer {
+    width: 100%;
+    max-width: var(--container-max-width-small);
+    margin: 0 auto;
+  }
+  
+.formFields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-large);
+    margin-bottom: var(--spacing-section-margin-px);
+  }
+  
+  .fieldWrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Hidden inputs that capture the actual form data */
+  .hiddenInput,
+  .hiddenTextarea {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-base-px);
+  }
+  
+.modalContent p {
+    margin: var(--spacing-base-px) 0;
+    font-family: Michroma, sans-serif;
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: var(--line-height-body);
+  }
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-base, 1rem);
+  }
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 730px) {
+    .formContainer {
+      width: var(--container-width-narrow);
+    }
+  }

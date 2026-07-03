@@ -1,0 +1,12 @@
+.page {
+}
+
+.container :global(.defaulttopspace) {
+  margin-top: 4%;
+}
+
+@media (max-width: 730px) {
+  .container :global(.defaulttopspace) {
+    margin-top: 10%;
+  }
+}

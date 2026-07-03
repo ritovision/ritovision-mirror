@@ -1,0 +1,37 @@
+/* wrapper is inherited from BasicContainer.module.css */
+
+.heading {
+    font-size: var(--font-size-heading-secondary);
+    color: var(--foreground);
+    text-align: center;
+    margin-bottom: var(--spacing-margin-bottom);
+  }
+  
+  .subheading {
+    font-size: 1.75rem;
+    color: var(--primary-red); 
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .paragraph {
+    color: var(--foreground);
+    text-align: left;
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-margin-bottom);
+  }
+  
+  .bulletList {
+    list-style-type: disc;
+    margin-left: var(--spacing-section-gap);
+    margin-bottom: var(--spacing-margin-bottom);
+  }
+  
+  .bulletList li {
+    margin-bottom: 0.5rem;
+    font-size: 1.333em; 
+    color: var(--foreground);
+    text-align: left;
+  }
+  

@@ -1,0 +1,33 @@
+name: Link Check
+description: Build site and run linkinator against ./out
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash
+
+    - name: Build site
+      run: pnpm build
+      shell: bash
+
+    - name: Run Linkinator
+      run: pnpm linkinator ./out --directory-listing --status-code "403:warn" --status-code "429:warn" --concurrency 25 --timeout 60000 --retry --retry-errors --retry-errors-count 3
+      shell: bash
+
+    - name: Upload link check report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: link-check-report
+        path: linkinator-report.md
+        retention-days: 14

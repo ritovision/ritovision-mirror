@@ -1,0 +1,110 @@
+.section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.lead {
+  margin: 0 0 14px;
+  opacity: 0.95;
+}
+
+.body {
+  margin: 0 0 14px;
+  opacity: 0.9;
+}
+
+.highlightLine {
+  margin: 0 0 18px;
+  opacity: 0.95;
+}
+
+.highlightLine strong {
+  color: var(--primary-red);
+}
+
+.conclusionBlock {
+  text-align: center;
+}
+
+.conclusionTitle {
+  margin: 0 0 12px;
+  color: var(--primary-red);
+}
+
+.conclusionBody {
+  margin: 0;
+  opacity: 0.95;
+}
+
+.subsection {
+  margin-top: 32px;
+  text-align: left;
+}
+
+.subsectionTitle {
+  margin: 0 0 12px;
+}
+
+.quickHighlightsTitle {
+  color: var(--primary-red);
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: 1.05;
+}
+
+.quickHighlights {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 18px 0 0;
+}
+
+.quickHighlightItem {
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.quickHighlightItem:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.quickHighlightLink {
+  color: var(--primary-red);
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 1.333em;
+}
+
+.quickHighlightSummary {
+  margin: 8px 0 0;
+  opacity: 0.9;
+}
+
+.tocSection {
+  width: 90%;
+  max-width: var(--container-max-width-large);
+  margin: 0 auto;
+}
+
+.link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.sliderBlock {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .subsection {
+    margin-top: 28px;
+  }
+
+  .quickHighlights {
+    gap: 16px;
+  }
+}

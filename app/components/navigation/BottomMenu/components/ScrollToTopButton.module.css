@@ -1,0 +1,25 @@
+.scroll-arrow-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Desktop-only hover effect */
+@media (hover: hover) {
+  .scroll-arrow-wrapper:hover {
+    transform: scale(1.4) !important;
+  }
+}
+
+/* Programmatic animation class */
+.arrow-animating {
+  transform: scale(1.4) !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .scroll-arrow-wrapper {
+    margin-left: -10px;
+  }
+}

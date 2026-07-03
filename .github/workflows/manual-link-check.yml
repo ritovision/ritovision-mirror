@@ -1,0 +1,14 @@
+name: Manual Link Check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run link check
+        uses: ./.github/actions/link-check

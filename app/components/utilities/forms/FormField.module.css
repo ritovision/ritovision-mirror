@@ -1,0 +1,94 @@
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing-base-px);
+}
+
+/* Delegate focus styling to the container.
+   This rule applies only when the container is focused (via :focus-within)
+   and only if the input is not already in a valid or invalid state.
+   Disabled fields are excluded. */
+.fieldContainer:not(.disabled):focus-within .formField:not(.valid):not(.invalid) {
+  border-color: var(--foreground);
+  outline: none;
+  box-shadow: none;
+}
+
+.fieldLabel {
+  font-family: agencyb, sans-serif;
+  margin-bottom: 5px;
+  color: var(--foreground);
+  text-align: center;
+}
+
+.formField {
+  border-radius: var(--border-radius-pill);
+  font-family: Michroma, sans-serif;
+  height: 40px;
+  width: 100%;
+  background: transparent;
+  border: 2px solid var(--secondary-blue);
+  padding: 0 10px;
+  font-size: clamp(10px, 2vw, 14px);
+  color: var(--foreground);
+  outline: none;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Remove native focus outline from the input */
+.formField:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 730px) {
+  .formField {
+    font-size: clamp(12px, 2vw, 16px);
+  }
+}
+
+/* State classes */
+
+/* Default state */
+.pre {
+  /* No additional styling */
+}
+
+/* We no longer rely on an explicit .focus class since :focus-within handles it */
+/* .focus { } */
+
+/* Valid state: maintain the green border */
+.valid {
+}
+.formField.valid {
+  border-color: var(--utility-green);
+}
+
+/* Invalid state: maintain the red border with inset shadow */
+.invalid {
+}
+.formField.invalid {
+  border-color: var(--primary-red);
+  box-shadow: inset 0 0 0 2px var(--primary-red);
+}
+
+/* Disabled state: style and center the text; disable pointer events */
+.disabled {
+}
+.formField.disabled {
+  border-color: var(--secondary-blue);
+  background-color: var(--secondary-blue);
+  color: var(--background-white);
+  cursor: not-allowed;
+  text-align: center;
+  line-height: 40px; /* matches the height for vertical centering */
+}
+
+.errorText {
+  color: var(--primary-red);
+  font-size: clamp(10px, 2vw, 12px);
+  margin-top: 4px;
+  font-family: Michroma, sans-serif;
+  text-align: center;
+}

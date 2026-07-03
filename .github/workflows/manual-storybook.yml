@@ -1,0 +1,21 @@
+name: Manual Storybook Deploy
+
+on:
+  workflow_dispatch:
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  deploy-storybook:
+    runs-on: ubuntu-latest
+    environment: storybook
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Deploy Storybook
+        uses: ./.github/actions/deploy-storybook
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}

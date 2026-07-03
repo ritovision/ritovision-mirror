@@ -1,0 +1,29 @@
+name: Scheduled Link Check
+description: Check production site for broken links
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash
+
+    - name: Check production site for broken links
+      run: npx linkinator https://ritovision.com --recurse --directory-listing --skip linkedin.com --skip twitter.com --skip facebook.com --skip instagram.com --skip phor.net --skip x.com --status-code "403:warn" --status-code "429:warn" --concurrency 25 --timeout 60000 --retry --retry-errors --retry-errors-count 3 --markdown
+      shell: bash
+
+    - name: Upload link check report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: scheduled-link-check-report
+        path: linkinator-report.md
+        retention-days: 30

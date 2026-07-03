@@ -1,0 +1,67 @@
+.heroContainer {
+    width: 90%;
+    max-width: var(--container-max-width-cards);
+    aspect-ratio: 2/3; /* Vertical rectangle aspect ratio */
+    margin: 0 auto;
+    border-radius: var(--border-radius-standard);
+    overflow: hidden; /* Hide anything outside the container */
+    position: relative;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .loaded {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .nextImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Always behind current/sliding image */
+  }
+  
+  .currentImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Always on top */
+  }
+  
+  .slidingImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Same z-index as current (on top) */
+    animation: slideOut 0.5s ease-in forwards; /* Non-reversible animation */
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%); /* Completely out of view */
+    }
+  }
+  
+  .image {
+    object-fit: cover;
+    border-radius: var(--border-radius-standard);
+    width: 100%;
+    height: 100%;
+  }

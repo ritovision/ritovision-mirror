@@ -1,0 +1,76 @@
+/* \test\app\projects\jumptag\sections\physical\components\Jewelry.module.css */
+
+.wrapper {
+  width: var(--container-width-percent);
+  max-width: var(--container-max-width-large);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--spacing-container-padding);
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background: transparent;
+  color: white;
+}
+
+.title {
+  font-size: var(--font-size-heading-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-margin-bottom);
+  color: white;
+}
+
+@media (max-width: 729px) {
+  .title {
+    font-size: var(--font-size-heading-secondary);
+  }
+}
+
+.text {
+  line-height: var(--line-height-body);
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.list {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: var(--spacing-margin-bottom);
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.imageContainer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.image {
+  width: 100%;
+  max-width: var(--container-max-width-cards);
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--border-radius-standard);
+  height: auto;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  text-align: center;
+  max-width: var(--container-max-width-cards);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 730px) {
+  .image {
+    width: 90%;
+    max-width: var(--container-max-width-cards);
+  }
+  .caption {
+    width: 90%;
+    max-width: var(--container-max-width-cards);
+    margin-bottom: 2rem;
+  }
+}

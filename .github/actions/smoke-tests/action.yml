@@ -1,0 +1,35 @@
+name: Smoke Tests
+description: Run Playwright smoke tests
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash
+
+    - name: Install Playwright browsers
+      run: pnpm exec playwright install --with-deps
+      shell: bash
+
+    - name: Run E2E (stable)
+      env:
+        BASE_URL: 'http://localhost:3000'
+      run: pnpm e2e:stable
+      shell: bash
+
+    - name: Upload Playwright report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 14

@@ -1,0 +1,114 @@
+.section {
+  width: 90%;
+  max-width: 1400px;
+  padding: 2rem;
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-gap-medium);
+}
+
+.item {
+  border: 1px solid rgba(var(--secondary-blue-rgb), 0.7);
+  border-radius: var(--border-radius-standard);
+  background: rgba(var(--secondary-blue-rgb), 0.18);
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 18px 28px -22px rgba(var(--secondary-blue-rgb), 0.7);
+  cursor: pointer;
+  transform: translateY(0);
+  will-change: transform;
+}
+
+.item:hover,
+.item:focus-within {
+  background: rgba(var(--secondary-blue-rgb), 0.28);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 36px -20px rgba(var(--secondary-blue-rgb), 0.95);
+}
+
+.cardLink {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  padding: 1.25rem 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.cardLogo {
+  opacity: 0.7;
+  object-fit: contain;
+}
+
+.description {
+  margin: 0;
+  line-height: var(--line-height-body);
+}
+
+.title {
+  color: var(--primary-red);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.linkLabel {
+  display: inline-flex;
+  align-items: center;
+  color: var(--foreground);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.item:hover .linkLabel,
+.item:focus-within .linkLabel {
+  text-decoration: underline;
+}
+
+.cardLink:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+  border-radius: var(--border-radius-standard);
+}
+
+@media (max-width: 700px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .cardLink {
+    padding: 1rem 1.25rem;
+  }
+}

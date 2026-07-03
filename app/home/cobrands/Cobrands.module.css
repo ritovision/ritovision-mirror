@@ -1,0 +1,222 @@
+.heading {
+  font-size: 4rem;
+  margin-top: var(--padding-medium);
+  font-family: var(--font-agency);
+  color: var(--foreground);
+}
+
+.cobrandsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-base-px);
+  margin-bottom: 10rem;
+}
+
+.fadeInSection {
+  opacity: 0;
+  transform: translateY(var(--spacing-base-px));
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeScaleSection {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.fadeScaleSection.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.topContainer {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  padding: var(--spacing-base-px);
+  border: var(--default-border);
+  border-bottom: none;
+  border-top-left-radius: var(--border-radius-standard);
+  border-top-right-radius: var(--border-radius-standard);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.topContainer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/images/home/hero/rito-picture4.jpg') center/cover no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.topText {
+  color: var(--foreground);
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  opacity: 1;
+}
+
+.topLogo {
+  width: var(--container-width-narrow);
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--border-radius-standard);
+  margin-top: var(--spacing-base-px);
+  clip-path: inset(0 100% 0 0);
+  opacity: 1;
+}
+@keyframes logoReveal {
+  to { clip-path: inset(0 0 0 0); }
+}
+.fadeScaleSection.visible .topLogo {
+  animation: logoReveal 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.bottomContainers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomContainer {
+  position: relative;
+  width: 100%;
+  padding: var(--spacing-base-px);
+  border: var(--default-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bottomContainers > .bottomContainer:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.bottomContainers > .bottomContainer:last-child {
+  border-bottom-left-radius: var(--border-radius-standard);
+  border-bottom-right-radius: var(--border-radius-standard);
+}
+
+/* Background slides */
+.bgSlider {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+.bgSlide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Centered bottom content */
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.contentWrapper.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Bottom logos centered */
+.logo {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Button reveal */
+.buttonWrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  margin-top: var(--spacing-section-gap);
+  opacity: 0;
+  transform: translateY(var(--spacing-base-px));
+  transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+.buttonWrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile tweaks */
+@media (max-width: 999px) {
+  .bottomContainers > .bottomContainer:last-child {
+    border-top: none;
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 1000px) {
+  .topContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-bottom: var(--default-border);
+  }
+  .bottomContainers {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -2px;
+  }
+  .bottomContainers > .bottomContainer {
+    width: 50%;
+    max-width: var(--container-max-width-cards);
+    height: 600px;
+  }
+  .bottomContainers > .bottomContainer:first-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-right-width: 1px;
+  }
+  .bottomContainers > .bottomContainer:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-width: 1px;
+  }
+  .logo {
+    width: 400px;
+  }
+  
+}
+
+/* Extra small screens */
+@media (max-width: 730px) {
+  .cobrandsWrapper {
+    margin-bottom: 5rem;
+  }
+}

@@ -1,0 +1,45 @@
+.tocWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tocContent {
+  text-align: left;
+  font-size: 1.333em;
+  display: inline-block;
+  padding-left: 2rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.linkList li {
+  margin: 0.25rem 0;
+}
+
+.spacer {
+  margin: var(--spacing-element-gap) 0;
+}
+
+.primaryTitle {
+  color: var(--primary-red);
+  margin: var(--spacing-element-gap) 0 0 0;
+}
+
+/* ⬇️ Mobile-specific overrides for left alignment */
+@media (max-width: 730px) {
+  .tocWrapper {
+    justify-content: flex-start;
+  }
+
+  .tocContent {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: block;
+    text-align: left;
+  }
+}

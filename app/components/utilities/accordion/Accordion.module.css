@@ -1,0 +1,112 @@
+.accordionRoot {
+    border: 2px solid var(--secondary-blue);
+    border-radius: var(--border-radius-standard);
+    overflow: hidden;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.accordionItem:not(:first-child) {
+    border-top: 2px solid var(--secondary-blue);
+}
+
+.accordionHeader {
+    margin: 0;
+}
+
+.accordionTrigger {
+    all: unset;
+    width: 100%;
+    padding: var(--spacing-element-gap);
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.headerWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-right: 70px; /* Space for icon + padding */
+}
+
+.title {
+    font-size: var(--font-size-subheading);
+    color: var(--foreground);
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    max-width: var(--container-max-width-medium);
+    word-wrap: break-word;
+}
+
+.icon {
+    position: absolute;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconLine {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--foreground);
+    transition: all 0.3s ease;
+}
+
+.iconLine:first-child {
+    transform: rotate(90deg);
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    right: 30%;
+    height: 2px;
+    background: var(--foreground);
+    transform-origin: center left;
+    margin: 0 auto;
+}
+
+.contentWrapper {
+    overflow: hidden;
+    padding: 0 var(--spacing-section-gap);
+    will-change: transform;
+}
+
+.contentWrapper > div {
+    padding: var(--spacing-element-gap) 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 730px) {
+    .title {
+        font-size: 1.2rem;
+        padding: 0 var(--spacing-base-px);
+        max-width: calc(100% - 60px);
+    }
+
+    .icon {
+        right: var(--spacing-base-px);
+        width: 30px;
+        height: 30px;
+    }
+
+    .headerWrapper {
+        padding-right: 50px;
+    }
+    .accordionRoot {
+        width: 95%;
+    }
+    .contentWrapper {
+        padding: 0 .5rem; /* or 0 if you want edge-to-edge */
+    }
+}

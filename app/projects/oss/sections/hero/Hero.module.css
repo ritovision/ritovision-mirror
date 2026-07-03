@@ -1,0 +1,194 @@
+.heroContainer {
+  position: relative;
+  margin: 24px auto 0;
+  width: 90vw;
+  max-width: 560px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  --border-dur: 1200ms;
+}
+
+.svgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.borderPath {
+  opacity: 0;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.05);
+  z-index: 1;
+  animation: fadeInBackground 0.8s ease-out forwards;
+  animation-delay: calc(var(--border-dur) + var(--reveal-delay));
+}
+
+.logo {
+  position: absolute;
+  z-index: 2;
+  width: 24%;
+  max-width: 140px;
+  height: auto;
+  opacity: 0;
+  --delay: 0ms;
+  --x: 0%;
+  --y: 0%;
+  --scale: 1;
+  animation: fadeInLogo 0.5s ease-out forwards;
+  transform: translate(var(--x), var(--y)) translateY(12px) scale(var(--scale));
+  animation-delay: calc(var(--border-dur) + var(--delay));
+}
+
+.logoTopLeft {
+  top: 8%;
+  left: 8%;
+  width: 21%;
+  max-width: 118px;
+}
+
+.logoTopCenter {
+  top: 9%;
+  left: 50%;
+  width: 19.5%;
+  max-width: 112px;
+  --x: -50%;
+}
+
+.logoTopRight {
+  top: 5%;
+  right: 8%;
+  width: 16%;
+  max-width: 92px;
+}
+
+.logoRightMiddle {
+  top: 40%;
+  right: 7%;
+  width: 18%;
+  max-width: 102px;
+}
+
+.logoBottomRight {
+  bottom: 6%;
+  right: 9%;
+  width: 17%;
+  max-width: 96px;
+}
+
+.logoBottomCenter {
+  bottom: 7%;
+  left: 50%;
+  width: 20%;
+  max-width: 118px;
+  --x: -50%;
+}
+
+.logoBottomLeft {
+  bottom: 10%;
+  left: 8%;
+  width: 22%;
+  max-width: 150px;
+}
+
+.logoLeftMiddle {
+  top: 47%;
+  left: 8%;
+  width: 21.33%;
+  max-width: 122px;
+}
+
+.logoCenter {
+  top: 50%;
+  left: 50%;
+  width: 21%;
+  max-width: 120px;
+  --x: -50%;
+  --y: -50%;
+  --scale: 0.85;
+}
+
+.logoCenterAnimated {
+  animation: fadeInGit 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: calc(var(--border-dur) + var(--delay));
+}
+
+@keyframes drawBorder {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLogo {
+  to {
+    opacity: 1;
+    transform: translate(var(--x), var(--y)) translateY(-6px) scale(1);
+  }
+}
+
+@keyframes fadeInGit {
+  to {
+    opacity: 1;
+    transform: translate(var(--x), var(--y)) translateY(-6px) scale(1);
+  }
+}
+
+@keyframes fadeInBackground {
+  to {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    width: 92vw;
+  }
+
+  .logoTopLeft {
+    width: 20%;
+  }
+
+  .logoTopCenter {
+    width: 20%;
+  }
+
+  .logoTopRight {
+    width: 18%;
+  }
+
+  .logoRightMiddle {
+    width: 20%;
+    right: 6%;
+  }
+
+  .logoBottomRight {
+    width: 18%;
+  }
+
+  .logoBottomCenter {
+    width: 20%;
+    max-width: 180px;
+  }
+
+  .logoBottomLeft {
+    width: 22%;
+  }
+
+  .logoLeftMiddle {
+    width: 20%;
+  }
+
+  .logoCenter {
+    width: 24%;
+  }
+}

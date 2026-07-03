@@ -1,0 +1,117 @@
+.heroContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    min-height: 500px; /* Fixed height to prevent layout shifts */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .loaded {
+    opacity: 1;
+  }
+  
+  .imagesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  @media (min-width: 768px) {
+    .imagesContainer {
+      gap: var(--spacing-section-gap);
+    }
+  }
+  
+  /* Mobile adjustment to position content higher */
+  @media (max-width: 600px) {
+    .heroContainer {
+      justify-content: flex-start;
+      padding-top: 1rem;
+    }
+    
+    .imagesContainer {
+      gap: var(--spacing-element-gap);
+      margin-top: 0;
+      padding-top: 1rem;
+    }
+  }
+  
+  .logoContainer {
+    width: 60%;
+    max-width: 400px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-radius: var(--border-radius-standard);
+    overflow: hidden;
+  }
+  
+  .logoImage {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-standard);
+    object-fit: contain;
+  }
+  
+  .warzoneWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Adjust Warzone position on mobile */
+  @media (max-width: 600px) {
+    .warzoneWrapper {
+      align-items: flex-start;
+      padding-top: 25%;  /* Position 25% from the top on mobile */
+    }
+  }
+  
+  .warzoneVisible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .warzoneImage {
+    width: 100%;
+    max-width: var(--container-max-width-large);
+    height: auto;
+    border-radius: var(--border-radius-standard);
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .warzoneVisible .warzoneImage {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .fadeIn {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .fadeOutScale {
+    opacity: 0;
+    transform: scale(0.2);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }

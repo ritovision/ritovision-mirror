@@ -1,0 +1,12 @@
+.wrapper {
+    text-align: center;
+  }
+  
+  .heading {
+    color: var(--primary-red);
+    margin-bottom: var(--spacing-section-gap);
+    width: var(--container-width-percent);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

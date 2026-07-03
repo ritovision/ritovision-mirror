@@ -1,0 +1,38 @@
+
+{
+  "@context": "https://schema.org",
+  "@type": "PlayAction",
+  "actionStatus": "https://schema.org/ActiveActionStatus",
+  "agent": {
+    "@type": "Person",
+    "@id": "https://ritovision.com/about",
+    "name": "Rito",
+    "alternateName": "Rito Rhymes"
+  },
+  "object": {
+    "@type": "MusicComposition",
+    "name": "Rito Rhymes, Rapper and Crypto Nerd",
+    "lyricist": {
+      "@type": "Person",
+      "name": "Rito"
+    },
+    "datePublished": "2022-06-08",
+    "url": "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/",
+    "description": "Rito was interviewed live on WABC radio with Frank Morano, he rapped his answers to certain questions in real time and performed a final rap verse at the end.",
+    "isPartOf": {
+      "@type": "RadioSeries",
+      "@id": "https://wabcradio.com/radio-series/the-other-side-of-midnight",
+      "name": "The Other Side of Midnight with Frank Morano",
+      "url": "https://wabcradio.com/"
+    },
+    "audio": {
+      "@type": "AudioObject",
+      "url": "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/",
+      "contentUrl": "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/",
+      "encodingFormat": "audio/mpeg",
+      "name": "Listen to the Episode",
+      "description": "Audio recording of Rito Rhymes, Rapper and Crypto Nerd episode."
+    }
+  },
+  "mainEntityOfPage": "https://wabcradio.com/episode/rito-rhymes-rapper-and-crypto-nerd-6-8-22/"
+}

@@ -1,0 +1,26 @@
+.speakerFormContainer {
+    width: var(--container-width-narrow);
+    max-width: 700px;
+    margin: 100px auto;
+    text-align: left;
+    padding: var(--spacing-element-gap);
+    margin-top: 0;
+
+  }
+
+  .formTitle {
+    text-align: center;
+    margin-bottom: var(--spacing-margin-bottom);
+  }
+
+  .formFieldWrapper {
+    margin-bottom: var(--spacing-margin-bottom);
+    width: 100%;
+  }
+  
+  .formFieldWrapper input,
+  .formFieldWrapper textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  

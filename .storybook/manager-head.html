@@ -1,0 +1,217 @@
+<!-- .storybook/manager-head.html -->
+<link rel="shortcut icon" href="/SEO/favicon.ico">
+<link rel="icon" type="image/png" href="/SEO/favicon.png" sizes="192x192" />
+<meta name="robots" content="noindex,nofollow" />
+<meta name="googlebot" content="noindex,nofollow" />
+
+
+<style>
+    /* ===========================
+     Global fonts for Storybook manager
+     =========================== */
+
+    @font-face {
+        font-family: 'AgencyB';
+        src: url('/fonts/AGENCYB.woff') format('woff'),
+            url('/fonts/AGENCYB.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'YoungAgency';
+        src: url('/fonts/YoungAgency-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Michroma';
+        src: url('/fonts/Michroma-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    :root {
+
+        --font-agency: 'AgencyB';
+        --font-young: 'YoungAgency';
+        --font-body: 'Michroma';
+        --rito-primary-blue: #012035;
+        --rito-border-color: #ffffff;
+        --rito-text-color: #ffffff;
+    }
+
+    /* ===========================
+     EXISTING: Sidebar icon hacks
+     =========================== */
+
+    /* Customize Sidebar Icons */
+    /* Target by attribute as seen in DOM */
+    svg[type="component"],
+    svg[type="group"],
+    /* Target by ID for higher specificity */
+    #storybook-explorer-tree svg[type="component"],
+    #storybook-explorer-tree svg[type="group"] {
+        color: white !important;
+        fill: white !important;
+    }
+
+    /* Target paths inside the SVGs */
+    svg[type="component"] path,
+    svg[type="group"] path,
+    #storybook-explorer-tree svg[type="component"] path,
+    #storybook-explorer-tree svg[type="group"] path {
+        fill: white !important;
+    }
+
+    /* Fallback: Target by the class user found (unstable but works for now) */
+    .css-1l9vsfg {
+        color: white !important;
+    }
+
+    /* ===========================
+     ADDONS BAR (Controls/Actions/Interactions tabs)
+     =========================== */
+
+    /* Root bar that holds the Controls / Actions / Interactions tabs */
+    .sb-bar {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+        border-top: 1px solid var(--rito-border-color) !important;
+        border-bottom: 1px solid var(--rito-border-color) !important;
+    }
+
+    /* Individual tab buttons */
+    .sb-bar .tabbutton {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+        border: none !important;
+    }
+
+    /* Active tab: invert to highlight */
+    .sb-bar .tabbutton.tabbutton-active {
+        background-color: var(--rito-text-color) !important;
+        color: var(--rito-primary-blue) !important;
+        border: none !important;
+    }
+
+    /* Buttons on the right of the bar (orientation toggle, hide addons) */
+    .sb-bar button {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+        border: none !important;
+    }
+
+    .sb-bar button svg {
+        color: var(--rito-text-color) !important;
+        fill: var(--rito-text-color) !important;
+    }
+
+    .sb-bar button svg path {
+        fill: var(--rito-text-color) !important;
+    }
+
+    /* Count pills in tab buttons:
+     - Inactive: white bg, black text
+     - Active: black bg, white text
+  */
+    .sb-bar .tabbutton .css-1h0t4nl {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    .sb-bar .tabbutton.tabbutton-active .css-16pxfp9 {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+    }
+
+    /* ===========================
+     ADDON PANEL CONTENT AREA
+     (the whole Controls / Actions / Interactions panel under the bar)
+     =========================== */
+
+    /* Root container for the panel content */
+    #panel-tab-content {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+        border-top: 1px solid var(--rito-border-color) !important;
+    }
+
+    /* First-level wrapper(s) inside the panel */
+    #panel-tab-content>div {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+    }
+
+    /* Main layout wrappers from your DOM snapshot */
+    #panel-tab-content .css-1kwmz9x,
+    #panel-tab-content .css-3teh2t,
+    #panel-tab-content .css-lbjp25,
+    #panel-tab-content .css-18s7g0r,
+    #panel-tab-content .css-19neyr4,
+    #panel-tab-content .css-13leji8,
+    #panel-tab-content .css-1snmuk1 {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+    }
+
+    /* Text blocks inside the panel */
+    #panel-tab-content .css-es424d,
+    #panel-tab-content .css-1dqf3m7,
+    #panel-tab-content .css-ura4ne,
+    #panel-tab-content .css-1pn07ih,
+    #panel-tab-content .css-1mjgzsp {
+        color: var(--rito-text-color) !important;
+    }
+
+    /* Links like "Read docs" */
+    #panel-tab-content a,
+    #panel-tab-content a:hover,
+    #panel-tab-content a:focus {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+        border: none !important;
+        text-decoration: none !important;
+    }
+
+    /* Buttons in the panel toolbar (Pass / Scroll to end / nav arrows / Rerun) */
+    #panel-tab-content button {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+        border: none !important;
+    }
+
+    #panel-tab-content button[disabled] {
+        opacity: 0.7;
+    }
+
+    #panel-tab-content button svg {
+        color: var(--rito-text-color) !important;
+        fill: var(--rito-text-color) !important;
+    }
+
+    #panel-tab-content button svg path {
+        fill: var(--rito-text-color) !important;
+    }
+
+    /* Little badges / chips (e.g., "Pass") */
+    #panel-tab-content .css-1pn07ih,
+    #panel-tab-content .css-tzq3wn,
+    #panel-tab-content .css-14eawul {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+        border: none !important;
+    }
+
+    /* Panel-level containers for the Interactions list */
+    #panel-tab-content [aria-label="Component tests toolbar"],
+    #panel-tab-content [aria-label="Interactions list"] {
+        background-color: var(--rito-primary-blue) !important;
+        color: var(--rito-text-color) !important;
+        border: none !important;
+    }
+</style>

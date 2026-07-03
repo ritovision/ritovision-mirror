@@ -1,0 +1,25 @@
+.accordionWrapper {
+  margin-bottom: 80px;
+}
+
+.buttonSectionWrapper {
+  width: 100%;
+}
+
+@media (max-width: 730px) {
+  .buttonSectionWrapper {
+    width: var(--container-width-narrow);
+  }
+}
+
+.faqTitle {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 730px) {
+  .faqTitle {
+    margin-top: 20%;
+  }
+}

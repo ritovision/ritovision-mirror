@@ -1,0 +1,91 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.intro,
+.closing,
+.point,
+.caption {
+  margin: 0;
+  font-family: michroma, sans-serif;
+  line-height: 1.8;
+  color: rgba(245, 247, 251, 0.9);
+}
+
+.intro,
+.closing {
+  max-width: 80ch;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.pointLabel {
+  color: rgba(255, 255, 255, 0.98);
+}
+
+.inlineCode {
+  font-family: monospace;
+  color: rgba(245, 247, 251, 0.96);
+}
+
+.mediaGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.9fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.ogFrame,
+.markFrame {
+  overflow: hidden;
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background: rgba(6, 24, 44, 0.55);
+}
+
+.ogFrame {
+  aspect-ratio: 1200 / 630;
+}
+
+.markFrame {
+  aspect-ratio: 1;
+  max-width: 360px;
+}
+
+.link {
+  color: var(--primary-red);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.link:hover {
+  color: var(--foreground);
+}
+
+@media (max-width: 900px) {
+  .mediaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .markFrame {
+    width: min(100%, 300px);
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

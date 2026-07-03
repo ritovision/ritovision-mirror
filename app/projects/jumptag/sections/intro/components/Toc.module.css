@@ -1,0 +1,45 @@
+/* \test\app\projects\jumptag\sections\intro\components\Toc.module.css */
+
+.tocWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tocContent {
+  text-align: left;
+  font-size: 1.333em;
+  display: inline-block;
+  padding-left: 2rem;
+}
+
+/* New: Mobile styles for text alignment */
+@media (max-width: 730px) {
+  .tocContent {
+    margin-left: var(--spacing-element-gap);
+    padding-left: 0;
+    display: block;
+  }
+
+  .tocWrapper {
+    justify-content: flex-start;
+  }
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin: 0.25rem 0;
+}
+
+.spacer {
+  margin: var(--spacing-element-gap) 0;
+}
+
+.primaryTitle {
+  color: var(--primary-red);
+  margin: var(--spacing-element-gap) 0 0 0;
+}

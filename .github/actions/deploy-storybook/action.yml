@@ -1,0 +1,31 @@
+name: Deploy Storybook
+description: Deploy Storybook to Vercel
+inputs:
+  vercel-token:
+    description: Vercel API token
+    required: true
+  local-config:
+    description: Vercel local config file
+    required: false
+    default: vercel.storybook.json
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Install Vercel CLI
+      run: npm i -g vercel@latest
+      shell: bash
+
+    - name: Pull Vercel env (storybook project)
+      run: vercel pull --yes --environment=production --token=${{ inputs.vercel-token }} --local-config=${{ inputs.local-config }}
+      shell: bash
+
+    - name: Build Storybook with Vercel
+      run: vercel build --prod --token=${{ inputs.vercel-token }} --local-config=${{ inputs.local-config }}
+      shell: bash
+
+    - name: Deploy prebuilt Storybook artifacts to Vercel
+      run: vercel deploy --prebuilt --prod --token=${{ inputs.vercel-token }} --local-config=${{ inputs.local-config }}
+      shell: bash

@@ -1,0 +1,27 @@
+/* FILE PATH: app/projects/uas/components/MapLinesAnimation.module.css */
+
+.mapLinesSvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Fill the parent container (Hero) */
+    height: 100%; /* Fill the parent container (Hero) */
+    z-index: 1.5; /* Between the map (1) and the main SVG border/X/Text (2/3) */
+    pointer-events: none; /* Allow clicks to pass through */
+    overflow: visible; /* Ensure line is not clipped at SVG boundary if it goes outside viewBox */
+  }
+  
+  .mapLine {
+      /* Initial state handled in TSX before animation */
+      /* stroke-dasharray and stroke-dashoffset are set in JS */
+       opacity: 0; /* Hide initially */
+  }
+  
+  
+  /* Animation for drawing a single line */
+  @keyframes drawLine {
+      to {
+          stroke-dashoffset: 0;
+          opacity: 1; /* Make the line visible as it draws */
+      }
+  }

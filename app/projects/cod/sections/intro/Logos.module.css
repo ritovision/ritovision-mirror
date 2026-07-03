@@ -1,0 +1,105 @@
+.logosSection {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 5% auto;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: var(--spacing-section-gap);
+    font-size: var(--font-size-heading-primary);
+  }
+  @media (max-width: 730px) {
+    .title {
+      font-size: var(--font-size-heading-secondary);          /* mobile size */
+    }
+  }
+  
+  .logosGrid {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logoItem {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logoImage {
+    border-radius: var(--border-radius-standard);
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .wideItem {
+    /* Styles for wide items if needed */
+  }
+  
+  /* Desktop Layout */
+  @media (min-width: 801px) {
+    .logosGrid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+        "meinmmo meinmmo screenrant screenrant dexerto dexerto"
+        "xgn charlieintel dbltap esports gamerant gfinity";
+    }
+  
+    /* Wide logos in top row - each spanning 2 columns */
+    .logoItem:nth-child(1) { grid-area: meinmmo; }
+    .logoItem:nth-child(2) { grid-area: screenrant; }
+    .logoItem:nth-child(3) { grid-area: dexerto; }
+    
+    /* Square logos in bottom row - each in its own column */
+    .logoItem:nth-child(4) { grid-area: xgn; }
+    .logoItem:nth-child(5) { grid-area: charlieintel; }
+    .logoItem:nth-child(6) { grid-area: dbltap; }
+    .logoItem:nth-child(7) { grid-area: esports; }
+    .logoItem:nth-child(8) { grid-area: gamerant; }
+    .logoItem:nth-child(9) { grid-area: gfinity; }
+  }
+  
+  /* Mobile Layout */
+  @media (max-width: 800px) {
+    .logosGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "screenrant screenrant"
+        "dbltap esports"
+        "dexerto dexerto"
+        "charlieintel gfinity"
+        "meinmmo meinmmo"
+        "xgn gamerant";
+      gap: var(--spacing-element-gap);
+      max-width: var(--container-max-width-cards);
+      margin: 0 auto;
+    }
+  
+    .logoItem:nth-child(1) { grid-area: meinmmo; }
+    .logoItem:nth-child(2) { grid-area: screenrant; }
+    .logoItem:nth-child(3) { grid-area: dexerto; }
+    .logoItem:nth-child(4) { grid-area: xgn; }
+    .logoItem:nth-child(5) { grid-area: charlieintel; }
+    .logoItem:nth-child(6) { grid-area: dbltap; }
+    .logoItem:nth-child(7) { grid-area: esports; }
+    .logoItem:nth-child(8) { grid-area: gamerant; }
+    .logoItem:nth-child(9) { grid-area: gfinity; }
+    
+    .logosSection {
+    margin: 20% auto;
+      }
+    
+}

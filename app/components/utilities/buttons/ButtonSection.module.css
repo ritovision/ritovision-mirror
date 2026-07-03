@@ -1,0 +1,17 @@
+.buttonSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-large);
+    width: 100%;
+    max-width: var(--container-max-width-medium);
+    margin: 0 auto;
+  }
+  
+  .title {
+    text-align: center;
+    font-family: "Michroma", sans-serif;
+    margin: 0 0 10px 0;
+    font-size: clamp(18px, 2vw, 24px);
+  }
+  

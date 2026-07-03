@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Canonical: https://ritovision.com/.well-known/security.txt
+Contact: https://ritovision.com/contact
+Encryption: https://ritovision.com/.well-known/ritovision-publickey.asc
+Preferred-Languages: en
+Policy: https://ritovision.com/security
+Expires: 2026-12-01T00:00:00Z
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEcC/1/ZXtLHc46kwUQQeuaGjtt4QFAmlqfzIACgkQQQeuaGjt
+t4Tq2xAAufKDlBsAw3v1k1XlhGsEPbybz/Fps77feWfkZgUe/RbYZv5OaaW8tv7J
+rUMVwUeIL1yLmcPv5iI5NKhM8ZAIX2e2HQoIm8GFbJerOMdryehyXGHYzr8BUPT8
+g0fS6RymS1WjB00JII9Tl90fB8lLrYAvmh2gFrbAglztGJpLveGu4tndDplf2B5w
+yf64B/POYiotq1nBMx3RQPLBuLzdrWioRD7RzcWvE2Ogmwn0gfhy5Lt4LyTdLYrN
+PE/XEW+TPc0LlMd1L/WcH1PneRtWTfe8ypnJVdaRCfHPk5gkGGtIBvanTDlXyP8i
+0YLl6LPZGZ0PbjbYX1B6lFb5iea5mDe1ImnPkqZUrHKk85bX8cv5EXlbof9jh/gM
+qxTWyYWFXR1v/beZfPiC5fTrHYpTS+0usV19FERkNrQCCnb4Dz0GyoS7FxNZQDRG
+gTxsQegl5tJdsh8TohGdJycLdAh1rYxLJeMmRp7mn5JdQPa8Jh/7M6AdjNmkuEX2
+9gSq3eBpcunCe+6/5PX9Hc/hv2o0ox+cOexZTko6zNeqv6ROe0+F3kSxF9za69cG
+nGMDBrjHlaqwiXUb0Uew9HaUMUM+GNPiGu6ia+R3D3NJBC92VNLfBRwl586yBPnZ
+pY5T3jyDAnzwMnWymsaAeqJetI0KIMOV+Z2JQJXJRmYOJEfddAc=
+=AiDQ
+-----END PGP SIGNATURE-----

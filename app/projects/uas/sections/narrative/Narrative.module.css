@@ -1,0 +1,122 @@
+.narrativeContainer {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .accordionWrapper {
+    width: 100%;
+    background-color: #000;
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    padding: 10px;
+  }
+  
+  .accordionRoot {
+    background-color: var(--primary-blue);
+    border: var(--default-border);
+    border-radius: var(--border-radius-standard);
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .accordionItem {
+    position: relative;
+  }
+  
+  .accordionHeader {
+    margin: 0;
+  }
+  
+  .accordionTrigger {
+    all: unset;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .headerWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-right: 70px;
+  }
+  
+  .title {
+    font-size: var(--font-size-subheading);
+    color: var(--foreground);
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    max-width: var(--container-max-width-medium);
+    word-wrap: break-word;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .iconLine {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--foreground);
+    transition: all 0.3s ease;
+  }
+  
+  .iconLine:first-child {
+    transform: rotate(90deg);
+  }
+  
+  .contentWrapper {
+    overflow: hidden;
+    padding: 0 1rem;
+    will-change: transform;
+  }
+  
+  .content {
+    padding: 1rem 0;
+    text-align: left;
+  }
+  
+  @media (max-width: 730px) {
+    .narrativeContainer {
+      width: 100%;
+    }
+  
+    .title {
+      font-size: 1.2rem;
+      padding: 0 20px;
+      max-width: calc(100% - 60px);
+    }
+  
+    .icon {
+      right: 20px;
+      width: 30px;
+      height: 30px;
+    }
+  
+    .headerWrapper {
+      padding-right: 50px;
+    }
+  
+    .contentWrapper {
+      padding-left: 0.5rem;
+      padding-right: 0.1rem;
+    }
+  }
+  

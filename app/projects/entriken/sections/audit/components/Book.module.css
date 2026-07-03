@@ -1,0 +1,72 @@
+.wrapper {
+    width: var(--container-width-percent);
+    max-width: var(--container-max-width-large);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* each section box */
+  .bookContainer {
+    border-left: 2px solid var(--secondary-blue);
+    border-right: 2px solid var(--secondary-blue);
+    border-top: 2px solid var(--secondary-blue);
+    border-bottom: none;
+    padding: var(--spacing-container-padding);
+    background: transparent;
+  }
+  
+  /* remove divider (top border) on all but the first box */
+  .bookContainer + .bookContainer {
+    border-top: none;
+  }
+  
+  .bookContainer:first-child {
+    border-radius: var(--border-radius-standard) var(--border-radius-standard) 0 0;
+  }
+
+  .bookContainer:last-child {
+    border-bottom: 2px solid var(--secondary-blue);
+    border-radius: 0 0 var(--border-radius-standard) var(--border-radius-standard);
+  }
+  
+  /* primary title */
+  .firstTitle {
+    font-size: var(--font-size-heading-primary);
+    color: var(--foreground);
+    text-align: center;
+    margin: 0 0 var(--spacing-margin-bottom);
+  }
+  
+  /* body paragraphs */
+  .paragraph {
+    color: var(--foreground);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-margin-bottom);
+    text-align: left;
+  }
+  
+  /* centered image */
+  .image {
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 90%;
+    height: auto;
+  }
+  
+  /* red sub-section titles, now centered */
+  .headingPrimary {
+    font-size: var(--font-size-heading-tertiary);
+    color: var(--primary-red);
+    margin: var(--spacing-margin-bottom) 0;
+    text-align: center;
+  }
+
+  /* white sub-sub headings: left-aligned with left margin */
+  .subheading {
+    font-size: var(--font-size-subheading);
+    color: var(--foreground);
+    margin: var(--spacing-margin-bottom) 0 0 var(--spacing-margin-bottom);
+    text-align: left;
+  }
+  

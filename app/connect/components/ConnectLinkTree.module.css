@@ -1,0 +1,204 @@
+.page {
+  position: relative;
+  min-height: calc(100svh - var(--height-nav-bar));
+  overflow: hidden;
+  background-color: var(--primary-blue);
+  color: var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px clamp(48px, 8vw, 96px);
+}
+
+.orbField {
+  opacity: 0.86;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 430px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.header {
+  text-align: center;
+}
+
+.portrait {
+  width: min(72vw, 350px);
+  aspect-ratio: 1;
+  position: relative;
+  margin: 12px auto 18px;
+  border-radius: var(--border-radius-standard);
+  overflow: hidden;
+}
+
+.portraitImage {
+  object-fit: contain;
+}
+
+.title {
+  font-size: clamp(2.75rem, 14vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+  margin: 4px 0 0;
+}
+
+.role {
+  font-size: clamp(1.25rem, 5vw, 1.65rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin: 10px auto 0;
+  max-width: 390px;
+}
+
+.positioning {
+  font-family: var(--font-body), sans-serif;
+  font-size: clamp(0.78rem, 2.8vw, 0.92rem);
+  line-height: 1.65;
+  letter-spacing: 0;
+  margin: 12px auto 0;
+  max-width: 410px;
+}
+
+.redText {
+  color: var(--primary-red);
+}
+
+.linkStack {
+  width: 100%;
+  display: grid;
+  gap: 12px;
+}
+
+.connectButton {
+  min-height: 50px;
+  border: 2px solid var(--secondary-blue);
+  border-radius: var(--border-radius-pill);
+  color: var(--foreground);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-agency), Arial, Helvetica, sans-serif;
+  font-size: clamp(1.25rem, 6vw, 1.55rem);
+  letter-spacing: 0;
+  padding: 8px 22px;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease,
+    transform 300ms ease;
+}
+
+.connectButton:hover,
+.connectButton:focus-visible {
+  background-color: var(--secondary-blue);
+}
+
+.connectButton:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+.connectButton:active {
+  transform: translateY(1px);
+}
+
+.buttonContent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttonSvgIcon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+}
+
+.buttonImageIcon {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  display: block;
+}
+
+.buttonImage {
+  object-fit: contain;
+}
+
+.ritoRhymes {
+  color: var(--primary-red);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 4px;
+}
+
+.socialLink {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 300ms ease;
+}
+
+.socialLink:hover,
+.socialLink:focus-visible {
+  transform: translateY(-1px);
+}
+
+.socialLink:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+.socialLink:active {
+  transform: translateY(1px) scale(0.96);
+}
+
+.socialIcon {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.socialImage {
+  object-fit: contain;
+}
+
+.telegramIcon {
+  width: 28px;
+  height: 28px;
+  fill: var(--foreground);
+}
+
+@media (max-width: 420px) {
+  .page {
+    align-items: flex-start;
+  }
+
+  .content {
+    gap: 20px;
+  }
+
+  .connectButton {
+    min-height: 48px;
+  }
+}

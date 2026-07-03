@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.intro,
+.conclusion,
+.point {
+  margin: 0;
+  max-width: 80ch;
+  font-family: michroma, sans-serif;
+  line-height: 1.8;
+  color: rgba(245, 247, 251, 0.9);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.link {
+  color: var(--primary-red);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.link:hover {
+  color: var(--foreground);
+}
+
+.inlineCode {
+  font-family: monospace;
+  color: rgba(245, 247, 251, 0.96);
+}

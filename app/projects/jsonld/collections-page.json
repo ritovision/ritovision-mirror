@@ -1,0 +1,68 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Projects",
+  "url": "https://ritovision.com/projects",
+  "description": "Explore a showcase of high-impact work led by Rito, a Strategic Synthesis Specialist, highlighting full-stack brand, product, UX, and engineering execution across industries including fashion, blockchain, and gaming.",
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Project Highlights",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "NYT-Featured Fansite for Caroline Vreeland",
+          "description": "End-to-end production of a New York Times recognized fansite, using lean Next.js architecture and CMS-like functionality.",
+          "url": "https://ritovision.com/projects/fansite",
+          "keywords": ["Next.js", "Content Strategy", "SEO", "AI", "CMS Replacement"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Wearable Tech Pilot with Celebrity Fashion Designers",
+          "description": "Orchestrated branding, design, and deployment of smart QR dog tags used in a high-fashion tech runway show.",
+          "url": "https://ritovision.com/projects/jumptag",
+          "keywords": ["Wearable Tech", "Product Management", "UX", "QR Codes", "FashionTech"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Call of Duty QA Campaign with Global Coverage",
+          "description": "Transformed QA findings into an infotaining content campaign that led to studio-level fixes and press coverage.",
+          "url": "https://ritovision.com/projects/cod",
+          "keywords": ["Quality Assurance", "Game Testing", "Performance", "Game Development"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Strategic Brand Repositioning for William Entriken",
+          "description": "Led personal brand transformation and CMS integration for blockchain pioneer William Entriken.",
+          "url": "https://ritovision.com/projects/entriken",
+          "keywords": ["Brand Strategy", "UX", "CMS", "SEO", "Web3"]
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "ERC Blockchain Standard Co-Authorship",
+          "description": "Co-authored a pivotal Ethereum standard with William Entriken to influence blockchain-wide adoption.",
+          "url": "https://ritovision.com/projects/uas",
+          "keywords": ["Blockchain", "Smart Contracts", "ERC", "Ethereum"]
+        }
+      }
+    ]
+  }
+}

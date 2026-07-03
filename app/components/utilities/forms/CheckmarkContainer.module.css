@@ -1,0 +1,87 @@
+.container {
+    border-radius: var(--border-radius-pill);
+    padding: var(--spacing-base-px);
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border: 2px solid var(--secondary-blue);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .title {
+    font-family: agencyb, sans-serif;
+    color: var(--foreground);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .itemsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* increased gap between each item */
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .checkBox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--secondary-blue);
+    border-radius: 4px; /* smaller border-radius so it's square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .checkIcon {
+    fill: var(--foreground); /* white checkmark */
+    width: 14px;
+    height: 14px;
+  }
+  
+  .itemText {
+    font-family: Michroma, sans-serif;
+    color: var(--foreground);
+    font-size: clamp(10px, 2vw, 14px);
+  }
+  
+  /* State classes */
+  .pre {
+    /* Default state; uses container’s border */
+  }
+  
+  .focus {
+    border-color: var(--foreground);
+    outline: 2px solid var(--foreground);
+    outline-offset: 2px;
+  }
+  
+  .valid {
+    border-color: var(--utility-green);
+  }
+  
+  .invalid {
+    border-color: var(--primary-red);
+    box-shadow: inset 0 0 0 2px var(--primary-red);
+  }
+  
+  .disabled {
+    border-color: var(--secondary-blue);
+    background-color: var(--secondary-blue);
+    color: var(--background-white);
+    cursor: not-allowed;
+  }
+  
+.errorText {
+    color: var(--primary-red);
+    font-size: clamp(10px, 2vw, 12px);
+    margin-top: var(--gap-small);
+    font-family: Michroma, sans-serif;
+    text-align: center; /* ✅ Center alignment */
+  }
+  

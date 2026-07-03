@@ -1,0 +1,65 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Major OSS Contributions by Rito",
+  "url": "https://ritovision.com/projects/oss",
+  "description": "A case study highlighting Rito's open-source contributions across major developer ecosystems, improving mobile usability, navigation, and accessibility for sites like Ethereum EIPs/ERCs, Kubernetes, OWASP, LangChain, and Storybook.",
+  "creator": {
+    "@type": "Person",
+    "name": "Rito",
+    "url": "https://ritovision.com/about",
+    "jobTitle": "Front-End Engineer & Open Source Contributor",
+    "sameAs": [
+      "https://www.instagram.com/ritorhymes",
+      "https://www.linkedin.com/in/ritorhymes",
+      "https://www.ritovision.com"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RitoVision",
+    "url": "https://ritovision.com"
+  },
+  "datePublished": "2026-01-09",
+  "keywords": [
+    "Open Source",
+    "OSS",
+    "Ethereum",
+    "Kubernetes",
+    "OWASP",
+    "LangChain",
+    "Storybook",
+    "Mobile Optimization",
+    "Accessibility",
+    "Developer Experience"
+  ],
+  "inLanguage": "en",
+  "image": "https://ritovision.com/images/home/hero/rito-ponder.jpg",
+  "mentions": [
+    {
+      "@type": "WebSite",
+      "name": "Ethereum EIPs",
+      "url": "https://eips.ethereum.org/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "Kubernetes",
+      "url": "https://kubernetes.io/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "OWASP",
+      "url": "https://owasp.org/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "LangChain",
+      "url": "https://docs.langchain.com/"
+    },
+    {
+      "@type": "WebSite",
+      "name": "Storybook",
+      "url": "https://storybook.js.org/"
+    }
+  ]
+}

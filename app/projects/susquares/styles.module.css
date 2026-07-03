@@ -1,0 +1,26 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--primary-blue);
+  background-image:
+    radial-gradient(circle at top, rgba(38, 71, 184, 0.28), transparent 38%),
+    linear-gradient(180deg, #04121f 0%, var(--primary-blue) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh, 100% 100vh;
+  color: #f5f7fb;
+}
+
+.container {
+  width: min(980px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0 clamp(4rem, 8vw, 6rem);
+}
+
+.container :global(.defaulttopspace) {
+  margin-top: 4%;
+}
+
+@media (max-width: 730px) {
+  .container :global(.defaulttopspace) {
+    margin-top: 10%;
+  }
+}

@@ -1,0 +1,24 @@
+.narrativeContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 200px;
+  }
+  
+  .sectionTitle {
+    font-family: var(--font-agency);
+    font-size: var(--font-size-heading-primary);
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 730px) {
+    .sectionTitle {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+    .narrativeContainer {
+        row-gap: 100px;
+      }
+  }

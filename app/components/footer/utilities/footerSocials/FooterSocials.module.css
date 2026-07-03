@@ -1,0 +1,40 @@
+.footerSocialsContainer {
+  border: var(--default-border);
+  border-radius: var(--border-radius-standard);
+  background-color: transparent;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.socialsGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  gap: var(--spacing-element-gap);
+}
+
+.socialLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialIconWrapper {
+  position: relative;
+  height: 30px;
+  width: 40px;
+}
+
+.socialsText {
+  font-family: "AgencyB", sans-serif;
+  font-size: 1.5rem;
+  color: var(--foreground);
+  text-align: center;
+  margin-bottom: 10px;
+}
